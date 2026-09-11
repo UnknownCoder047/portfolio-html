@@ -1,0 +1,65 @@
+// -----------------------------------------------------------------------------
+// PROJECTS ARCHIVE PAGE (ChatGPT Image Sep 5, 2026, 01_16_22 AM.png)
+// -----------------------------------------------------------------------------
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.projects-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: $spacing-md;
+  margin-bottom: $spacing-2xl;
+
+  .filter-tabs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .filter-tab {
+    padding: 8px 16px;
+    border-radius: $radius-full;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: $color-text-secondary;
+    font-size: $font-size-xs;
+    font-weight: 600;
+    transition: all $transition-fast;
+
+    &:hover, &.active {
+      background: $color-accent-dim;
+      border-color: $color-accent;
+      color: $color-accent;
+    }
+  }
+
+  .search-input-wrap {
+    position: relative;
+    width: 280px;
+
+    @include max-sm {
+      width: 100%;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $color-text-muted;
+      width: 16px;
+      height: 16px;
+    }
+
+    input {
+      padding-left: 38px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      border-radius: $radius-full;
+      font-size: $font-size-xs;
+    }
+  }
+}

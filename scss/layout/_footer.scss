@@ -1,0 +1,415 @@
+// -----------------------------------------------------------------------------
+// FOOTER (Matched to designs/footer.png)
+// -----------------------------------------------------------------------------
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.footer {
+  background-color: #060807;
+  position: relative;
+  border-top: none;
+  padding-top: 5rem;
+  padding-bottom: 2.75rem;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 340px 160px 1fr;
+    gap: 3.5rem;
+    align-items: stretch;
+    margin-bottom: 3.5rem;
+
+    @include max-lg {
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
+
+    @include max-md {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  // Column 1: Brand & Socials
+  &__brand {
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    padding-right: 3rem;
+    display: flex;
+    flex-direction: column;
+
+    @include max-lg {
+      border-right: none;
+      padding-right: 0;
+    }
+
+    &-tag {
+      font-family: $font-mono;
+      font-size: 0.8125rem; // 13px
+      font-weight: 500;
+      color: $color-accent;
+      letter-spacing: 0.12em;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+      display: inline-block;
+    }
+
+    &-title {
+      font-family: $font-sans;
+      font-size: 3.5rem; // 56px
+      font-weight: 900;
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      color: $color-text-white;
+      margin-bottom: 1.15rem;
+
+      .highlight {
+        color: $color-accent;
+      }
+
+      @include max-md {
+        font-size: 2.75rem;
+      }
+
+      @include max-sm {
+        font-size: 2.25rem;
+      }
+    }
+
+    &-sub {
+      font-family: $font-sans;
+      font-size: 0.9375rem; // 15px
+      color: #78827c;
+      line-height: 1.55;
+      margin-bottom: 2rem;
+      max-width: 290px;
+    }
+
+    .footer__social-links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: auto;
+    }
+
+    .footer__social-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.03);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      text-decoration: none;
+      transition: all $transition-normal;
+
+      svg {
+        width: 20px;
+        height: 20px;
+        fill: currentColor;
+        transition: transform $transition-fast;
+      }
+
+      &:hover {
+        border-color: $color-accent;
+        background: rgba(163, 230, 53, 0.08);
+        color: $color-accent;
+        box-shadow: 0 0 16px rgba(163, 230, 53, 0.25);
+        transform: translateY(-2px);
+      }
+
+      &:active {
+        transform: translateY(0) scale(0.96);
+      }
+    }
+  }
+
+  // Column 2: Navigate
+  &__nav {
+    display: flex;
+    flex-direction: column;
+
+    &-header {
+      font-family: $font-mono;
+      font-size: 0.8125rem; // 13px
+      font-weight: 500;
+      color: #718077;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 2.25rem;
+    }
+
+    &-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem; // 22px
+
+      li a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 140px;
+        font-family: $font-sans;
+        font-size: 1.0625rem; // 17px
+        font-weight: 500;
+        color: #e5e7eb;
+        text-decoration: none;
+        transition: color $transition-fast;
+
+        .arrow {
+          color: $color-accent;
+          font-size: 1.15rem;
+          line-height: 1;
+          display: inline-block;
+        }
+
+        &:hover {
+          color: $color-accent;
+        }
+      }
+    }
+  }
+
+  // Column 3: Let's Build CTA & Technical Graphic
+  &__cta-wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+    position: relative;
+
+    @include max-lg {
+      grid-column: 1 / -1;
+      margin-top: 1rem;
+    }
+
+    @include max-md {
+      margin-top: 0;
+    }
+  }
+
+  &__cta-content {
+    flex: 1;
+    max-width: 480px;
+  }
+
+  &__status {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+
+    &-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $color-accent;
+      box-shadow: 0 0 10px rgba(163, 230, 53, 0.9), 0 0 4px $color-accent;
+      display: inline-block;
+    }
+
+    &-text {
+      font-family: $font-mono;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      color: $color-accent;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+  }
+
+  &__cta-heading {
+    font-family: $font-sans;
+    font-size: 1.55rem;
+    font-weight: 700;
+    line-height: 1.32;
+    letter-spacing: -0.025em;
+    color: $color-text-white;
+    margin-bottom: 0.875rem;
+
+    @include max-sm {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__cta-sub {
+    font-family: $font-sans;
+    font-size: 0.9375rem;
+    color: #8e9892;
+    line-height: 1.55;
+    margin-bottom: 1.75rem;
+    max-width: 440px;
+  }
+
+  &__cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 26px;
+    background-color: $color-accent;
+    color: #070908;
+    font-family: $font-sans;
+    font-size: 0.875rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 25px rgba(163, 230, 53, 0.35);
+    transition: all $transition-normal;
+    user-select: none;
+    white-space: nowrap;
+
+    .arrow-icon {
+      display: inline-block;
+    }
+
+    &:hover {
+      background-color: $color-accent-light;
+      box-shadow: 0 0 35px rgba(163, 230, 53, 0.55);
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(0) scale(0.98);
+    }
+  }
+
+  // Technical Coordinate Grid Graphic
+  &__tech-grid {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1rem;
+    margin-left: auto;
+    flex-shrink: 0;
+    user-select: none;
+    pointer-events: none;
+
+    @include max-lg {
+      display: none;
+    }
+  }
+
+  &__grid-wireframe {
+    width: 130px;
+    height: 150px;
+    position: relative;
+  }
+
+  &__grid-svg {
+    width: 130px;
+    height: 150px;
+    overflow: visible;
+  }
+
+  &__tech-words {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: $font-mono;
+    font-size: 0.6875rem; // 11px
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    color: #4b5563;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  // Bottom Bar
+  &__bottom {
+    position: relative;
+    border-top: none;
+    margin-top: 4.5rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    padding-right: 4rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+
+    @include max-md {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+      padding-top: 1.75rem;
+      padding-right: 0;
+      padding-bottom: 4.5rem;
+    }
+  }
+
+  &__copyright {
+    font-family: $font-sans;
+    font-size: 0.8125rem; // 13px
+    color: #71717a;
+    letter-spacing: 0.01em;
+  }
+
+  &__philosophy {
+    font-family: $font-mono;
+    font-size: 0.75rem; // 12px
+    letter-spacing: 0.08em;
+    color: #71717a;
+
+    .slash {
+      color: $color-accent;
+      font-weight: 700;
+      margin-right: 6px;
+    }
+  }
+
+  &__made-with {
+    font-family: $font-mono;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    color: #9ca3af;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .code-icon {
+      color: $color-accent;
+      font-weight: 700;
+      font-size: 0.8125rem;
+    }
+
+    .coffee-icon {
+      color: $color-accent;
+      stroke: $color-accent;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

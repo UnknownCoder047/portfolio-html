@@ -1,0 +1,143 @@
+- generic [active] [ref=f1e1]:
+  - banner [ref=f1e2]:
+    - generic [ref=f1e3]:
+      - link "A/ - Home" [ref=f1e4] [cursor=pointer]:
+        - /url: ../index.html
+        - generic [ref=f1e5]: A
+        - generic [ref=f1e6]: /
+      - generic [ref=f1e25]:
+        - link "LET'S TALK" [ref=f1e26] [cursor=pointer]:
+          - /url: contact.html
+          - generic [aria-hidden] [ref=f1e28]: →
+        - button "Toggle mobile menu" [ref=f1e166] [cursor=pointer]
+    - generic [aria-hidden]:
+      - generic:
+        - navigation:
+          - list:
+            - listitem:
+              - link:
+                - /url: ../index.html
+                - generic: Home
+            - listitem:
+              - link:
+                - /url: projects.html
+                - generic: Projects
+            - listitem:
+              - link:
+                - /url: services.html
+                - generic: Services
+            - listitem:
+              - link:
+                - /url: about.html
+                - generic: About
+            - listitem:
+              - link:
+                - /url: contact.html
+                - generic: Contact
+        - generic:
+          - link:
+            - /url: contact.html
+            - generic: LET'S TALK
+            - generic: →
+  - main [ref=f1e29]:
+    - generic [ref=f1e31]:
+      - generic [ref=f1e32]:
+        - generic [ref=f1e33]:
+          - generic [ref=f1e34]: LET'S CONNECT
+          - heading "Have a Project in Mind?" [level=1] [ref=f1e35]
+          - paragraph [ref=f1e36]: I'm always open to discussing new opportunities, interesting ideas, or just a friendly chat about technology. Feel free to reach out and I'll get back to you as soon as possible.
+        - img "Different Places Same Passion - Let's create impact together" [ref=f1e40]
+      - generic [ref=f1e41]:
+        - generic [ref=f1e42]:
+          - link "Email Drop me an email anytime ankit@example.com" [ref=f1e43] [cursor=pointer]:
+            - /url: mailto:ankit@example.com
+            - generic [ref=f1e48]:
+              - heading "Email" [level=2] [ref=f1e49]
+              - generic [ref=f1e50]: Drop me an email anytime
+              - generic [ref=f1e51]: ankit@example.com
+          - link "Phone Available for calls (Mon - Fri) +91 98765 43210" [ref=f1e52] [cursor=pointer]:
+            - /url: tel:+919876543210
+            - generic [ref=f1e56]:
+              - heading "Phone" [level=2] [ref=f1e57]
+              - generic [ref=f1e58]: Available for calls (Mon - Fri)
+              - generic [ref=f1e59]: +91 98765 43210
+          - generic [ref=f1e65]:
+            - heading "Location" [level=2] [ref=f1e66]
+            - generic [ref=f1e67]: Based in
+            - generic [ref=f1e68]: Bengaluru, India
+          - link "LinkedIn Let's connect professionally linkedin.com/in/ankitkumar" [ref=f1e69] [cursor=pointer]:
+            - /url: https://linkedin.com/in/ankitkumar
+            - generic [ref=f1e73]:
+              - heading "LinkedIn" [level=2] [ref=f1e74]
+              - generic [ref=f1e75]: Let's connect professionally
+              - generic [ref=f1e76]: linkedin.com/in/ankitkumar
+          - link "GitHub Check out my open source work github.com/ankitkumar" [ref=f1e77] [cursor=pointer]:
+            - /url: https://github.com/ankitkumar
+            - generic [ref=f1e81]:
+              - heading "GitHub" [level=2] [ref=f1e82]
+              - generic [ref=f1e83]: Check out my open source work
+              - generic [ref=f1e84]: github.com/ankitkumar
+          - img "Let's Build Something Amazing Together!" [ref=f1e86]
+        - generic [ref=f1e87]:
+          - generic [ref=f1e88]: — SEND A MESSAGE
+          - heading "Tell Me About Your Idea." [level=2] [ref=f1e89]
+          - paragraph [ref=f1e90]: Fill out the form and I'll get back to you soon.
+          - generic [ref=f1e91]:
+            - generic [ref=f1e92]:
+              - textbox "Your Name" [ref=f1e94]
+              - textbox "Your Email" [ref=f1e96]
+            - textbox "Subject" [ref=f1e98]
+            - generic [ref=f1e99]:
+              - textbox "Your Message" [ref=f1e100]
+              - generic: 0/500
+            - button "Send Message" [ref=f1e101] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f1e103]: →
+            - generic [ref=f1e104]: Your information is safe with me. I never share your details.
+  - contentinfo [ref=f1e109]:
+    - generic [ref=f1e110]:
+      - generic [ref=f1e111]:
+        - generic [ref=f1e112]:
+          - generic [ref=f1e113]: "[ BUILD • LEARN • SHIP ]"
+          - heading "Good Software Matters." [level=3] [ref=f1e114]: GoodSoftwareMatters.
+          - paragraph [ref=f1e115]: Ideas to real products. One build at a time.
+          - generic [ref=f1e116]:
+            - link "GitHub" [ref=f1e117] [cursor=pointer]:
+              - /url: https://github.com/ankitkumar
+            - link "LinkedIn" [ref=f1e120] [cursor=pointer]:
+              - /url: https://linkedin.com/in/ankitkumar
+        - generic [ref=f1e123]:
+          - heading "NAVIGATE" [level=4] [ref=f1e124]
+          - list [ref=f1e125]:
+            - listitem [ref=f1e126]:
+              - link "Work →" [ref=f1e127] [cursor=pointer]:
+                - /url: projects.html
+                - generic [ref=f1e128]: Work
+                - generic [ref=f1e129]: →
+            - listitem [ref=f1e130]:
+              - link "Services →" [ref=f1e131] [cursor=pointer]:
+                - /url: services.html
+                - generic [ref=f1e132]: Services
+                - generic [ref=f1e133]: →
+            - listitem [ref=f1e134]:
+              - link "About →" [ref=f1e135] [cursor=pointer]:
+                - /url: about.html
+                - generic [ref=f1e136]: About
+                - generic [ref=f1e137]: →
+            - listitem [ref=f1e138]:
+              - link "Contact →" [ref=f1e139] [cursor=pointer]:
+                - /url: contact.html
+                - generic [ref=f1e140]: Contact
+                - generic [ref=f1e141]: →
+        - generic [ref=f1e143]:
+          - generic [ref=f1e144]: LET'S BUILD
+          - heading "Software engineer building reliable systems and useful products." [level=4] [ref=f1e147]: Software engineer building reliablesystems and useful products.
+          - paragraph [ref=f1e148]: Available for freelance projects — from asingle backend to a complete product.
+          - link "START A PROJECT" [ref=f1e149] [cursor=pointer]:
+            - /url: contact.html
+      - generic [ref=f1e153]:
+        - generic [ref=f1e154]: © 2026 Ankit Kumar. All rights reserved.
+        - generic [ref=f1e155]: // SAME IDEAS. BIGGER POSSIBILITIES.
+        - generic [ref=f1e156]:
+          - generic [ref=f1e157]: MADE WITH
+          - generic [ref=f1e158]: </>
+          - generic [ref=f1e159]: AND

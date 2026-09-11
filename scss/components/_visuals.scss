@@ -1,0 +1,58 @@
+// -----------------------------------------------------------------------------
+// 3D ISOMETRIC, WIREFRAME & ARTWORK VISUALS
+// Recreated from the pixel mockups
+// -----------------------------------------------------------------------------
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// Glowing wireframe SVGs
+.glow-svg {
+  filter: drop-shadow(0 0 12px rgba(163, 230, 53, 0.4));
+  transition: transform $transition-smooth;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// Isometric stack
+.isometric-stack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Server rack visual
+.server-rack-visual {
+  position: relative;
+  width: 140px;
+  height: 110px;
+}
+
+// Floating phone mock visual
+.phone-mock-visual {
+  width: 110px;
+  height: 130px;
+  position: relative;
+}
+
+// Undulating curve timeline container
+.timeline-path-svg {
+  width: 100%;
+  height: 180px;
+  overflow: visible;
+
+  path {
+    stroke-dasharray: 6 6;
+    animation: dashMove 30s linear infinite;
+  }
+}
+
+@keyframes dashMove {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}

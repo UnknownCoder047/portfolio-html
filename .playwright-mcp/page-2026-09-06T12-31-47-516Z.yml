@@ -1,0 +1,812 @@
+- generic [active] [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - generic [ref=f2e3]:
+      - link "A/ - Home" [ref=f2e4] [cursor=pointer]:
+        - /url: index.html
+        - generic [ref=f2e5]: A
+        - generic [ref=f2e6]: /
+      - navigation "Primary Navigation" [ref=f2e7]:
+        - list [ref=f2e8]:
+          - listitem [ref=f2e9]:
+            - link "Home" [ref=f2e10] [cursor=pointer]:
+              - /url: index.html
+          - listitem [ref=f2e13]:
+            - link "Projects" [ref=f2e14] [cursor=pointer]:
+              - /url: pages/projects.html
+          - listitem [ref=f2e15]:
+            - link "Services" [ref=f2e16] [cursor=pointer]:
+              - /url: pages/services.html
+          - listitem [ref=f2e17]:
+            - link "About" [ref=f2e18] [cursor=pointer]:
+              - /url: pages/about.html
+          - listitem [ref=f2e19]:
+            - link "Contact" [ref=f2e20] [cursor=pointer]:
+              - /url: pages/contact.html
+      - link "LET'S TALK" [ref=f2e22] [cursor=pointer]:
+        - /url: pages/contact.html
+        - generic [aria-hidden] [ref=f2e24]: →
+    - generic [aria-hidden]:
+      - generic:
+        - navigation:
+          - list:
+            - listitem:
+              - link:
+                - /url: index.html
+                - generic: Home
+            - listitem:
+              - link:
+                - /url: pages/projects.html
+                - generic: Projects
+            - listitem:
+              - link:
+                - /url: pages/services.html
+                - generic: Services
+            - listitem:
+              - link:
+                - /url: pages/about.html
+                - generic: About
+            - listitem:
+              - link:
+                - /url: pages/contact.html
+                - generic: Contact
+        - generic:
+          - link:
+            - /url: pages/contact.html
+            - generic: LET'S TALK
+            - generic: →
+  - main [ref=f2e25]:
+    - generic [ref=f2e27]:
+      - generic [ref=f2e28]:
+        - generic [ref=f2e29]: AVAILABLE FOR SELECT PROJECTS
+        - heading "I BUILD DIGITAL THINGS®" [level=1] [ref=f2e32]:
+          - text: I BUILD
+          - generic [ref=f2e33]: DIGITAL
+          - text: THINGS®
+        - paragraph [ref=f2e34]: I turn ideas, messy requirements and technical problems into software people can actually use.
+        - generic [ref=f2e35]:
+          - generic [ref=f2e36]:
+            - generic [ref=f2e37]: "01"
+            - generic [ref=f2e38]: BACKENDENGINEER
+          - generic [ref=f2e39]:
+            - generic [ref=f2e40]: "02"
+            - generic [ref=f2e41]: ANDROIDBUILDER
+          - generic [ref=f2e42]:
+            - generic [ref=f2e43]: "03"
+            - generic [ref=f2e44]: PRODUCTDEVELOPER
+        - generic [ref=f2e45]:
+          - link "START A PROJECT" [ref=f2e46] [cursor=pointer]:
+            - /url: pages/contact.html
+            - generic [aria-hidden] [ref=f2e48]: →
+          - link "SEE MY WORK" [ref=f2e49] [cursor=pointer]:
+            - /url: pages/projects.html
+      - img "Digital Product Architecture Diagram - Idea, Architecture, Build, Product" [ref=f2e53]
+      - generic [ref=f2e54]:
+        - generic [ref=f2e55]:
+          - generic [ref=f2e56]: SCROLL
+          - generic [aria-hidden] [ref=f2e57]: ↓
+        - generic [ref=f2e58]: "[ FROM IDEA TO IMPACT ]"
+    - region [ref=f2e59]:
+      - generic [aria-hidden]: +
+      - generic [aria-hidden]: +
+      - generic [ref=f2e60]:
+        - generic [ref=f2e61]:
+          - generic [ref=f2e62]:
+            - generic [ref=f2e63]: SELECTED WORK
+            - heading "THINGS I'VE BUILT." [level=2] [ref=f2e66]
+            - paragraph [ref=f2e67]: Real problems. Real products. Real engineering decisions.
+          - generic "Section summary" [ref=f2e68]:
+            - generic [ref=f2e69]: //
+            - paragraph [ref=f2e70]: From solving complex backend problems to building user-facing products — here are some highlights.
+        - generic [ref=f2e71]:
+          - article [ref=f2e72]:
+            - generic [ref=f2e73]:
+              - generic [ref=f2e74]: "01"
+              - generic [ref=f2e75]: BACKEND
+            - img "Backend and API Platform architecture and server infrastructure diagram" [ref=f2e77]
+            - generic [ref=f2e78]:
+              - heading "Backend & API Platform" [level=3] [ref=f2e79]
+              - paragraph [ref=f2e80]: Designed and built a production backend system — authentication, integrations, database design, and a reliable API layer for a live product.
+              - generic "Technologies used" [ref=f2e81]:
+                - generic [ref=f2e82]: APIs
+                - generic [ref=f2e83]: PostgreSQL
+                - generic [ref=f2e84]: Docker
+                - generic [ref=f2e85]: AWS
+              - generic [ref=f2e86]:
+                - link "View case study for Backend and API Platform" [ref=f2e87] [cursor=pointer]:
+                  - /url: pages/project-detail.html
+                  - generic [ref=f2e88]: VIEW CASE STUDY
+                  - generic [aria-hidden] [ref=f2e89]: →
+                - generic [ref=f2e90]:
+                  - generic [ref=f2e91]: Real systems.
+                  - generic [ref=f2e92]: Real users.
+          - article [ref=f2e93]:
+            - generic [ref=f2e94]:
+              - generic [ref=f2e95]: "02"
+              - generic [ref=f2e96]: ANDROID
+            - img "Native Android mobile application user interface mockup" [ref=f2e98]
+            - generic [ref=f2e99]:
+              - heading "Native Android App" [level=3] [ref=f2e100]
+              - paragraph [ref=f2e101]: Built a modern native Android application with Kotlin and modern Android architecture.
+              - generic "Technologies used" [ref=f2e102]:
+                - generic [ref=f2e103]: Kotlin
+                - generic [ref=f2e104]: Jetpack Compose
+                - generic [ref=f2e105]: Android
+                - generic [ref=f2e106]: Clean Architecture
+              - generic [ref=f2e107]:
+                - link "View case study for Native Android App" [ref=f2e108] [cursor=pointer]:
+                  - /url: pages/project-detail.html
+                  - generic [ref=f2e109]: VIEW CASE STUDY
+                  - generic [aria-hidden] [ref=f2e110]: →
+                - generic [ref=f2e111]:
+                  - generic [ref=f2e112]: Ideas into
+                  - generic [ref=f2e113]: real apps.
+          - article [ref=f2e114]:
+            - generic [ref=f2e115]:
+              - generic [ref=f2e116]: "03"
+              - generic [ref=f2e117]: PRODUCT
+            - img "MVP Development dashboard and metrics interface mockup" [ref=f2e119]
+            - generic [ref=f2e120]:
+              - heading "MVP Development" [level=3] [ref=f2e121]
+              - paragraph [ref=f2e122]: Turned an early-stage idea into a focused, working product without unnecessary complexity.
+              - generic "Technologies used" [ref=f2e123]:
+                - generic [ref=f2e124]: MVP
+                - generic [ref=f2e125]: Product Strategy
+                - generic [ref=f2e126]: Web
+                - generic [ref=f2e127]: Rapid Development
+              - generic [ref=f2e128]:
+                - link "View case study for MVP Development" [ref=f2e129] [cursor=pointer]:
+                  - /url: pages/project-detail.html
+                  - generic [ref=f2e130]: VIEW CASE STUDY
+                  - generic [aria-hidden] [ref=f2e131]: →
+                - generic [ref=f2e132]:
+                  - generic [ref=f2e133]: From idea
+                  - generic [ref=f2e134]: to impact.
+        - generic [ref=f2e135]:
+          - generic [ref=f2e136]:
+            - generic [ref=f2e137]:
+              - generic [ref=f2e138]: MORE
+              - generic [ref=f2e139]: PROJECTS
+            - link "Explore all projects" [ref=f2e140] [cursor=pointer]:
+              - /url: pages/projects.html
+              - generic [aria-hidden] [ref=f2e142]: →
+          - generic [ref=f2e144]:
+            - generic [ref=f2e145]: Different problems.
+            - generic [ref=f2e146]: Different solutions.
+            - generic [ref=f2e147]: Same mindset.
+    - region [ref=f2e151]:
+      - generic [ref=f2e152]:
+        - generic [ref=f2e153]:
+          - generic [ref=f2e154]:
+            - generic [ref=f2e155]: SERVICES
+            - heading "WHAT CAN I BUILD FOR YOU?" [level=2] [ref=f2e157]
+            - paragraph [ref=f2e158]: From a backend system to a complete MVP, I can help turn an idea into something real.
+          - generic "Services philosophy" [ref=f2e159]:
+            - generic [ref=f2e160]: //
+            - generic [ref=f2e161]:
+              - generic [ref=f2e162]: IDEAS
+              - generic [ref=f2e163]: TECHNOLOGY
+              - generic [ref=f2e164]: PRODUCTS
+              - generic [ref=f2e165]: REAL IMPACT
+        - generic [ref=f2e168]:
+          - article [ref=f2e169]:
+            - generic [ref=f2e170]:
+              - generic [ref=f2e171]: "01"
+              - generic [aria-hidden] [ref=f2e172]: →
+            - generic [ref=f2e173]:
+              - generic [ref=f2e174]:
+                - heading "BACKEND" [level=3] [ref=f2e175]
+                - paragraph [ref=f2e176]: APIs, business logic, authentication, databases, integrations and scalable backend systems.
+              - img "Backend servers with scalable reliable secure architecture" [ref=f2e178]
+            - generic [ref=f2e179]: APIS · DATABASES · INTEGRATIONS
+          - article [ref=f2e181]:
+            - generic [ref=f2e182]:
+              - generic [ref=f2e183]: "02"
+              - generic [aria-hidden] [ref=f2e184]: →
+            - generic [ref=f2e185]:
+              - generic [ref=f2e186]:
+                - heading "ANDROID" [level=3] [ref=f2e187]
+                - paragraph [ref=f2e188]: Modern native Android applications using Kotlin and modern Android architecture.
+              - img "Native Android app development with Kotlin and Jetpack Compose" [ref=f2e190]
+            - generic [ref=f2e191]: ANDROID · KOTLIN · MODERN ARCH
+          - article [ref=f2e193]:
+            - generic [ref=f2e194]:
+              - generic [ref=f2e195]: "03"
+              - generic [aria-hidden] [ref=f2e196]: →
+            - generic [ref=f2e197]:
+              - generic [ref=f2e198]:
+                - heading "MVPS" [level=3] [ref=f2e199]
+                - paragraph [ref=f2e200]: Turn an idea into a focused, working product without unnecessary complexity.
+              - img "MVP development isometric blocks showing Idea to MVP to Growth" [ref=f2e202]
+            - generic [ref=f2e203]: IDEA · PROTOTYPE · MVP · ITERATE
+          - article [ref=f2e205]:
+            - generic [ref=f2e206]:
+              - generic [ref=f2e207]: "04"
+              - generic [aria-hidden] [ref=f2e208]: →
+            - generic [ref=f2e209]:
+              - generic [ref=f2e210]:
+                - heading "SYSTEM DESIGN" [level=3] [ref=f2e211]: SYSTEMDESIGN
+                - paragraph [ref=f2e212]: Architecture, APIs, databases, service boundaries and technical foundations.
+              - img "System design architecture layers and performance scalability" [ref=f2e214]
+            - generic [ref=f2e215]: ARCHITECTURE · APIS · SYSTEMS
+          - article [ref=f2e217]:
+            - generic [ref=f2e218]:
+              - generic [ref=f2e219]: "05"
+              - generic [aria-hidden] [ref=f2e220]: →
+            - generic [ref=f2e221]:
+              - generic [ref=f2e222]:
+                - heading "EXISTING PRODUCTS" [level=3] [ref=f2e223]: EXISTINGPRODUCTS
+                - paragraph [ref=f2e224]: Extend, improve, refactor, debug or maintain existing software.
+              - img "Codebase modernization, refactoring and software maintenance" [ref=f2e226]
+            - generic [ref=f2e227]: SUPPORT · OPTIMIZE · REFINE
+          - article [ref=f2e229]:
+            - generic [ref=f2e230]:
+              - generic [ref=f2e231]: "06"
+              - generic [aria-hidden] [ref=f2e232]: →
+            - generic [ref=f2e233]:
+              - generic [ref=f2e234]:
+                - heading "PRODUCT ENGINEERING" [level=3] [ref=f2e235]: PRODUCTENGINEERING
+                - paragraph [ref=f2e236]: Work across the product from problem definition to implementation and delivery.
+              - img "Intersection of Problem, Tech, and User creating real products" [ref=f2e238]
+            - generic [ref=f2e239]: STRATEGY · DEVELOPMENT · DELIVERY
+        - generic [ref=f2e241]:
+          - generic [ref=f2e242]:
+            - generic [ref=f2e243]: FLEXIBLE ENGAGEMENT
+            - paragraph [ref=f2e246]: MVPS · FEATURE DEVELOPMENT · TECHNICAL CONSULTATION · LONG-TERM COLLABORATION
+          - generic [ref=f2e247]:
+            - link "START A PROJECT" [ref=f2e248] [cursor=pointer]:
+              - /url: pages/contact.html
+              - generic [aria-hidden] [ref=f2e250]: →
+            - link "VIEW MY WORK" [ref=f2e251] [cursor=pointer]:
+              - /url: pages/projects.html
+          - generic [ref=f2e253]:
+            - generic [ref=f2e254]: GOOD
+            - generic [ref=f2e255]: SOFTWARE
+            - generic [ref=f2e256]: BUILDS
+            - generic [ref=f2e257]: OPPORTUNITIES
+    - region [ref=f2e258]:
+      - generic [ref=f2e259]:
+        - generic [ref=f2e260]:
+          - generic [ref=f2e261]:
+            - generic [ref=f2e262]: "[ THE PROCESS ]"
+            - heading "MORE THAN JUST CODE." [level=2] [ref=f2e263]
+          - paragraph [ref=f2e265]:
+            - generic [ref=f2e266]: //
+            - generic [ref=f2e267]: Good software starts long before implementation. Here’s how I turn ideas into real products.
+        - generic [ref=f2e269]:
+          - article [ref=f2e270]:
+            - generic [ref=f2e271]:
+              - generic [ref=f2e272]:
+                - img "Wireframe analysis and user research cube network" [ref=f2e274]
+                - generic [ref=f2e275]:
+                  - generic [ref=f2e276]: A PROBLEM —
+                  - list [ref=f2e277]:
+                    - listitem [ref=f2e278]: IDEAS
+                    - listitem [ref=f2e279]: REQUIREMENTS
+                    - listitem [ref=f2e280]: CONSTRAINTS
+              - generic [ref=f2e282]:
+                - generic [ref=f2e283]: 01 _
+                - heading "UNDERSTAND" [level=3] [ref=f2e284]
+                - paragraph [ref=f2e285]: Understand the problem, users, requirements and constraints.
+          - article [ref=f2e286]:
+            - generic [ref=f2e287]:
+              - img "System architecture layers and technical blueprint" [ref=f2e289]
+              - generic [ref=f2e290]:
+                - generic [ref=f2e291]: — A SOLUTION
+                - list [ref=f2e292]:
+                  - listitem [ref=f2e293]: RESEARCH
+                  - listitem [ref=f2e294]: ARCHITECTURE
+                  - listitem [ref=f2e295]: PLANNING
+            - generic [ref=f2e296]:
+              - generic [ref=f2e297]: 02 _
+              - heading "DESIGN" [level=3] [ref=f2e298]
+              - paragraph [ref=f2e299]: Turn the problem into a practical technical solution.
+          - article [ref=f2e300]:
+            - generic [ref=f2e301]:
+              - img "Code editors and fullstack development panes" [ref=f2e303]
+              - generic [ref=f2e304]:
+                - generic [ref=f2e305]: — A SYSTEM
+                - list [ref=f2e306]:
+                  - listitem [ref=f2e307]: DEVELOPMENT
+                  - listitem [ref=f2e308]: INTEGRATION
+                  - listitem [ref=f2e309]: TESTING
+            - generic [ref=f2e310]:
+              - generic [ref=f2e311]: 03 _
+              - heading "BUILD" [level=3] [ref=f2e312]
+              - paragraph [ref=f2e313]: Build reliable software across backend, APIs and mobile.
+          - article [ref=f2e314]:
+            - generic [ref=f2e315]:
+              - img "Live production device with analytics chart" [ref=f2e317]
+              - generic [ref=f2e318]:
+                - generic [ref=f2e319]: — A PRODUCT
+                - list [ref=f2e320]:
+                  - listitem [ref=f2e321]: REAL USERS
+                  - listitem [ref=f2e322]: REAL IMPACT
+            - generic [ref=f2e323]:
+              - generic [ref=f2e324]: 04 _
+              - heading "SHIP" [level=3] [ref=f2e325]
+              - paragraph [ref=f2e326]: Refine, deploy and take ownership of the final product.
+        - region "Process progression milestones" [ref=f2e327]:
+          - generic [ref=f2e328]: "[ PROBLEM ]"
+          - generic [ref=f2e332]: "[ SOLUTION ]"
+          - generic [ref=f2e335]: "[ SYSTEM ]"
+          - generic [ref=f2e338]:
+            - generic [ref=f2e339]: "[ PRODUCT ]"
+            - generic [aria-hidden] [ref=f2e340]: →
+    - region [ref=f2e341]:
+      - generic [ref=f2e342]:
+        - generic [ref=f2e343]:
+          - generic [ref=f2e344]:
+            - generic [ref=f2e345]: EXPERIENCE
+            - heading "3+ YEARS OF BUILDING SOFTWARE." [level=2] [ref=f2e348]
+            - paragraph [ref=f2e349]: From backend systems to mobile apps, I've worked on real products, solved complex problems and shipped software that people use.
+          - generic "Experience philosophy" [ref=f2e350]:
+            - generic [ref=f2e351]:
+              - generic [ref=f2e352]: //
+              - generic [ref=f2e353]:
+                - generic [ref=f2e354]: REAL PROBLEMS
+                - generic [ref=f2e355]: REAL SOLUTIONS
+                - generic [ref=f2e356]: REAL IMPACT
+            - paragraph [ref=f2e358]: 3+ years of hands-on experience in building scalable systems, reliable APIs and user-facing products.
+        - generic [ref=f2e359]:
+          - article [ref=f2e360]:
+            - generic [ref=f2e361]: "01"
+            - generic [ref=f2e363]:
+              - heading "BACKEND ENGINEERING" [level=3] [ref=f2e370]: BACKENDENGINEERING
+              - paragraph [ref=f2e371]: Production backend systems, APIs, and services built for real workloads.
+            - generic [ref=f2e374]:
+              - generic [ref=f2e375]: APIs
+              - generic [ref=f2e376]: Microservices
+              - generic [ref=f2e377]: Security
+              - generic [ref=f2e378]: Scalability
+          - article [ref=f2e379]:
+            - generic [ref=f2e380]: "02"
+            - generic [ref=f2e382]:
+              - heading "API DEVELOPMENT" [level=3] [ref=f2e388]: APIDEVELOPMENT
+              - paragraph [ref=f2e389]: Designing and building reliable, well-structured APIs.
+            - generic [ref=f2e392]:
+              - generic [ref=f2e393]: REST
+              - generic [ref=f2e394]: Authentication
+              - generic [ref=f2e395]: Integrations
+              - generic [ref=f2e396]: Docs
+          - article [ref=f2e397]:
+            - generic [ref=f2e398]: "03"
+            - generic [ref=f2e400]:
+              - heading "DATABASE DESIGN" [level=3] [ref=f2e407]: DATABASEDESIGN
+              - paragraph [ref=f2e408]: Data models and databases built for scale and maintainability.
+            - generic [ref=f2e411]:
+              - generic [ref=f2e412]: PostgreSQL
+              - generic [ref=f2e413]: MySQL
+              - generic [ref=f2e414]: MongoDB
+              - generic [ref=f2e415]: Optimization
+          - article [ref=f2e416]:
+            - generic [ref=f2e417]: "04"
+            - generic [ref=f2e419]:
+              - heading "SYSTEM ARCHITECTURE" [level=3] [ref=f2e426]: SYSTEMARCHITECTURE
+              - paragraph [ref=f2e427]: Designing the technical foundation before a line of code is written.
+            - generic [ref=f2e430]:
+              - generic [ref=f2e431]: Architecture
+              - generic [ref=f2e432]: Scalability
+              - generic [ref=f2e433]: Reliability
+              - generic [ref=f2e434]: Cost
+          - article [ref=f2e435]:
+            - generic [ref=f2e436]: "05"
+            - generic [ref=f2e438]:
+              - heading "ANDROID DEVELOPMENT" [level=3] [ref=f2e442]: ANDROIDDEVELOPMENT
+              - paragraph [ref=f2e443]: Native Android apps with Kotlin and modern architecture.
+            - generic [ref=f2e446]:
+              - generic [ref=f2e447]: Kotlin
+              - generic [ref=f2e448]: Jetpack Compose
+              - generic [ref=f2e449]: MVVM
+              - generic [ref=f2e450]: Clean Arch
+          - article [ref=f2e451]:
+            - generic [ref=f2e452]: "06"
+            - generic [ref=f2e454]:
+              - heading "PRODUCT ENGINEERING" [level=3] [ref=f2e461]: PRODUCTENGINEERING
+              - paragraph [ref=f2e462]: Owning the product from requirements to delivery.
+            - generic [ref=f2e465]:
+              - generic [ref=f2e466]: MVPs
+              - generic [ref=f2e467]: Product Strategy
+              - generic [ref=f2e468]: Iteration
+              - generic [ref=f2e469]: Delivery
+        - generic [ref=f2e470]:
+          - generic [ref=f2e471]:
+            - generic [ref=f2e474]:
+              - generic [ref=f2e475]: ALWAYS
+              - generic [ref=f2e476]: LEARNING
+            - generic [ref=f2e478]: BETTER SYSTEMS. MORE USEFUL PRODUCTS.
+          - generic [ref=f2e479]:
+            - link "MORE ABOUT ME" [ref=f2e480] [cursor=pointer]:
+              - /url: pages/about.html
+              - generic [aria-hidden] [ref=f2e482]: →
+            - 'generic "Cycle: Build, Learn, Improve, Repeat" [ref=f2e484]':
+              - generic [ref=f2e485]: BUILD
+              - generic [ref=f2e486]: LEARN
+              - generic [ref=f2e487]: IMPROVE
+              - generic [ref=f2e488]: REPEAT
+    - region [ref=f2e489]:
+      - generic [ref=f2e490]:
+        - generic [ref=f2e491]:
+          - generic [ref=f2e492]:
+            - generic [ref=f2e493]: CURRENTLY EXPLORING
+            - generic [ref=f2e496]:
+              - heading "CURRENTLY EXPLORING" [level=2] [ref=f2e497]:
+                - text: CURRENTLY EXPLORING
+                - generic [aria-hidden] [ref=f2e498]: →
+              - paragraph [ref=f2e501]: Exploring new tools, frameworks and ideas to build better, faster and more meaningful products.
+          - 'generic "Cycle: Learn, Build, Improve, Repeat" [ref=f2e504]':
+            - generic [ref=f2e505]: LEARN
+            - generic [ref=f2e506]: BUILD
+            - generic [ref=f2e507]: IMPROVE
+            - generic [ref=f2e508]: REPEAT
+        - generic [ref=f2e510]:
+          - article [ref=f2e511]:
+            - generic [ref=f2e512]:
+              - generic [ref=f2e513]: "01"
+              - generic [aria-hidden] [ref=f2e516]: →
+            - generic [ref=f2e518]:
+              - heading "ANDROID DEVELOPMENT" [level=3] [ref=f2e522]: ANDROIDDEVELOPMENT
+              - paragraph [ref=f2e523]: Building native mobile experiences with modern tools and best practices.
+            - generic [ref=f2e526]:
+              - generic [ref=f2e527]: Kotlin
+              - generic [ref=f2e528]: Jetpack Compose
+              - generic [ref=f2e529]: Android SDK
+          - article [ref=f2e530]:
+            - generic [ref=f2e531]:
+              - generic [ref=f2e532]: "02"
+              - generic [aria-hidden] [ref=f2e535]: →
+            - generic [ref=f2e537]:
+              - heading "KOTLIN" [level=3] [ref=f2e543]
+              - paragraph [ref=f2e544]: A modern, expressive language for Android and beyond.
+            - generic [ref=f2e547]:
+              - generic [ref=f2e548]: Kotlin
+              - generic [ref=f2e549]: Coroutines
+              - generic [ref=f2e550]: Clean Code
+          - article [ref=f2e551]:
+            - generic [ref=f2e552]:
+              - generic [ref=f2e553]: "03"
+              - generic [aria-hidden] [ref=f2e556]: →
+            - generic [ref=f2e558]:
+              - heading "JETPACK COMPOSE" [level=3] [ref=f2e562]
+              - paragraph [ref=f2e563]: Declarative UI for Android. Beautiful, simple and powerful.
+            - generic [ref=f2e566]:
+              - generic [ref=f2e567]: Compose
+              - generic [ref=f2e568]: UI/UX
+              - generic [ref=f2e569]: Modern Android
+          - article [ref=f2e570]:
+            - generic [ref=f2e571]:
+              - generic [ref=f2e572]: "04"
+              - generic [aria-hidden] [ref=f2e575]: →
+            - generic [ref=f2e577]:
+              - heading "AI-ASSISTED DEVELOPMENT" [level=3] [ref=f2e581]: AI-ASSISTEDDEVELOPMENT
+              - paragraph [ref=f2e582]: Using AI to build better and faster without compromising quality.
+            - generic [ref=f2e585]:
+              - generic [ref=f2e586]: AI Tools
+              - generic [ref=f2e587]: Productivity
+              - generic [ref=f2e588]: Better Code
+          - article [ref=f2e589]:
+            - generic [ref=f2e590]:
+              - generic [ref=f2e591]: "05"
+              - generic [aria-hidden] [ref=f2e594]: →
+            - generic [ref=f2e596]:
+              - heading "PRODUCT ENGINEERING" [level=3] [ref=f2e603]: PRODUCTENGINEERING
+              - paragraph [ref=f2e604]: Owning outcomes, not just code. Turning ideas into real products.
+            - generic [ref=f2e607]:
+              - generic [ref=f2e608]: Strategy
+              - generic [ref=f2e609]: Execution
+              - generic [ref=f2e610]: User Focus
+          - article [ref=f2e611]:
+            - generic [ref=f2e612]:
+              - generic [ref=f2e613]: "06"
+              - generic [aria-hidden] [ref=f2e616]: →
+            - generic [ref=f2e618]:
+              - heading "MODERN SOFTWARE ARCHITECTURE" [level=3] [ref=f2e625]: MODERN SOFTWAREARCHITECTURE
+              - paragraph [ref=f2e626]: Clean, scalable and maintainable system design.
+            - generic [ref=f2e629]:
+              - generic [ref=f2e630]: System Design
+              - generic [ref=f2e631]: Scalability
+              - generic [ref=f2e632]: Best Practices
+        - generic [ref=f2e633]:
+          - generic [ref=f2e634]:
+            - generic [aria-hidden] [ref=f2e635]: //
+            - generic [ref=f2e637]:
+              - generic [ref=f2e638]: ALWAYS LEARNING,
+              - generic [ref=f2e639]: ALWAYS BUILDING.
+          - generic [ref=f2e640]: NEW TOOLS. BETTER SOLUTIONS. BIGGER POSSIBILITIES.
+          - link "VIEW MY WORK" [ref=f2e642] [cursor=pointer]:
+            - /url: pages/projects.html
+            - generic [aria-hidden] [ref=f2e644]: →
+    - region [ref=f2e645]:
+      - generic [ref=f2e646]:
+        - generic [ref=f2e647]:
+          - generic [aria-hidden] [ref=f2e648]:
+            - generic [ref=f2e649]: IDEAS
+            - generic [ref=f2e650]: PROBLEMS
+            - generic [ref=f2e651]: SOLUTIONS
+            - generic [ref=f2e652]: REAL IMPACT
+          - generic [ref=f2e653]: LET'S BUILD
+          - generic [aria-hidden] [ref=f2e656]:
+            - generic [ref=f2e657]: DISCUSS
+            - generic [ref=f2e658]: PLAN
+            - generic [ref=f2e659]: BUILD
+            - generic [ref=f2e660]: SHIP
+        - generic [ref=f2e661]:
+          - heading "GOT SOMETHING WORTH BUILDING?" [level=2] [ref=f2e662]
+          - paragraph [ref=f2e663]: Have an idea, an existing product, or a technical problem? Let's turn it into something people can actually use.
+        - generic [ref=f2e664]:
+          - 'img "Concept to Product Flow: Idea to Product" [ref=f2e667]'
+          - generic [ref=f2e668]:
+            - generic [ref=f2e669]:
+              - link "START A PROJECT" [ref=f2e670] [cursor=pointer]:
+                - /url: pages/contact.html
+                - generic [aria-hidden] [ref=f2e672]: →
+              - link "GET IN TOUCH" [ref=f2e673] [cursor=pointer]:
+                - /url: pages/contact.html
+            - generic [ref=f2e680]:
+              - generic [ref=f2e681]: SAME IDEAS.
+              - generic [ref=f2e682]: BIGGER POSSIBILITIES.
+          - 'img "Engineering System Flow: Build to Real Impact" [ref=f2e685]'
+        - generic [ref=f2e686]:
+          - generic [ref=f2e687]:
+            - generic [aria-hidden] [ref=f2e688]: //
+            - generic [ref=f2e690]:
+              - generic [ref=f2e691]: GOOD IDEAS DESERVE
+              - generic [ref=f2e692]: GREAT EXECUTION.
+          - list "Core Engineering Disciplines" [ref=f2e694]:
+            - listitem [ref=f2e695]: SOFTWARE
+            - listitem [ref=f2e696]: MOBILE APPS
+            - listitem [ref=f2e697]: APIS
+            - listitem [ref=f2e698]: SYSTEMS
+    - region [ref=f2e699]:
+      - generic [ref=f2e700]:
+        - generic [ref=f2e701]:
+          - generic [ref=f2e702]:
+            - generic [ref=f2e703]: MY APPROACH
+            - heading "I DON'T START WITH CODE." [level=2] [ref=f2e706]
+            - paragraph [ref=f2e707]: I start by understanding what needs to be solved, why it matters and what the simplest reliable solution looks like.
+          - generic [ref=f2e708]:
+            - generic [ref=f2e709]:
+              - generic [ref=f2e710]: //
+              - generic [ref=f2e711]:
+                - generic [ref=f2e712]: THOUGHTFUL
+                - generic [ref=f2e713]: ENGINEERING
+                - generic [ref=f2e714]: BETTER PRODUCTS
+            - generic [ref=f2e721]:
+              - generic [ref=f2e722]: IDEAS
+              - generic [ref=f2e723]: TO
+              - generic [ref=f2e724]: IMPACT
+        - generic [ref=f2e726]:
+          - article [ref=f2e727]:
+            - generic [ref=f2e728]:
+              - generic [ref=f2e729]:
+                - text: "01"
+                - generic [ref=f2e730]: _
+              - heading "QUESTION" [level=3] [ref=f2e731]
+              - paragraph [ref=f2e732]: Start with what needs to be solved and why it matters.
+            - generic [ref=f2e733]:
+              - img "Radar sonar question mark analysis node" [ref=f2e735]
+              - generic [ref=f2e736]:
+                - generic [ref=f2e737]: CURIOSITY
+                - generic [ref=f2e738]: ABOUT THE PROBLEM
+          - article [ref=f2e739]:
+            - generic [ref=f2e740]:
+              - generic [ref=f2e741]:
+                - generic [ref=f2e742]: CLARITY
+                - generic [ref=f2e743]: CREATES DIRECTION
+              - img "Magnifying glass inspecting coordinate grid blueprint" [ref=f2e745]
+            - generic [ref=f2e746]:
+              - generic [ref=f2e747]:
+                - text: "02"
+                - generic [ref=f2e748]: _
+              - heading "PROBLEM" [level=3] [ref=f2e749]
+              - paragraph [ref=f2e750]: Define the problem clearly before reaching for a solution.
+          - article [ref=f2e751]:
+            - generic [ref=f2e752]:
+              - generic [ref=f2e753]:
+                - text: "03"
+                - generic [ref=f2e754]: _
+              - heading "ARCHITECTURE" [level=3] [ref=f2e755]
+              - paragraph [ref=f2e756]: Design the technical approach and system boundaries.
+            - generic [ref=f2e757]:
+              - img "Four tiered glowing isometric glass architecture plates" [ref=f2e759]
+              - generic [ref=f2e760]:
+                - generic [ref=f2e761]: A SOLID PLAN
+                - generic [ref=f2e762]: REDUCES RISK
+          - article [ref=f2e763]:
+            - generic [ref=f2e764]:
+              - generic [ref=f2e765]:
+                - generic [ref=f2e766]: TURN IDEAS
+                - generic [ref=f2e767]: INTO SOMETHING REAL
+              - img "Isometric cubes with a vibrant neon illuminated core cube" [ref=f2e769]
+            - generic [ref=f2e770]:
+              - generic [ref=f2e771]:
+                - text: "04"
+                - generic [ref=f2e772]: _
+              - heading "PROTOTYPE" [level=3] [ref=f2e773]
+              - paragraph [ref=f2e774]: Validate the core idea with a working prototype.
+          - article [ref=f2e775]:
+            - generic [ref=f2e776]:
+              - generic [ref=f2e777]:
+                - text: "05"
+                - generic [ref=f2e778]: _
+              - heading "BUILD" [level=3] [ref=f2e779]
+              - paragraph [ref=f2e780]: Build reliable software across backend, APIs and mobile.
+            - generic [ref=f2e781]:
+              - img "Isometric dark development window with illuminated neon code brackets" [ref=f2e783]
+              - generic [ref=f2e784]:
+                - generic [ref=f2e785]: CODE WITH PURPOSE
+                - generic [ref=f2e786]: NOT JUST FEATURES
+          - article [ref=f2e787]:
+            - generic [ref=f2e788]:
+              - generic [ref=f2e789]:
+                - generic [ref=f2e790]: REAL USERS
+                - generic [ref=f2e791]: REAL IMPACT
+              - img "Glowing neon paper plane cutting through technical orbital coordinates" [ref=f2e793]
+            - generic [ref=f2e794]:
+              - generic [ref=f2e795]:
+                - text: "06"
+                - generic [ref=f2e796]: _
+              - heading "SHIP" [level=3] [ref=f2e797]
+              - paragraph [ref=f2e798]: Refine, deploy and take ownership of the final product.
+        - generic [ref=f2e799]:
+          - generic [ref=f2e800]:
+            - generic [ref=f2e801]: "| // |"
+            - generic [ref=f2e802]: BETTER QUESTIONS. CLEARER SOLUTIONS. MORE USEFUL PRODUCTS.
+          - generic [ref=f2e803]: "[ 01 - 06 ]"
+    - region [ref=f2e804]:
+      - generic [ref=f2e805]:
+        - generic [ref=f2e806]:
+          - generic [ref=f2e807]:
+            - generic [ref=f2e808]: MY MINDSET
+            - heading "HOW I THINK ABOUT SOFTWARE." [level=2] [ref=f2e811]
+          - generic [aria-hidden] [ref=f2e812]:
+            - generic [ref=f2e813]:
+              - generic [ref=f2e814]: //
+              - generic [ref=f2e815]:
+                - generic [ref=f2e816]: BETTER
+                - generic [ref=f2e817]: THINKING
+                - generic [ref=f2e818]: BUILDS
+                - generic [ref=f2e819]: BETTER
+                - generic [ref=f2e820]: SOFTWARE
+            - generic [ref=f2e822]:
+              - generic [ref=f2e823]: IDEAS
+              - generic [ref=f2e824]: SYSTEMS
+              - generic [ref=f2e825]: PEOPLE
+              - generic [ref=f2e826]: IMPACT
+        - generic [ref=f2e828]:
+          - article [ref=f2e829]:
+            - generic [ref=f2e830]: "01"
+            - img "Isometric diagram showing users, constraints, goals, and real problem discs" [ref=f2e835]
+            - generic [ref=f2e836]:
+              - generic [ref=f2e837]: START HERE
+              - heading "UNDERSTAND BEFORE BUILDING." [level=3] [ref=f2e838]
+              - paragraph [ref=f2e839]: Good engineering starts with understanding the problem.
+              - generic [ref=f2e840]:
+                - generic [ref=f2e841]: USERS
+                - generic [ref=f2e842]: ·
+                - generic [ref=f2e843]: CONTEXT
+                - generic [ref=f2e844]: ·
+                - generic [ref=f2e845]: REAL NEEDS
+                - generic [ref=f2e846]: ·
+                - generic [ref=f2e847]: RIGHT QUESTIONS
+          - article [ref=f2e848]:
+            - generic [ref=f2e849]: "02"
+            - img "Isometric cube wireframe with glowing core illustrating systemic problem-solving" [ref=f2e854]
+            - generic [ref=f2e855]:
+              - generic [ref=f2e856]: SOLVE SMARTER
+              - heading "COMPLEXITY SHOULD SOLVE A REAL PROBLEM." [level=3] [ref=f2e857]
+              - paragraph [ref=f2e858]: Architecture should solve real problems, not create impressive diagrams.
+              - generic [ref=f2e859]:
+                - generic [ref=f2e860]: CLARITY
+                - generic [ref=f2e861]: ·
+                - generic [ref=f2e862]: SIMPLICITY
+                - generic [ref=f2e863]: ·
+                - generic [ref=f2e864]: PURPOSE
+                - generic [ref=f2e865]: ·
+                - generic [ref=f2e866]: TRADE-OFFS
+          - article [ref=f2e867]:
+            - generic [ref=f2e868]: "03"
+            - img "Four-layer stacked isometric architectural plates" [ref=f2e873]
+            - generic [ref=f2e874]:
+              - generic [ref=f2e875]: BUILD WITH PURPOSE
+              - heading "ARCHITECTURE SHOULD SERVE THE PRODUCT." [level=3] [ref=f2e876]
+              - paragraph [ref=f2e877]: Code is only meaningful when it helps solve the problem it was built for.
+              - generic [ref=f2e878]:
+                - generic [ref=f2e879]: PRAGMATIC
+                - generic [ref=f2e880]: ·
+                - generic [ref=f2e881]: SCALABLE
+                - generic [ref=f2e882]: ·
+                - generic [ref=f2e883]: MAINTAINABLE
+                - generic [ref=f2e884]: ·
+                - generic [ref=f2e885]: BUSINESS VALUE
+          - article [ref=f2e886]:
+            - generic [ref=f2e887]: "04"
+            - img "User avatar radar circle with useful, reliable, accessible, delightful markers" [ref=f2e892]
+            - generic [ref=f2e893]:
+              - generic [ref=f2e894]: PEOPLE FIRST
+              - heading "GOOD SOFTWARE IS SOFTWARE PEOPLE CAN ACTUALLY USE." [level=3] [ref=f2e895]
+              - paragraph [ref=f2e896]: The measure of good software is whether people actually use it.
+              - generic [ref=f2e897]:
+                - generic [ref=f2e898]: USABILITY
+                - generic [ref=f2e899]: ·
+                - generic [ref=f2e900]: RELIABILITY
+                - generic [ref=f2e901]: ·
+                - generic [ref=f2e902]: REAL IMPACT
+                - generic [ref=f2e903]: ·
+                - generic [ref=f2e904]: HAPPY USERS
+          - article [ref=f2e905]:
+            - generic [ref=f2e906]: "05"
+            - img "Growth curve illustrating learn, build, improve, repeat cycle" [ref=f2e911]
+            - generic [ref=f2e912]:
+              - generic [ref=f2e913]: STAY CURIOUS
+              - heading "KEEP LEARNING. KEEP BUILDING." [level=3] [ref=f2e914]
+              - paragraph [ref=f2e915]: Technology changes quickly. Strong engineering fundamentals matter longer.
+              - generic [ref=f2e916]:
+                - generic [ref=f2e917]: CURIOSITY
+                - generic [ref=f2e918]: ·
+                - generic [ref=f2e919]: PRACTICE
+                - generic [ref=f2e920]: ·
+                - generic [ref=f2e921]: ADAPT
+                - generic [ref=f2e922]: ·
+                - generic [ref=f2e923]: LONG-TERM THINKING
+        - generic [ref=f2e924]:
+          - generic [ref=f2e925]:
+            - generic [ref=f2e926]: "| // |"
+            - generic [ref=f2e927]:
+              - generic [ref=f2e928]: SAME THINKING.
+              - generic [ref=f2e929]: BETTER SOFTWARE.
+          - generic [ref=f2e930]: "[ 01 - 05 ]"
+  - contentinfo [ref=f2e931]:
+    - generic [ref=f2e932]:
+      - generic [ref=f2e933]:
+        - generic [ref=f2e934]:
+          - generic [ref=f2e935]: "[ BUILD • LEARN • SHIP ]"
+          - heading "Good Software Matters." [level=3] [ref=f2e936]: GoodSoftwareMatters.
+          - paragraph [ref=f2e937]: Ideas to real products. One build at a time.
+          - generic [ref=f2e938]:
+            - link "GitHub" [ref=f2e939] [cursor=pointer]:
+              - /url: https://github.com/ankitkumar
+            - link "LinkedIn" [ref=f2e942] [cursor=pointer]:
+              - /url: https://linkedin.com/in/ankitkumar
+        - generic [ref=f2e945]:
+          - heading "NAVIGATE" [level=4] [ref=f2e946]
+          - list [ref=f2e947]:
+            - listitem [ref=f2e948]:
+              - link "Work →" [ref=f2e949] [cursor=pointer]:
+                - /url: pages/projects.html
+                - generic [ref=f2e950]: Work
+                - generic [ref=f2e951]: →
+            - listitem [ref=f2e952]:
+              - link "Services →" [ref=f2e953] [cursor=pointer]:
+                - /url: pages/services.html
+                - generic [ref=f2e954]: Services
+                - generic [ref=f2e955]: →
+            - listitem [ref=f2e956]:
+              - link "About →" [ref=f2e957] [cursor=pointer]:
+                - /url: pages/about.html
+                - generic [ref=f2e958]: About
+                - generic [ref=f2e959]: →
+            - listitem [ref=f2e960]:
+              - link "Contact →" [ref=f2e961] [cursor=pointer]:
+                - /url: pages/contact.html
+                - generic [ref=f2e962]: Contact
+                - generic [ref=f2e963]: →
+        - generic [ref=f2e964]:
+          - generic [ref=f2e965]:
+            - generic [ref=f2e966]: LET'S BUILD
+            - heading "Software engineer building reliable systems and useful products." [level=4] [ref=f2e969]: Software engineer building reliablesystems and useful products.
+            - paragraph [ref=f2e970]: Available for freelance projects — from asingle backend to a complete product.
+            - link "START A PROJECT" [ref=f2e971] [cursor=pointer]:
+              - /url: pages/contact.html
+          - generic [aria-hidden]:
+            - generic:
+              - generic: IDEAS
+              - generic: CODE
+              - generic: PEOPLE
+              - generic: IMPACT
+      - generic [ref=f2e975]:
+        - generic [ref=f2e976]: © 2026 Jhon Smith
+        - generic [ref=f2e977]: // SAME IDEAS. BIGGER POSSIBILITIES.
+        - generic [ref=f2e978]:
+          - generic [ref=f2e979]: MADE WITH
+          - generic [ref=f2e980]: </>
+          - generic [ref=f2e981]: AND

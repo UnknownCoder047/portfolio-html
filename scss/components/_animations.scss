@@ -1,0 +1,707 @@
+// -----------------------------------------------------------------------------
+// COMPONENTS: ANIMATIONS (Pattern 1: The Technical Fade-Up)
+// Zero-lag, GPU-composited, Progressive Enhancement + Smooth Scroll
+// -----------------------------------------------------------------------------
+
+// When JavaScript activates scroll-reveal, html receives .reveal-ready.
+// If JS is disabled or fails, elements remain 100% visible (opacity: 1) for SEO & accessibility.
+html.reveal-ready {
+  .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(38px);
+    transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+
+    &.is-revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  // Animation variants (if needed)
+  .reveal--fade {
+    transform: none;
+
+    &.is-revealed {
+      transform: none;
+    }
+  }
+
+  .reveal--scale {
+    transform: scale(0.94) translateY(24px);
+
+    &.is-revealed {
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  // Stagger Delays for rhythmic, natural cascading sequence
+  [data-reveal-delay="50"]  { transition-delay: 50ms; }
+  [data-reveal-delay="100"] { transition-delay: 120ms; }
+  [data-reveal-delay="150"] { transition-delay: 180ms; }
+  [data-reveal-delay="200"] { transition-delay: 240ms; }
+  [data-reveal-delay="250"] { transition-delay: 300ms; }
+  [data-reveal-delay="300"] { transition-delay: 360ms; }
+  [data-reveal-delay="350"] { transition-delay: 420ms; }
+  [data-reveal-delay="400"] { transition-delay: 480ms; }
+  [data-reveal-delay="500"] { transition-delay: 600ms; }
+  [data-reveal-delay="600"] { transition-delay: 720ms; }
+
+  // ---------------------------------------------------------------------------
+  // PATTERN 2: THE CASCADE / STAGGER GRID (Cards, Grids & Pills)
+  // ---------------------------------------------------------------------------
+  .reveal-cascade {
+    // Case A: Children are individually .reveal-on-scroll
+    > .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(34px) scale(0.985);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+
+      &.is-revealed {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    // Case B: Container itself receives .is-revealed, cascading non-reveal-on-scroll children
+    > *:not(.reveal-on-scroll) {
+      opacity: 0;
+      transform: translateY(34px) scale(0.985);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    &.is-revealed > *:not(.reveal-on-scroll) {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    // Sequential cascade on desktop (min-width: 992px)
+    @media (min-width: 992px) {
+      > * {
+        &:nth-child(1) { transition-delay: 0ms; }
+        &:nth-child(2) { transition-delay: 90ms; }
+        &:nth-child(3) { transition-delay: 180ms; }
+        &:nth-child(4) { transition-delay: 270ms; }
+        &:nth-child(5) { transition-delay: 360ms; }
+        &:nth-child(6) { transition-delay: 450ms; }
+        &:nth-child(7) { transition-delay: 540ms; }
+        &:nth-child(8) { transition-delay: 630ms; }
+      }
+
+      // 3-Column Row-Aware Reset: Rows cascade independently across
+      &.cascade--3col > * {
+        &:nth-child(3n + 1) { transition-delay: 0ms; }
+        &:nth-child(3n + 2) { transition-delay: 100ms; }
+        &:nth-child(3n + 3) { transition-delay: 200ms; }
+      }
+
+      // 4-Column Row-Aware Reset: For 4-step timelines & flows
+      &.cascade--4col > * {
+        &:nth-child(4n + 1) { transition-delay: 0ms; }
+        &:nth-child(4n + 2) { transition-delay: 90ms; }
+        &:nth-child(4n + 3) { transition-delay: 180ms; }
+        &:nth-child(4n + 4) { transition-delay: 270ms; }
+      }
+
+      // 2-Column Row-Aware Reset
+      &.cascade--2col > * {
+        &:nth-child(2n + 1) { transition-delay: 0ms; }
+        &:nth-child(2n + 2) { transition-delay: 110ms; }
+      }
+    }
+
+    // Tablet: 2-Column Stagger (768px to 991px)
+    @media (min-width: 768px) and (max-width: 991px) {
+      > * {
+        &:nth-child(2n + 1) { transition-delay: 0ms; }
+        &:nth-child(2n + 2) { transition-delay: 100ms; }
+      }
+    }
+
+    // Mobile: 1-Column Snappy Stagger (max-width: 767px)
+    @media (max-width: 767px) {
+      > * {
+        &:nth-child(1) { transition-delay: 0ms; }
+        &:nth-child(2) { transition-delay: 50ms; }
+        &:nth-child(n + 3) { transition-delay: 50ms; }
+      }
+    }
+  }
+
+  // Micro-cascade for Tag Pills & Badges (inside revealed cards or standalone)
+  .reveal-cascade-pills {
+    > *,
+    .tag-pill,
+    .hero__role-tag,
+    .meta-tags li {
+      opacity: 0;
+      transform: translateY(10px) scale(0.95);
+      transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    &.is-revealed,
+    .is-revealed & {
+      > *,
+      .tag-pill,
+      .hero__role-tag,
+      .meta-tags li {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+
+      > *:nth-child(1), .tag-pill:nth-child(1), .hero__role-tag:nth-child(1), .meta-tags li:nth-child(1) { transition-delay: 100ms; }
+      > *:nth-child(2), .tag-pill:nth-child(2), .hero__role-tag:nth-child(2), .meta-tags li:nth-child(2) { transition-delay: 160ms; }
+      > *:nth-child(3), .tag-pill:nth-child(3), .hero__role-tag:nth-child(3), .meta-tags li:nth-child(3) { transition-delay: 220ms; }
+      > *:nth-child(4), .tag-pill:nth-child(4), .hero__role-tag:nth-child(4), .meta-tags li:nth-child(4) { transition-delay: 280ms; }
+      > *:nth-child(5), .tag-pill:nth-child(5), .hero__role-tag:nth-child(5), .meta-tags li:nth-child(5) { transition-delay: 340ms; }
+      > *:nth-child(6), .tag-pill:nth-child(6), .hero__role-tag:nth-child(6), .meta-tags li:nth-child(6) { transition-delay: 400ms; }
+    }
+  }
+  // ---------------------------------------------------------------------------
+  // PATTERN 3: THE TECHNICAL LINE DRAW (Horizontal Line Expansion)
+  // Zero-lag, GPU compositor, scaleX(0) -> scaleX(1) from left to right
+  // ---------------------------------------------------------------------------
+  .line-draw,
+  .tech-line-draw,
+  [data-line-draw] {
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.95s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+
+    &.is-revealed,
+    &.is-drawn,
+    .is-revealed & {
+      transform: scaleX(1);
+    }
+  }
+
+  // Section Dividers (Blueprint Rule Lines)
+  .section-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.12) 20%, rgba(163, 230, 53, 0.35) 50%, rgba(255, 255, 255, 0.12) 80%, transparent 100%);
+    position: relative;
+    overflow: hidden;
+
+    &.line-draw {
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 1.15s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: transform;
+
+      &.is-revealed,
+      &.is-drawn,
+      .is-revealed & {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  // Specific Section Dividers / Rules Expand from Left to Right
+  .hero__footer::before,
+  .approach__bottom::before,
+  .cta__bottom-bar::before,
+  .footer::before,
+  .footer__bottom::before,
+  .about-stats::before,
+  .service-detail__highlights::before {
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 1.05s cubic-bezier(0.16, 1, 0.3, 1) 0.15s;
+    will-change: transform;
+  }
+
+  .hero__footer.is-revealed::before,
+  .is-revealed .hero__footer::before,
+  .approach__bottom.is-revealed::before,
+  .is-revealed .approach__bottom::before,
+  .cta__bottom-bar.is-revealed::before,
+  .is-revealed .cta__bottom-bar::before,
+  .footer.is-revealed::before,
+  .is-revealed .footer::before,
+  .footer__bottom.is-revealed::before,
+  .is-revealed .footer__bottom::before,
+  .about-stats.is-revealed::before,
+  .is-revealed .about-stats::before,
+  .service-detail__highlights.is-revealed::before,
+  .is-revealed .service-detail__highlights::before {
+    transform: scaleX(1);
+  }
+
+  // Cycle Divider Lines (LEARN / BUILD / IMPROVE / REPEAT)
+  .exploring__cycle-line,
+  .experience__cycle-line,
+  .projects-hero__cycle-line,
+  .experience__meta-line,
+  .approach__philosophy-line,
+  .mindset__meta-underline {
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.25s;
+    will-change: transform;
+
+    &.is-revealed,
+    &.is-drawn,
+    .is-revealed &,
+    .is-revealed + & {
+      transform: scaleX(1);
+    }
+  }
+
+
+  // Technical Card Top Borders Expand Horizontally (Left to Right)
+  .card::before,
+  .work-card::before,
+  .service-card::before,
+  .service-item-card::before,
+  .project-item-card::before,
+  .process-card::before,
+  .approach-card::before,
+  .about-card::before,
+  .contact-card::before,
+  .contact-form-card::before,
+  .exp-card::after,
+  .exploring-card::after {
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+  }
+
+  .card.is-revealed::before,
+  .is-revealed .card::before,
+  .work-card.is-revealed::before,
+  .is-revealed .work-card::before,
+  .service-card.is-revealed::before,
+  .is-revealed .service-card::before,
+  .service-item-card.is-revealed::before,
+  .is-revealed .service-item-card::before,
+  .project-item-card.is-revealed::before,
+  .is-revealed .project-item-card::before,
+  .process-card.is-revealed::before,
+  .is-revealed .process-card::before,
+  .approach-card.is-revealed::before,
+  .is-revealed .approach-card::before,
+  .about-card.is-revealed::before,
+  .is-revealed .about-card::before,
+  .contact-card.is-revealed::before,
+  .is-revealed .contact-card::before,
+  .contact-form-card.is-revealed::before,
+  .is-revealed .contact-form-card::before,
+  .exp-card.is-revealed::after,
+  .is-revealed .exp-card::after,
+  .exploring-card.is-revealed::after,
+  .is-revealed .exploring-card::after {
+    transform: scaleX(1);
+  }
+
+  // Row-aware cascade delays for card top borders on desktop
+  @media (min-width: 992px) {
+    .reveal-cascade {
+      > *:nth-child(1)::before, > *:nth-child(1)::after { transition-delay: 40ms; }
+      > *:nth-child(2)::before, > *:nth-child(2)::after { transition-delay: 130ms; }
+      > *:nth-child(3)::before, > *:nth-child(3)::after { transition-delay: 220ms; }
+      > *:nth-child(4)::before, > *:nth-child(4)::after { transition-delay: 310ms; }
+      > *:nth-child(5)::before, > *:nth-child(5)::after { transition-delay: 400ms; }
+      > *:nth-child(6)::before, > *:nth-child(6)::after { transition-delay: 490ms; }
+
+      &.cascade--3col > * {
+        &:nth-child(3n + 1)::before, &:nth-child(3n + 1)::after { transition-delay: 40ms; }
+        &:nth-child(3n + 2)::before, &:nth-child(3n + 2)::after { transition-delay: 140ms; }
+        &:nth-child(3n + 3)::before, &:nth-child(3n + 3)::after { transition-delay: 240ms; }
+      }
+
+      &.cascade--4col > * {
+        &:nth-child(4n + 1)::before, &:nth-child(4n + 1)::after { transition-delay: 40ms; }
+        &:nth-child(4n + 2)::before, &:nth-child(4n + 2)::after { transition-delay: 130ms; }
+        &:nth-child(4n + 3)::before, &:nth-child(4n + 3)::after { transition-delay: 220ms; }
+        &:nth-child(4n + 4)::before, &:nth-child(4n + 4)::after { transition-delay: 310ms; }
+      }
+    }
+  }
+
+  // Stagger delays for manual markup
+  [data-line-delay="50"]  { transition-delay: 50ms; }
+  [data-line-delay="100"] { transition-delay: 100ms; }
+  [data-line-delay="150"] { transition-delay: 150ms; }
+  [data-line-delay="200"] { transition-delay: 200ms; }
+  [data-line-delay="300"] { transition-delay: 300ms; }
+  [data-line-delay="400"] { transition-delay: 400ms; }
+}
+
+// -----------------------------------------------------------------------------
+// PATTERN 3: GLOBAL CARD TOP BORDER ACCENTS (Base styles)
+// -----------------------------------------------------------------------------
+.work-card,
+.service-card,
+.service-item-card,
+.project-item-card,
+.process-card,
+.approach-card,
+.about-card,
+.contact-card,
+.contact-form-card {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1.5px;
+    background: linear-gradient(90deg, rgba(163, 230, 53, 0.75) 0%, rgba(255, 255, 255, 0.18) 50%, transparent 100%);
+    pointer-events: none;
+    z-index: 4;
+  }
+}
+
+.exp-card,
+.exploring-card {
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1.5px;
+    background: linear-gradient(90deg, rgba(163, 230, 53, 0.75) 0%, rgba(255, 255, 255, 0.18) 50%, transparent 100%);
+    pointer-events: none;
+    z-index: 4;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// PATTERN 4: AMBIENT 3D GRAPHIC PARALLAX DRIFT (Subtle Floating)
+// -----------------------------------------------------------------------------
+.parallax-drift {
+  transform: translate3d(0, var(--parallax-y, 0px), 0);
+  will-change: transform;
+}
+
+.ambient-float {
+  animation: ambientFloat 6.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.ambient-float-alt {
+  animation: ambientFloatAlt 7.2s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes ambientFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-22px) rotate(0.35deg);
+  }
+}
+
+@keyframes ambientFloatAlt {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(-0.4deg);
+  }
+}
+
+// -----------------------------------------------------------------------------
+// PATTERN 5: BACK & FORTH ARROW OSCILLATION (Horizontal & Vertical Motion)
+// -----------------------------------------------------------------------------
+
+// Horizontal arrow oscillation (right: →)
+@keyframes arrowOscillateX {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+// Amplified & faster oscillation on hover (right: →)
+@keyframes arrowOscillateXHover {
+  0%, 100% {
+    transform: translateX(2px);
+  }
+  50% {
+    transform: translateX(7px);
+  }
+}
+
+// Horizontal arrow oscillation (left: ←)
+@keyframes arrowOscillateXLeft {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-4px);
+  }
+}
+
+// Amplified & faster oscillation on hover (left: ←)
+@keyframes arrowOscillateXLeftHover {
+  0%, 100% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(-7px);
+  }
+}
+
+// Vertical arrow oscillation (down: ↓)
+@keyframes arrowOscillateY {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+// Amplified & faster oscillation on hover (down: ↓)
+@keyframes arrowOscillateYHover {
+  0%, 100% {
+    transform: translateY(2px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+// Vertical arrow oscillation (up: ↑)
+@keyframes arrowOscillateYUp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+// Amplified & faster oscillation on hover (up: ↑)
+@keyframes arrowOscillateYUpHover {
+  0%, 100% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+// Base arrow display & GPU compositing
+.arrow,
+.btn-arrow,
+.btn-talk__arrow,
+.cta-arrow,
+.banner-arrow,
+.service-card__arrow,
+.service-item-card__arrow,
+.exploring-card__arrow,
+.process__track-arrow,
+.scroll-arrow,
+.scroll-top-btn__icon,
+.arrow-icon,
+[data-arrow] {
+  display: inline-block;
+  will-change: transform;
+}
+
+// 1. Horizontal Arrows (Default: Pointing Right)
+.btn-arrow,
+.btn-talk__arrow,
+.cta-arrow,
+.banner-arrow,
+.service-card__arrow,
+.service-item-card__arrow,
+.exploring-card__arrow,
+.process__track-arrow,
+.arrow,
+.arrow--x,
+.arrow--right,
+.footer__cta-btn .arrow-icon,
+[data-arrow="horizontal"],
+[data-arrow="right"] {
+  animation: arrowOscillateX 1.8s ease-in-out infinite;
+}
+
+// 2. Horizontal Arrows (Pointing Left)
+.arrow--left,
+.service-detail__back .arrow,
+.case-hero__back .arrow,
+[data-arrow="left"] {
+  animation: arrowOscillateXLeft 1.8s ease-in-out infinite;
+}
+
+// 3. Vertical Arrows (Pointing Down)
+.scroll-arrow,
+.arrow--down,
+.arrow--y,
+[data-arrow="vertical"],
+[data-arrow="down"] {
+  animation: arrowOscillateY 1.8s ease-in-out infinite;
+}
+
+// 4. Vertical Arrows (Pointing Up)
+.scroll-top-btn__icon,
+.arrow--up,
+[data-arrow="up"] {
+  animation: arrowOscillateYUp 1.8s ease-in-out infinite;
+}
+
+// Interactive Hover: Accelerated & amplified back & forth feedback
+a:hover,
+button:hover,
+.btn:hover,
+.btn-talk:hover,
+.card:hover,
+.service-card:hover,
+.service-item-card:hover,
+.exploring-card:hover,
+.work-card:hover,
+.footer__cta-btn:hover {
+  .btn-arrow,
+  .btn-talk__arrow,
+  .cta-arrow,
+  .banner-arrow,
+  .service-card__arrow,
+  .service-item-card__arrow,
+  .exploring-card__arrow,
+  .process__track-arrow,
+  .arrow,
+  .arrow--x,
+  .arrow--right,
+  .arrow-icon,
+  [data-arrow="horizontal"],
+  [data-arrow="right"] {
+    animation-name: arrowOscillateXHover;
+    animation-duration: 0.8s;
+  }
+
+  .arrow--left,
+  .service-detail__back .arrow,
+  .case-hero__back .arrow,
+  [data-arrow="left"] {
+    animation-name: arrowOscillateXLeftHover;
+    animation-duration: 0.8s;
+  }
+
+  .scroll-arrow,
+  .arrow--down,
+  .arrow--y,
+  [data-arrow="vertical"],
+  [data-arrow="down"] {
+    animation-name: arrowOscillateYHover;
+    animation-duration: 0.8s;
+  }
+
+  .scroll-top-btn__icon,
+  .arrow--up,
+  [data-arrow="up"] {
+    animation-name: arrowOscillateYUpHover;
+    animation-duration: 0.8s;
+  }
+}
+
+// Respect user preference for reduced motion
+@media (prefers-reduced-motion: reduce) {
+  html.reveal-ready {
+    .reveal-on-scroll,
+    .reveal-cascade > *,
+    .reveal-cascade > .reveal-child,
+    .reveal-cascade-pills > *,
+    .reveal-cascade-pills .tag-pill,
+    .reveal-cascade-pills .hero__role-tag,
+    .reveal-cascade-pills .meta-tags li,
+    .line-draw,
+    .tech-line-draw,
+    [data-line-draw],
+    .section-divider.line-draw,
+    .hero__footer::before,
+    .approach__bottom::before,
+    .cta__bottom-bar::before,
+    .footer::before,
+    .footer__bottom::before,
+    .about-stats::before,
+    .service-detail__highlights::before,
+    .exploring__cycle-line,
+    .experience__cycle-line,
+    .projects-hero__cycle-line,
+    .experience__meta-line,
+    .approach__philosophy-line,
+    .mindset__meta-underline,
+    .card::before,
+    .work-card::before,
+    .service-card::before,
+    .service-item-card::before,
+    .project-item-card::before,
+    .process-card::before,
+    .approach-card::before,
+    .about-card::before,
+    .contact-card::before,
+    .contact-form-card::before,
+    .exp-card::after,
+    .exploring-card::after {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+  }
+
+  .parallax-drift {
+    transform: none !important;
+  }
+
+  .ambient-float,
+  .ambient-float-alt {
+    animation: none !important;
+  }
+
+  .arrow,
+  .btn-arrow,
+  .btn-talk__arrow,
+  .cta-arrow,
+  .banner-arrow,
+  .service-card__arrow,
+  .service-item-card__arrow,
+  .exploring-card__arrow,
+  .process__track-arrow,
+  .scroll-arrow,
+  .scroll-top-btn__icon,
+  .arrow-icon,
+  [data-arrow] {
+    animation: none !important;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// LENIS SMOOTH SCROLLING STYLES
+// -----------------------------------------------------------------------------
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}

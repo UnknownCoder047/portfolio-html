@@ -1,0 +1,497 @@
+// -----------------------------------------------------------------------------
+// PROCESS SECTION INTERACTIVE ANIMATION CONCEPTS LAB
+// Pure SCSS for process-concepts.html
+// -----------------------------------------------------------------------------
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// Lab Header & Navigation
+.concept-lab {
+  position: relative;
+  z-index: 10;
+  
+  &__nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(7, 9, 8, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 14px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+
+    @include max-md {
+      padding: 12px 16px;
+    }
+  }
+
+  &__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #94a3b8;
+    text-decoration: none;
+    font-family: $font-mono;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 16px;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.03);
+    color: #cbd5e1;
+    font-family: $font-mono;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all $transition-fast;
+
+    &:hover {
+      border-color: rgba($color-accent, 0.6);
+      background: rgba($color-accent, 0.12);
+      color: $color-accent;
+      box-shadow: 0 0 14px rgba($color-accent, 0.3);
+    }
+
+    &--combo {
+      border-color: rgba($color-accent, 0.5);
+      background: rgba($color-accent, 0.1);
+      color: $color-accent;
+      font-weight: 700;
+      box-shadow: 0 0 10px rgba($color-accent, 0.15);
+    }
+  }
+
+  &__section {
+    padding: 60px 0 90px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.12);
+    position: relative;
+  }
+
+  &__banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 32px;
+    padding: 20px 24px;
+    background: rgba(13, 17, 15, 0.85);
+    border: 1px solid rgba(163, 230, 53, 0.25);
+    border-left: 4px solid $color-accent;
+    border-radius: 8px;
+    backdrop-filter: blur(12px);
+
+    @include max-md {
+      flex-direction: column;
+      gap: 12px;
+      padding: 16px;
+    }
+  }
+
+  &__tag {
+    display: inline-block;
+    font-family: $font-mono;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: $color-accent;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  &__title {
+    font-family: $font-sans;
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+  }
+
+  &__desc {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 800px;
+  }
+
+  &__meta {
+    font-family: $font-mono;
+    font-size: 12px;
+    color: #64748b;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// CONCEPT 1: HOLOGRAPHIC FLOATING & AMBIENT BREATHING FOR 3D VISUALS
+// -----------------------------------------------------------------------------
+.concept-1 {
+  .process-card--1 .process-card__visual {
+    animation: conceptFloat1 5.4s ease-in-out infinite;
+  }
+  .process-card--2 .process-card__visual {
+    animation: conceptFloat2 6.2s ease-in-out infinite 0.9s;
+  }
+  .process-card--3 .process-card__visual {
+    animation: conceptFloat3 5.8s ease-in-out infinite 1.7s;
+  }
+  .process-card--4 .process-card__visual {
+    animation: conceptFloat4 6.6s ease-in-out infinite 2.5s;
+  }
+
+  .process-card:hover .process-card__visual {
+    animation-play-state: paused;
+    transform: translateY(-12px) scale(1.04);
+    filter: drop-shadow(0 0 32px rgba($color-accent, 0.6));
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+}
+
+@keyframes conceptFloat1 {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+    filter: drop-shadow(0 0 12px rgba(163, 230, 53, 0.18));
+  }
+  50% {
+    transform: translateY(-10px) rotate(-0.6deg);
+    filter: drop-shadow(0 0 28px rgba(163, 230, 53, 0.48));
+  }
+}
+
+@keyframes conceptFloat2 {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+    filter: drop-shadow(0 0 14px rgba(163, 230, 53, 0.2));
+  }
+  50% {
+    transform: translateY(-11px) rotate(0.6deg);
+    filter: drop-shadow(0 0 32px rgba(163, 230, 53, 0.52));
+  }
+}
+
+@keyframes conceptFloat3 {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+    filter: drop-shadow(0 0 12px rgba(163, 230, 53, 0.18));
+  }
+  50% {
+    transform: translateY(-9px) rotate(-0.5deg);
+    filter: drop-shadow(0 0 28px rgba(163, 230, 53, 0.48));
+  }
+}
+
+@keyframes conceptFloat4 {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+    filter: drop-shadow(0 0 16px rgba(163, 230, 53, 0.22));
+  }
+  50% {
+    transform: translateY(-12px) rotate(0.6deg);
+    filter: drop-shadow(0 0 36px rgba(163, 230, 53, 0.58));
+  }
+}
+
+// -----------------------------------------------------------------------------
+// CONCEPT 2: FIBER-OPTIC ENERGY PULSE ALONG THE CURVED WAVE SPLINE (SEAMLESS CONTINUOUS LOOP)
+// -----------------------------------------------------------------------------
+.concept-2 {
+  .process__spline-pulse-aura {
+    stroke: rgba(163, 230, 53, 0.65);
+    stroke-width: 6px;
+    stroke-linecap: round;
+    stroke-dasharray: 140 1055;
+    fill: none;
+    animation: seamlessSplineFlow 3.6s linear infinite;
+    filter: drop-shadow(0 0 10px rgba(163, 230, 53, 0.95)) drop-shadow(0 0 20px rgba(163, 230, 53, 0.6));
+    pointer-events: none;
+    will-change: stroke-dashoffset;
+  }
+
+  .process__spline-pulse {
+    stroke-dasharray: 100 1095;
+    animation: seamlessSplineFlowCore 3.6s linear infinite;
+    stroke: #ffffff;
+    stroke-width: 2.5px;
+    filter: drop-shadow(0 0 4px #a3e635);
+    stroke-linecap: round;
+    pointer-events: none;
+    will-change: stroke-dashoffset;
+  }
+
+  .process__wave-photon {
+    display: none;
+  }
+}
+
+@keyframes splineEnergyFlow {
+  0% {
+    stroke-dashoffset: 1400;
+    opacity: 0;
+  }
+  4% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -120;
+    opacity: 0;
+  }
+}
+
+@keyframes photonTravel {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  4% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  94% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+    transform: scale(0.4);
+  }
+}
+
+// -----------------------------------------------------------------------------
+// CONCEPT 3: CONCENTRIC RADAR / SONAR NODE RINGS
+// -----------------------------------------------------------------------------
+.concept-3 {
+  .process-card__visual {
+    animation: none !important;
+  }
+
+  .process__node-ping {
+    transform-box: fill-box;
+    transform-origin: center;
+    pointer-events: none;
+
+    &--1 {
+      animation: sonarRipple 3.6s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+    }
+    &--2 {
+      animation: sonarRipple 3.6s cubic-bezier(0.1, 0.8, 0.3, 1) infinite 0.9s;
+    }
+    &--3 {
+      animation: sonarRipple 3.6s cubic-bezier(0.1, 0.8, 0.3, 1) infinite 1.8s;
+    }
+    &--4 {
+      animation: sonarRipple 3.6s cubic-bezier(0.1, 0.8, 0.3, 1) infinite 2.7s;
+    }
+  }
+}
+
+@keyframes sonarRipple {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.95;
+    stroke-width: 2.5px;
+    stroke: #a3e635;
+  }
+  45% {
+    opacity: 0.55;
+    stroke: #bef264;
+  }
+  100% {
+    transform: scale(3.4);
+    opacity: 0;
+    stroke-width: 0.5px;
+    stroke: rgba(163, 230, 53, 0);
+  }
+}
+
+// -----------------------------------------------------------------------------
+// CONCEPT 4: TERMINAL CURSOR BLINK & INTERACTIVE CARD FOCUS
+// -----------------------------------------------------------------------------
+.concept-4 {
+  .process-card__visual {
+    animation: none !important;
+  }
+
+  .process-card__cursor {
+    display: inline-block;
+    animation: terminalCursorBlink 1.1s step-end infinite;
+    color: $color-accent;
+    text-shadow: 0 0 10px rgba($color-accent, 0.85);
+  }
+
+  .process-card {
+    padding: 16px;
+    margin: -16px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+
+    &::before {
+      opacity: 0.4;
+      transition: transform 0.4s ease, opacity 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    &:hover {
+      border-color: rgba(163, 230, 53, 0.3);
+      background: rgba(163, 230, 53, 0.035);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(163, 230, 53, 0.04);
+
+      &::before {
+        opacity: 1;
+        box-shadow: 0 0 16px #a3e635, 0 0 32px rgba(163, 230, 53, 0.75);
+      }
+
+      .process-card__number {
+        color: $color-accent;
+        text-shadow: 0 0 12px rgba($color-accent, 0.7);
+      }
+
+      .process-card__title {
+        color: #ffffff;
+        text-shadow: 0 0 16px rgba($color-accent, 0.5);
+      }
+
+      .process-card__visual {
+        transform: translateY(-8px) scale(1.03);
+        filter: drop-shadow(0 0 32px rgba($color-accent, 0.6));
+      }
+
+      .meta-tags li {
+        color: $color-accent;
+        border-color: rgba($color-accent, 0.4);
+        background: rgba($color-accent, 0.08);
+        text-shadow: 0 0 8px rgba($color-accent, 0.4);
+      }
+    }
+  }
+}
+
+@keyframes terminalCursorBlink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// CONCEPT ALL (COMBO): SYNCHRONIZED ARCHITECTURAL MASTERPIECE
+// -----------------------------------------------------------------------------
+.concept-combo {
+  // 1. Floating Visuals
+  .process-card--1 .process-card__visual { animation: conceptFloat1 5.4s ease-in-out infinite; }
+  .process-card--2 .process-card__visual { animation: conceptFloat2 6.2s ease-in-out infinite 0.9s; }
+  .process-card--3 .process-card__visual { animation: conceptFloat3 5.8s ease-in-out infinite 1.7s; }
+  .process-card--4 .process-card__visual { animation: conceptFloat4 6.6s ease-in-out infinite 2.5s; }
+
+  // 2. Spline Pulse (Seamless Continuous Loop)
+  .process__spline-pulse-aura {
+    stroke: rgba(163, 230, 53, 0.65);
+    stroke-width: 6px;
+    stroke-linecap: round;
+    stroke-dasharray: 140 1055;
+    fill: none;
+    animation: seamlessSplineFlow 3.6s linear infinite;
+    filter: drop-shadow(0 0 10px rgba(163, 230, 53, 0.95)) drop-shadow(0 0 20px rgba(163, 230, 53, 0.6));
+    pointer-events: none;
+    will-change: stroke-dashoffset;
+  }
+
+  .process__spline-pulse {
+    stroke-dasharray: 100 1095;
+    animation: seamlessSplineFlowCore 3.6s linear infinite;
+    stroke: #ffffff;
+    stroke-width: 2.5px;
+    filter: drop-shadow(0 0 4px #a3e635);
+    stroke-linecap: round;
+    pointer-events: none;
+    will-change: stroke-dashoffset;
+  }
+
+  .process__wave-photon {
+    display: none;
+  }
+
+  // 3. Radar Pings
+  .process__node-ping {
+    transform-box: fill-box;
+    transform-origin: center;
+    pointer-events: none;
+    &--1 { animation: sonarRipple 3.6s cubic-bezier(0.1, 0.8, 0.3, 1) infinite; }
+    &--2 { animation: sonarRipple 3.6s cubic-bezier(0.1, 0.8, 0.3, 1) infinite 0.9s; }
+    &--3 { animation: sonarRipple 3.6s cubic-bezier(0.1, 0.8, 0.3, 1) infinite 1.8s; }
+    &--4 { animation: sonarRipple 3.6s cubic-bezier(0.1, 0.8, 0.3, 1) infinite 2.7s; }
+  }
+
+  // 4. Terminal Cursor & Focus
+  .process-card__cursor {
+    display: inline-block;
+    animation: terminalCursorBlink 1.1s step-end infinite;
+    color: $color-accent;
+    text-shadow: 0 0 10px rgba($color-accent, 0.85);
+  }
+
+  .process-card {
+    padding: 16px;
+    margin: -16px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+
+    &:hover {
+      border-color: rgba(163, 230, 53, 0.3);
+      background: rgba(163, 230, 53, 0.035);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(163, 230, 53, 0.04);
+
+      .process-card__visual {
+        animation-play-state: paused;
+        transform: translateY(-12px) scale(1.04);
+        filter: drop-shadow(0 0 32px rgba($color-accent, 0.6));
+      }
+
+      .process-card__number {
+        color: $color-accent;
+        text-shadow: 0 0 12px rgba($color-accent, 0.7);
+      }
+
+      .meta-tags li {
+        color: $color-accent;
+        border-color: rgba($color-accent, 0.4);
+        background: rgba($color-accent, 0.08);
+      }
+    }
+  }
+}

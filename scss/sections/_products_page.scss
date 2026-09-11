@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// PRODUCTS PAGE (ChatGPT Image Sep 5, 2026, 01_31_11 AM.png & 01_27_05 AM.png)
+// -----------------------------------------------------------------------------
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.download-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: $spacing-xl;
+
+  th {
+    text-align: left;
+    padding: $spacing-md;
+    font-family: $font-mono;
+    font-size: $font-size-xs;
+    color: $color-text-muted;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    text-transform: uppercase;
+  }
+
+  td {
+    padding: $spacing-lg $spacing-md;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    font-size: $font-size-sm;
+    color: $color-text-secondary;
+    vertical-align: middle;
+  }
+
+  tr:hover td {
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .version-name {
+    font-weight: 800;
+    color: $color-text-white;
+    font-family: $font-mono;
+  }
+}

@@ -1,0 +1,61 @@
+<!-- ==========================================================================
+     HEADER / NAVBAR SECTION
+     Extracted from designs/hero.png (Pixel-Perfect & Responsive)
+     ========================================================================== -->
+<header class="header" id="main-header">
+  <div class="header__container">
+    <a href="index.html" class="header__logo" aria-label="A/ - Home">
+      <span class="logo-letter">A</span><span class="logo-slash">/</span>
+    </a>
+
+    <nav class="header__nav" aria-label="Primary Navigation">
+      <ul class="header__menu">
+        <li>
+          <a href="index.html" class="header__link active" aria-current="page">
+            <span class="nav-dot" aria-hidden="true"></span>
+            <span>Home</span>
+          </a>
+        </li>
+        <li><a href="pages/projects.html" class="header__link">Projects</a></li>
+        <li><a href="pages/services.html" class="header__link">Services</a></li>
+        <li><a href="pages/about.html" class="header__link">About</a></li>
+        <li><a href="pages/contact.html" class="header__link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <a href="pages/contact.html" class="btn-talk">
+        <span class="btn-talk__text">LET'S TALK</span>
+        <span class="btn-talk__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <button class="header__toggle" id="header-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <span class="bar bar--1"></span>
+        <span class="bar bar--2"></span>
+        <span class="bar bar--3"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="header__mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="drawer-inner">
+      <nav class="drawer-nav">
+        <ul class="drawer-menu">
+          <li><a href="index.html" class="drawer-link active"><span class="drawer-dot"></span><span>Home</span></a></li>
+          <li><a href="pages/projects.html" class="drawer-link"><span>Projects</span></a></li>
+          <li><a href="pages/services.html" class="drawer-link"><span>Services</span></a></li>
+          <li><a href="pages/about.html" class="drawer-link"><span>About</span></a></li>
+          <li><a href="pages/contact.html" class="drawer-link"><span>Contact</span></a></li>
+        </ul>
+      </nav>
+      <div class="drawer-action">
+        <a href="pages/contact.html" class="btn-talk btn-talk--full">
+          <span>LET'S TALK</span>
+          <span class="btn-talk__arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+

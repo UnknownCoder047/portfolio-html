@@ -1,0 +1,499 @@
+// ==========================================================================
+// SERVICE DETAIL PAGE STYLES (designs/services-details.png)
+// Pure SCSS - Pixel-Perfect & Fully Responsive
+// ==========================================================================
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.service-detail {
+  position: relative;
+  padding: clamp(100px, 9vw, 130px) 0 clamp(60px, 7vw, 90px);
+  background-color: #060a08;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  // 1. Back Link
+  &__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #a3e635;
+    text-decoration: none;
+    margin-bottom: 28px;
+    transition: all 0.2s ease;
+
+    .arrow {
+      transition: transform 0.2s ease;
+    }
+
+    &:hover {
+      color: #bbf451;
+    }
+  }
+
+  // 2. Hero Section
+  &__hero {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 36px;
+    align-items: center;
+    margin-bottom: 40px;
+
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: #a3e635;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: inline-block;
+  }
+
+  &__headline {
+    font-size: clamp(2.3rem, 4.2vw, 3.4rem);
+    font-weight: 900;
+    line-height: 1.12;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    margin: 0 0 18px 0;
+
+    .highlight {
+      color: #a3e635;
+      text-shadow: 0 0 35px rgba(163, 230, 53, 0.45);
+      display: inline-block;
+    }
+  }
+
+  &__lead {
+    font-size: clamp(0.95rem, 1.25vw, 1.05rem);
+    line-height: 1.65;
+    color: #9ca3af;
+    max-width: 500px;
+    margin: 0;
+  }
+
+  &__visual {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+
+    @media (max-width: 992px) {
+      justify-content: center;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    img {
+      width: 100%;
+      max-width: 460px;
+      height: auto;
+      display: block;
+      border-radius: 14px;
+      transition: transform 0.4s ease;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+  }
+
+  // 3. Highlights Bar
+  &__highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    background: #0d1312;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 16px;
+    padding: 22px 28px;
+    margin-bottom: 56px;
+
+    @media (max-width: 860px) {
+      grid-template-columns: 1fr;
+      gap: 18px;
+      padding: 20px;
+    }
+  }
+
+  &__highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+
+    // Divider between items on desktop
+    &:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: -12px;
+      top: 15%;
+      height: 70%;
+      width: 1px;
+      background: rgba(255, 255, 255, 0.07);
+
+      @media (max-width: 860px) {
+        display: none;
+      }
+    }
+  }
+
+  &__highlight-icon {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(163, 230, 53, 0.05);
+    border: 1px solid rgba(163, 230, 53, 0.25);
+    border-radius: 12px;
+    color: #a3e635;
+    transition: all 0.3s ease;
+
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &__highlight-content {
+    h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 3px 0;
+    }
+
+    p {
+      font-size: 0.825rem;
+      color: #9ca3af;
+      margin: 0;
+      line-height: 1.4;
+    }
+  }
+
+  // 4. Section Title
+  &__section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  &__section-dash {
+    color: #a3e635;
+    font-weight: 800;
+    font-size: 1.3rem;
+    line-height: 1;
+  }
+
+  &__section-title {
+    font-size: clamp(1.35rem, 2.3vw, 1.65rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  // 5. What I Offer (2x2 Grid)
+  &__offerings-section {
+    margin-bottom: 56px;
+    padding: 0 !important;
+  }
+
+  &__offerings-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__offer-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    background: #0d1312;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 22px 24px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+    &:hover {
+      border-color: rgba(163, 230, 53, 0.3);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(163, 230, 53, 0.08);
+
+      .service-detail__offer-icon {
+        border-color: #a3e635;
+        background: rgba(163, 230, 53, 0.1);
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &__offer-icon {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(163, 230, 53, 0.05);
+    border: 1px solid rgba(163, 230, 53, 0.2);
+    border-radius: 12px;
+    color: #a3e635;
+    transition: all 0.3s ease;
+
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &__offer-info {
+    h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 5px 0;
+    }
+
+    p {
+      font-size: 0.85rem;
+      color: #9ca3af;
+      line-height: 1.5;
+      margin: 0;
+    }
+  }
+
+  // 6. Technologies I Use
+  &__tech-section {
+    margin-bottom: 56px;
+    padding: 0 !important;
+  }
+
+  &__tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &__tech-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #0d1312;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+    padding: 10px 18px;
+    color: #f3f4f6;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.25s ease;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      min-width: 18px;
+    }
+
+    &:hover {
+      border-color: rgba(163, 230, 53, 0.4);
+      background: rgba(163, 230, 53, 0.04);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  // 7. Process (4-Column Steps)
+  &__process-section {
+    margin-bottom: 64px;
+    padding: 0 !important;
+  }
+
+  &__process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    position: relative;
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px 24px;
+    }
+
+    @media (max-width: 580px) {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+
+  &__process-step {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    // Right divider between steps on desktop
+    @media (min-width: 993px) {
+      &:not(:last-child) {
+        border-right: 1px solid rgba(255, 255, 255, 0.08);
+        padding-right: 20px;
+      }
+    }
+  }
+
+  &__process-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #a3e635;
+    line-height: 1;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+  }
+
+  &__process-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 6px 0;
+  }
+
+  &__process-desc {
+    font-size: 0.85rem;
+    color: #9ca3af;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  // 8. Bottom CTA Banner
+  &__cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(163, 230, 53, 0.07) 0%, #0d1312 40%, rgba(163, 230, 53, 0.03) 100%);
+    border: 1px solid rgba(163, 230, 53, 0.22);
+    border-radius: 18px;
+    padding: 28px 36px;
+    gap: 24px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 24px 20px;
+    }
+
+    &:hover {
+      border-color: rgba(163, 230, 53, 0.38);
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(163, 230, 53, 0.08);
+    }
+  }
+
+  &__cta-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @media (max-width: 580px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+    }
+  }
+
+  &__cta-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(163, 230, 53, 0.1);
+    border: 1px solid rgba(163, 230, 53, 0.3);
+    color: #a3e635;
+    box-shadow: 0 0 20px rgba(163, 230, 53, 0.18);
+    transition: transform 0.3s ease;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__cta-info {
+    h3 {
+      font-size: clamp(1.15rem, 1.8vw, 1.35rem);
+      font-weight: 800;
+      color: #ffffff;
+      margin: 0 0 4px 0;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      font-size: 0.875rem;
+      color: #9ca3af;
+      margin: 0;
+      line-height: 1.45;
+    }
+  }
+
+  &__cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #a3e635;
+    color: #000000;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 13px 26px;
+    border-radius: 10px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 15px rgba(163, 230, 53, 0.2);
+
+    @media (max-width: 768px) {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .arrow {
+      display: inline-block;
+    }
+
+    &:hover {
+      background: #bbf451;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(163, 230, 53, 0.4);
+    }
+  }
+}

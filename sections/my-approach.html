@@ -1,0 +1,239 @@
+<!-- ==========================================================================
+     MY APPROACH SECTION (designs/my-approach.png)
+     ========================================================================== -->
+<section class="section approach" id="approach" aria-labelledby="approach-title">
+  <div class="container">
+    <!-- Header: Title Group on Left, Meta Philosophy & Bracket Box on Right -->
+    <header class="approach__header reveal-on-scroll">
+      <div class="approach__title-group">
+        <div class="approach__badge">
+          <span class="approach__badge-dot"></span>
+          <span>MY APPROACH</span>
+        </div>
+        <h2 id="approach-title" class="approach__headline">
+          I DON'T START<br>
+          WITH <span class="highlight">CODE.</span>
+        </h2>
+        <p class="approach__lead">
+          I start by understanding what needs to be solved, why it matters<br class="desktop-br">
+          and what the simplest reliable solution looks like.
+        </p>
+      </div>
+
+      <div class="approach__header-meta">
+        <div class="approach__philosophy">
+          <div class="approach__slash">//</div>
+          <div class="approach__philosophy-text">
+            <span>THOUGHTFUL</span>
+            <span>ENGINEERING</span>
+            <span>BETTER PRODUCTS</span>
+          </div>
+          <div class="approach__philosophy-line line-draw" aria-hidden="true"></div>
+        </div>
+
+        <div class="approach__bracket-box" aria-hidden="true">
+          <div class="corner corner--tl"></div>
+          <div class="corner corner--tr"></div>
+          <div class="corner corner--bl"></div>
+          <div class="corner corner--br"></div>
+          <div class="approach__bracket-content">
+            <span>IDEAS</span>
+            <span>TO</span>
+            <span>IMPACT</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main 6-Step Wave Flow -->
+    <div class="approach__flow">
+      <!-- Desktop Continuous Glowing Sine Wave Spline with Anchor Nodes -->
+      <div class="approach__wave-wrap" aria-hidden="true">
+        <svg class="approach__wave-svg" viewBox="0 0 1272 470" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <defs>
+            <filter id="appr-glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="3" result="b1" />
+              <feGaussianBlur stdDeviation="7" result="b2" />
+              <feMerge>
+                <feMergeNode in="b2" />
+                <feMergeNode in="b1" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+            <filter id="appr-line-glow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+
+          <!-- Ambient Glow under the Spline -->
+          <path d="M 130 335 C 180 335, 240 222, 313 222 C 385 222, 455 250, 528 250 C 600 250, 670 222, 744 222 C 815 222, 885 250, 959 250 C 1030 250, 1100 222, 1174 222 C 1210 222, 1240 230, 1260 235"
+                stroke="rgba(163, 230, 53, 0.2)" stroke-width="5" fill="none" filter="url(#appr-line-glow)" />
+
+          <!-- Main Spline Track -->
+          <path class="approach__spline-draw" d="M 130 335 C 180 335, 240 222, 313 222 C 385 222, 455 250, 528 250 C 600 250, 670 222, 744 222 C 815 222, 885 250, 959 250 C 1030 250, 1100 222, 1174 222 C 1210 222, 1240 230, 1260 235"
+                stroke="rgba(163, 230, 53, 0.75)" stroke-width="2" fill="none" />
+
+          <!-- Seamless Fiber-Optic Energy Pulse (Approach Continuous Loop) -->
+          <path class="approach__spline-pulse-aura" d="M 130 335 C 180 335, 240 222, 313 222 C 385 222, 455 250, 528 250 C 600 250, 670 222, 744 222 C 815 222, 885 250, 959 250 C 1030 250, 1100 222, 1174 222 C 1210 222, 1240 230, 1260 235"
+                pathLength="1177" fill="none" />
+          <path class="approach__spline-pulse" d="M 130 335 C 180 335, 240 222, 313 222 C 385 222, 455 250, 528 250 C 600 250, 670 222, 744 222 C 815 222, 885 250, 959 250 C 1030 250, 1100 222, 1174 222 C 1210 222, 1240 230, 1260 235"
+                pathLength="1177" fill="none" />
+
+          <!-- Glowing Anchor Node 2: Problem (313, 222) -->
+          <g class="approach__node">
+            <circle cx="313" cy="222" r="14" fill="rgba(163, 230, 53, 0.08)" />
+            <circle cx="313" cy="222" r="7.5" fill="none" stroke="rgba(163, 230, 53, 0.5)" stroke-width="1.5" />
+            <circle cx="313" cy="222" r="4.5" fill="#a3e635" filter="url(#appr-glow)" />
+          </g>
+
+          <!-- Glowing Anchor Node 4: Prototype (744, 222) -->
+          <g class="approach__node">
+            <circle cx="744" cy="222" r="14" fill="rgba(163, 230, 53, 0.08)" />
+            <circle cx="744" cy="222" r="7.5" fill="none" stroke="rgba(163, 230, 53, 0.5)" stroke-width="1.5" />
+            <circle cx="744" cy="222" r="4.5" fill="#a3e635" filter="url(#appr-glow)" />
+          </g>
+
+          <!-- Glowing Anchor Node 6: Ship (1174, 222) -->
+          <g class="approach__node">
+            <circle cx="1174" cy="222" r="14" fill="rgba(163, 230, 53, 0.08)" />
+            <circle cx="1174" cy="222" r="7.5" fill="none" stroke="rgba(163, 230, 53, 0.5)" stroke-width="1.5" />
+            <circle cx="1174" cy="222" r="4.5" fill="#a3e635" filter="url(#appr-glow)" />
+          </g>
+        </svg>
+      </div>
+
+      <!-- 6 Alternating Step Cards -->
+      <div class="approach__grid reveal-cascade cascade--3col">
+        <!-- Step 01: QUESTION (Content Top, Visual Bottom) -->
+        <article class="approach-card approach-card--odd approach-card--1 reveal-on-scroll" aria-labelledby="appr-step-01-title">
+          <div class="approach-card__content">
+            <div class="approach-card__number">01 <span class="approach-card__cursor">_</span></div>
+            <h3 id="appr-step-01-title" class="approach-card__title">QUESTION</h3>
+            <p class="approach-card__desc">Start with what needs to be solved and why it matters.</p>
+          </div>
+
+          <div class="approach-card__visual-wrap">
+            <div class="approach-card__visual">
+              <img src="images/approach-01-question.png" alt="Radar sonar question mark analysis node" class="approach-card__img" width="165" height="165" loading="lazy">
+            </div>
+            <div class="approach-card__micro-tag reveal-cascade-pills">
+              <span>CURIOSITY</span>
+              <span>ABOUT THE PROBLEM</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Step 02: PROBLEM (Visual Top, Content Bottom) -->
+        <article class="approach-card approach-card--even approach-card--2 reveal-on-scroll" aria-labelledby="appr-step-02-title">
+          <div class="approach-card__visual-wrap">
+            <div class="approach-card__micro-tag reveal-cascade-pills">
+              <span>CLARITY</span>
+              <span>CREATES DIRECTION</span>
+            </div>
+            <div class="approach-card__visual">
+              <img src="images/approach-02-problem.png" alt="Magnifying glass inspecting coordinate grid blueprint" class="approach-card__img" width="150" height="140" loading="lazy">
+            </div>
+          </div>
+
+          <div class="approach-card__content">
+            <div class="approach-card__number">02 <span class="approach-card__cursor">_</span></div>
+            <h3 id="appr-step-02-title" class="approach-card__title">PROBLEM</h3>
+            <p class="approach-card__desc">Define the problem clearly before reaching for a solution.</p>
+          </div>
+        </article>
+
+        <!-- Step 03: ARCHITECTURE (Content Top, Visual Bottom) -->
+        <article class="approach-card approach-card--odd approach-card--3 reveal-on-scroll" aria-labelledby="appr-step-03-title">
+          <div class="approach-card__content">
+            <div class="approach-card__number">03 <span class="approach-card__cursor">_</span></div>
+            <h3 id="appr-step-03-title" class="approach-card__title">ARCHITECTURE</h3>
+            <p class="approach-card__desc">Design the technical approach and system boundaries.</p>
+          </div>
+
+          <div class="approach-card__visual-wrap">
+            <div class="approach-card__visual">
+              <img src="images/approach-03-architecture.png" alt="Four tiered glowing isometric glass architecture plates" class="approach-card__img" width="145" height="155" loading="lazy">
+            </div>
+            <div class="approach-card__micro-tag reveal-cascade-pills">
+              <span>A SOLID PLAN</span>
+              <span>REDUCES RISK</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Step 04: PROTOTYPE (Visual Top, Content Bottom) -->
+        <article class="approach-card approach-card--even approach-card--4 reveal-on-scroll" aria-labelledby="appr-step-04-title">
+          <div class="approach-card__visual-wrap">
+            <div class="approach-card__micro-tag reveal-cascade-pills">
+              <span>TURN IDEAS</span>
+              <span>INTO SOMETHING REAL</span>
+            </div>
+            <div class="approach-card__visual">
+              <img src="images/approach-04-prototype.png" alt="Isometric cubes with a vibrant neon illuminated core cube" class="approach-card__img" width="150" height="145" loading="lazy">
+            </div>
+          </div>
+
+          <div class="approach-card__content">
+            <div class="approach-card__number">04 <span class="approach-card__cursor">_</span></div>
+            <h3 id="appr-step-04-title" class="approach-card__title">PROTOTYPE</h3>
+            <p class="approach-card__desc">Validate the core idea with a working prototype.</p>
+          </div>
+        </article>
+
+        <!-- Step 05: BUILD (Content Top, Visual Bottom) -->
+        <article class="approach-card approach-card--odd approach-card--5 reveal-on-scroll" aria-labelledby="appr-step-05-title">
+          <div class="approach-card__content">
+            <div class="approach-card__number">05 <span class="approach-card__cursor">_</span></div>
+            <h3 id="appr-step-05-title" class="approach-card__title">BUILD</h3>
+            <p class="approach-card__desc">Build reliable software across backend, APIs and mobile.</p>
+          </div>
+
+          <div class="approach-card__visual-wrap">
+            <div class="approach-card__visual">
+              <img src="images/approach-05-build.png" alt="Isometric dark development window with illuminated neon code brackets" class="approach-card__img" width="145" height="150" loading="lazy">
+            </div>
+            <div class="approach-card__micro-tag reveal-cascade-pills">
+              <span>CODE WITH PURPOSE</span>
+              <span>NOT JUST FEATURES</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Step 06: SHIP (Visual Top, Content Bottom) -->
+        <article class="approach-card approach-card--even approach-card--6 reveal-on-scroll" aria-labelledby="appr-step-06-title">
+          <div class="approach-card__visual-wrap">
+            <div class="approach-card__micro-tag reveal-cascade-pills">
+              <span>REAL USERS</span>
+              <span>REAL IMPACT</span>
+            </div>
+            <div class="approach-card__visual">
+              <img src="images/approach-06-ship.png" alt="Glowing neon paper plane cutting through technical orbital coordinates" class="approach-card__img" width="185" height="140" loading="lazy">
+            </div>
+          </div>
+
+          <div class="approach-card__content">
+            <div class="approach-card__number">06 <span class="approach-card__cursor">_</span></div>
+            <h3 id="appr-step-06-title" class="approach-card__title">SHIP</h3>
+            <p class="approach-card__desc">Refine, deploy and take ownership of the final product.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Bottom Status Bar -->
+    <div class="approach__bottom reveal-on-scroll">
+      <div class="approach__bottom-left">
+        <span class="approach__bottom-marker">| // |</span>
+        <span class="approach__bottom-motto">BETTER QUESTIONS. &nbsp; CLEARER SOLUTIONS. &nbsp; MORE USEFUL PRODUCTS.</span>
+      </div>
+      <div class="approach__bottom-right">
+        <span class="approach__bottom-counter">[ 01 - 06 ]</span>
+      </div>
+    </div>
+  </div>
+</section>
+

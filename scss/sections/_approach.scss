@@ -1,0 +1,783 @@
+// -----------------------------------------------------------------------------
+// MY APPROACH SECTION (designs/my-approach.png)
+// Pure SCSS, Pixel-Perfect & Responsive across Desktop, Tablet, and Mobile
+// -----------------------------------------------------------------------------
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.approach {
+  position: relative;
+  padding-top: $spacing-4xl;
+  padding-bottom: $spacing-4xl;
+  overflow: hidden;
+
+  @include max-md {
+    padding-top: $spacing-3xl;
+    padding-bottom: $spacing-3xl;
+  }
+
+  // Header: Title Group on Left, Philosophy & Bracket Box on Right
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: $spacing-2xl;
+    margin-bottom: clamp(48px, 6vw, 72px);
+
+    @include max-lg {
+      gap: $spacing-xl;
+    }
+
+    @include max-md {
+      flex-direction: column;
+      gap: $spacing-lg;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title-group {
+    flex: 1;
+    max-width: 680px;
+  }
+
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: $font-mono;
+    font-size: 0.75rem; // 12px
+    font-weight: 700;
+    color: $color-accent;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    border: 1px solid rgba($color-accent, 0.35);
+    border-radius: $radius-full;
+    padding: 5px 14px;
+    margin-bottom: 22px;
+    background: rgba($color-accent, 0.05);
+
+    &-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $color-accent;
+      box-shadow: 0 0 8px $color-accent;
+    }
+  }
+
+  &__headline {
+    font-family: $font-sans;
+    font-size: clamp(2.75rem, 5vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.03;
+    color: $color-text-white;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    margin: 0 0 1.25rem 0;
+
+    .highlight {
+      color: $color-accent;
+      text-shadow: 0 0 35px rgba($color-accent, 0.4);
+    }
+  }
+
+  &__lead {
+    font-size: 1.0625rem; // 17px
+    line-height: 1.6;
+    color: #8e9892;
+    margin: 0;
+    max-width: 540px;
+
+    .desktop-br {
+      @include max-md {
+        display: none;
+      }
+    }
+  }
+
+  // Header Right Meta: Philosophy + Corner Bracket Box
+  &__header-meta {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.75rem;
+    margin-top: 1rem;
+    flex-shrink: 0;
+
+    @include max-md {
+      margin-top: 0;
+      gap: 2rem;
+    }
+
+    @include max-sm {
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+  }
+
+  &__philosophy {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .approach__slash {
+      font-family: $font-mono;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: $color-accent;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-family: $font-mono;
+      font-size: 0.6875rem; // 11px
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      color: #718077;
+      text-transform: uppercase;
+      line-height: 1.35;
+    }
+
+    &-line {
+      width: 28px;
+      height: 2px;
+      background-color: $color-accent;
+      margin-top: 8px;
+      border-radius: 1px;
+    }
+  }
+
+  &__bracket-box {
+    position: relative;
+    padding: 16px 20px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .corner {
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      border-color: $color-accent;
+      border-style: solid;
+
+      &--tl {
+        top: 0;
+        left: 0;
+        border-width: 1.5px 0 0 1.5px;
+      }
+
+      &--tr {
+        top: 0;
+        right: 0;
+        border-width: 1.5px 1.5px 0 0;
+      }
+
+      &--bl {
+        bottom: 0;
+        left: 0;
+        border-width: 0 0 1.5px 1.5px;
+      }
+
+      &--br {
+        bottom: 0;
+        right: 0;
+        border-width: 0 1.5px 1.5px 0;
+      }
+    }
+
+    .approach__bracket-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      font-family: $font-mono;
+      font-size: 0.75rem; // 12px
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: $color-accent;
+      text-transform: uppercase;
+      line-height: 1.25;
+      text-align: center;
+    }
+  }
+
+  // Flow Timeline Area
+  &__flow {
+    position: relative;
+    width: 100%;
+    margin-bottom: clamp(48px, 6vw, 68px);
+  }
+
+  // Continuous Desktop Spline Wave
+  &__wave-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+
+    @include max-lg {
+      display: none;
+    }
+  }
+
+  &__wave-svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__spline-draw {
+    stroke-dasharray: 1400;
+    stroke-dashoffset: 0;
+  }
+
+  // Seamless Fiber-Optic Energy Pulse (Approach Continuous Loop)
+  &__spline-pulse-aura {
+    stroke: rgba(163, 230, 53, 0.65);
+    stroke-width: 6px;
+    stroke-linecap: round;
+    stroke-dasharray: 140 1037; // 140 + 1037 = 1177 (exact path length)
+    fill: none;
+    animation: approachSplineFlow 4.2s linear infinite;
+    filter: drop-shadow(0 0 10px rgba(163, 230, 53, 0.95)) drop-shadow(0 0 20px rgba(163, 230, 53, 0.6));
+    pointer-events: none;
+    will-change: stroke-dashoffset;
+  }
+
+  &__spline-pulse {
+    stroke: #ffffff;
+    stroke-width: 2.5px;
+    stroke-linecap: round;
+    stroke-dasharray: 100 1077; // 100 + 1077 = 1177 (exact path length)
+    fill: none;
+    animation: approachSplineFlowCore 4.2s linear infinite;
+    filter: drop-shadow(0 0 4px #a3e635);
+    pointer-events: none;
+    will-change: stroke-dashoffset;
+  }
+
+  // Grid of 6 Steps
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.25rem;
+    position: relative;
+    z-index: 2;
+
+    @include max-xl {
+      gap: 0.875rem;
+    }
+
+    @include max-lg {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem 1.5rem;
+    }
+
+    @include max-md {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+}
+
+// Individual Approach Step Card
+.approach-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 470px;
+  position: relative;
+  transition: transform $transition-normal;
+
+  @include max-lg {
+    min-height: auto;
+    gap: 1.5rem;
+    justify-content: flex-start;
+  }
+
+  // Odd cards (01, 03, 05): Content on top, Visual on bottom
+  &--odd {
+    .approach-card__content {
+      order: 1;
+      margin-bottom: 2.5rem;
+
+      @include max-lg {
+        margin-bottom: 0;
+      }
+    }
+
+    .approach-card__visual-wrap {
+      order: 2;
+      margin-top: auto;
+
+      @include max-lg {
+        margin-top: 0;
+      }
+    }
+  }
+
+  // Even cards (02, 04, 06): Visual on top, Content on bottom
+  &--even {
+    .approach-card__visual-wrap {
+      order: 1;
+      margin-bottom: 2.5rem;
+
+      @include max-lg {
+        order: 2;
+        margin-bottom: 0;
+      }
+    }
+
+    .approach-card__content {
+      order: 2;
+      margin-top: auto;
+
+      @include max-lg {
+        order: 1;
+        margin-top: 0;
+      }
+    }
+  }
+
+  // Content Block
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__number {
+    font-family: $font-sans;
+    font-size: 2rem; // 32px
+    font-weight: 900;
+    line-height: 1;
+    color: $color-text-white;
+    display: flex;
+    align-items: baseline;
+    gap: 3px;
+    letter-spacing: -0.02em;
+
+    .approach-card__cursor {
+      color: $color-accent;
+      font-weight: 800;
+      font-family: $font-mono;
+    }
+  }
+
+  &__title {
+    font-family: $font-sans;
+    font-size: 1.125rem; // 18px
+    font-weight: 800;
+    color: $color-text-white;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    margin: 4px 0 0 0;
+  }
+
+  &__desc {
+    font-size: 0.8125rem; // 13px
+    line-height: 1.55;
+    color: #8e9892;
+    margin: 0;
+    max-width: 175px;
+
+    @include max-lg {
+      max-width: 100%;
+      font-size: 0.875rem;
+    }
+  }
+
+  // Visual Container
+  &__visual-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  &__visual {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 165px;
+    transform-origin: center bottom;
+    will-change: transform, filter;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 0 16px rgba($color-accent, 0.12));
+      transition: transform $transition-normal, filter $transition-normal;
+    }
+  }
+
+  &--1 &__visual {
+    @media (min-width: 992px) {
+      animation: approachVisualPulseFloat1 4.2s linear infinite;
+    }
+  }
+
+  &--2 &__visual {
+    @media (min-width: 992px) {
+      animation: approachVisualPulseFloat2 4.2s linear infinite;
+    }
+  }
+
+  &--3 &__visual {
+    @media (min-width: 992px) {
+      animation: approachVisualPulseFloat3 4.2s linear infinite;
+    }
+  }
+
+  &--4 &__visual {
+    @media (min-width: 992px) {
+      animation: approachVisualPulseFloat4 4.2s linear infinite;
+    }
+  }
+
+  &--5 &__visual {
+    @media (min-width: 992px) {
+      animation: approachVisualPulseFloat5 4.2s linear infinite;
+    }
+  }
+
+  &--6 &__visual {
+    @media (min-width: 992px) {
+      animation: approachVisualPulseFloat6 4.2s linear infinite;
+    }
+  }
+
+  &:hover {
+    .approach-card__visual img {
+      transform: translateY(-4px) scale(1.03);
+      filter: drop-shadow(0 0 24px rgba($color-accent, 0.28));
+    }
+
+    .approach-card__micro-tag {
+      border-color: rgba($color-accent, 0.35);
+      background: rgba($color-accent, 0.04);
+      color: $color-accent;
+    }
+  }
+
+  // Micro-tag label
+  &__micro-tag {
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    background: rgba(255, 255, 255, 0.02);
+    padding: 6px 10px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    text-align: center;
+    transition: all $transition-normal;
+
+    span {
+      font-family: $font-mono;
+      font-size: 0.5625rem; // 9px
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: #6d7671;
+      text-transform: uppercase;
+      line-height: 1.35;
+      white-space: nowrap;
+      transition: color $transition-normal;
+    }
+  }
+}
+
+// Bottom Bar
+.approach__bottom {
+  position: relative;
+  border-top: none;
+  padding-top: 2rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+
+  @include max-md {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  &-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-family: $font-mono;
+    font-size: 0.75rem; // 12px
+    letter-spacing: 0.08em;
+    color: #718077;
+
+    @include max-md {
+      flex-direction: column;
+      gap: 6px;
+    }
+  }
+
+  &-marker {
+    color: $color-accent;
+    font-weight: 800;
+    font-size: 0.8125rem;
+    letter-spacing: 0.1em;
+  }
+
+  &-motto {
+    color: #718077;
+    letter-spacing: 0.08em;
+  }
+
+  &-right {
+    font-family: $font-mono;
+    font-size: 0.75rem; // 12px
+    letter-spacing: 0.12em;
+    color: #718077;
+  }
+}
+
+html.reveal-ready {
+  .approach__spline-draw {
+    stroke-dashoffset: 1400;
+    transition: stroke-dashoffset 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .approach__wave-wrap.is-drawn .approach__spline-draw,
+  .approach.is-revealed .approach__spline-draw,
+  .is-revealed .approach__spline-draw {
+    stroke-dashoffset: 0;
+  }
+}
+
+// Seamless Continuous Sine Wave Spline Energy Flow (Zero-Glitch Loop)
+@keyframes approachSplineFlow {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -1177;
+  }
+}
+
+@keyframes approachSplineFlowCore {
+  0% {
+    stroke-dashoffset: -20;
+  }
+  100% {
+    stroke-dashoffset: -1197;
+  }
+}
+
+// Step 01: QUESTION
+@keyframes approachVisualPulseFloat1 {
+  0% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.12));
+  }
+  1% {
+    transform: translateY(-4px) scale(1.01);
+  }
+  3% {
+    transform: translateY(-16px) scale(1.035);
+    filter: drop-shadow(0 0 32px rgba($color-accent, 0.65)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.4));
+  }
+  6% {
+    transform: translateY(-12px) scale(1.025);
+    filter: drop-shadow(0 0 24px rgba($color-accent, 0.45));
+  }
+  9% {
+    transform: translateY(-3px) scale(1.008);
+  }
+  11% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.12));
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.12));
+  }
+}
+
+// Step 02: PROBLEM
+@keyframes approachVisualPulseFloat2 {
+  0%, 13% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.12));
+  }
+  15% {
+    transform: translateY(-4px) scale(1.01);
+  }
+  18.7% {
+    transform: translateY(-16px) scale(1.035);
+    filter: drop-shadow(0 0 32px rgba($color-accent, 0.65)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.4));
+  }
+  21.5% {
+    transform: translateY(-12px) scale(1.025);
+    filter: drop-shadow(0 0 24px rgba($color-accent, 0.45));
+  }
+  24% {
+    transform: translateY(-3px) scale(1.008);
+  }
+  26% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.12));
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.12));
+  }
+}
+
+// Step 03: ARCHITECTURE
+@keyframes approachVisualPulseFloat3 {
+  0%, 31% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.12));
+  }
+  33% {
+    transform: translateY(-4px) scale(1.01);
+  }
+  37.1% {
+    transform: translateY(-16px) scale(1.035);
+    filter: drop-shadow(0 0 32px rgba($color-accent, 0.65)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.4));
+  }
+  40% {
+    transform: translateY(-12px) scale(1.025);
+    filter: drop-shadow(0 0 24px rgba($color-accent, 0.45));
+  }
+  42.5% {
+    transform: translateY(-3px) scale(1.008);
+  }
+  44.5% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.12));
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.12));
+  }
+}
+
+// Step 04: PROTOTYPE
+@keyframes approachVisualPulseFloat4 {
+  0%, 50% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.12));
+  }
+  52% {
+    transform: translateY(-4px) scale(1.01);
+  }
+  55.7% {
+    transform: translateY(-16px) scale(1.035);
+    filter: drop-shadow(0 0 32px rgba($color-accent, 0.65)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.4));
+  }
+  58.5% {
+    transform: translateY(-12px) scale(1.025);
+    filter: drop-shadow(0 0 24px rgba($color-accent, 0.45));
+  }
+  61% {
+    transform: translateY(-3px) scale(1.008);
+  }
+  63% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.12));
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.12));
+  }
+}
+
+// Step 05: BUILD
+@keyframes approachVisualPulseFloat5 {
+  0%, 68% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.12));
+  }
+  70% {
+    transform: translateY(-4px) scale(1.01);
+  }
+  74.1% {
+    transform: translateY(-16px) scale(1.035);
+    filter: drop-shadow(0 0 32px rgba($color-accent, 0.65)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.4));
+  }
+  77% {
+    transform: translateY(-12px) scale(1.025);
+    filter: drop-shadow(0 0 24px rgba($color-accent, 0.45));
+  }
+  79.5% {
+    transform: translateY(-3px) scale(1.008);
+  }
+  81.5% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.12));
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.12));
+  }
+}
+
+// Step 06: SHIP
+@keyframes approachVisualPulseFloat6 {
+  0%, 87% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.12));
+  }
+  89% {
+    transform: translateY(-4px) scale(1.01);
+  }
+  92.6% {
+    transform: translateY(-16px) scale(1.035);
+    filter: drop-shadow(0 0 32px rgba($color-accent, 0.65)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.4));
+  }
+  95.5% {
+    transform: translateY(-12px) scale(1.025);
+    filter: drop-shadow(0 0 24px rgba($color-accent, 0.45));
+  }
+  97.5% {
+    transform: translateY(-3px) scale(1.008);
+  }
+  99% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.12));
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.12));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .approach__spline-pulse-aura,
+  .approach__spline-pulse {
+    display: none !important;
+  }
+
+  .approach-card__visual {
+    animation: none !important;
+    transform: none !important;
+  }
+}

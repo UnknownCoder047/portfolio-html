@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Android App Development | Services | Ankit Kumar</title>
+  <meta name="description" content="Build powerful, user-friendly Android applications with clean architecture, modern tools, and a focus on real-world usability.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-dark text-light">
+
+  <!-- ==========================================================================
+       HEADER (Synchronized with index.html & services.html)
+       ========================================================================== -->
+  <header class="header" id="main-header">
+    <div class="header__container">
+      <a href="../index.html" class="header__logo" aria-label="Ankit Kumar - Home">
+        <span class="logo-letter">A</span><span class="logo-slash">/</span>
+      </a>
+
+      <nav class="header__nav" aria-label="Primary Navigation">
+        <ul class="header__menu">
+          <li><a href="../index.html" class="header__link">Home</a></li>
+          <li><a href="projects.html" class="header__link">Projects</a></li>
+          <li>
+            <a href="services.html" class="header__link active" aria-current="page">
+              <span class="nav-dot" aria-hidden="true"></span>
+              <span>Services</span>
+            </a>
+          </li>
+          <li><a href="about.html" class="header__link">About</a></li>
+          <li><a href="contact.html" class="header__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="contact.html" class="btn-talk">
+          <span class="btn-talk__text">LET'S TALK</span>
+          <span class="btn-talk__arrow" aria-hidden="true">→</span>
+        </a>
+
+        <button class="header__toggle" id="header-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <span class="bar bar--1"></span>
+          <span class="bar bar--2"></span>
+          <span class="bar bar--3"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="header__mobile-drawer" id="mobile-drawer" aria-hidden="true">
+      <div class="drawer-inner">
+        <nav class="drawer-nav">
+          <ul class="drawer-menu">
+            <li><a href="../index.html" class="drawer-link"><span>Home</span></a></li>
+            <li><a href="projects.html" class="drawer-link"><span>Projects</span></a></li>
+            <li>
+              <a href="services.html" class="drawer-link active">
+                <span class="drawer-dot"></span>
+                <span>Services</span>
+              </a>
+            </li>
+            <li><a href="about.html" class="drawer-link"><span>About</span></a></li>
+            <li><a href="contact.html" class="drawer-link"><span>Contact</span></a></li>
+          </ul>
+        </nav>
+        <div class="drawer-action">
+          <a href="contact.html" class="btn-talk btn-talk--full">
+            <span>LET'S TALK</span>
+            <span class="btn-talk__arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MAIN CONTENT: SERVICE DETAIL (designs/services-details.png)
+       ========================================================================== -->
+  <main class="service-detail" id="main-content">
+    <div class="container">
+
+      <!-- 1. Back Navigation Link -->
+      <a href="services.html" class="service-detail__back">
+        <span class="arrow" aria-hidden="true">←</span>
+        <span>Back to Services</span>
+      </a>
+
+      <!-- 2. Hero Section: Intro + Android Phone Graphic -->
+      <div class="service-detail__hero">
+        <div class="service-detail__intro">
+          <span class="service-detail__tag">ANDROID DEVELOPMENT</span>
+          <h1 class="service-detail__headline">
+            Android App<br>
+            <span class="highlight">Development</span>
+          </h1>
+          <p class="service-detail__lead">
+            Build powerful, user-friendly Android applications with clean architecture, modern tools, and a focus on real-world usability.
+          </p>
+        </div>
+
+        <div class="service-detail__visual parallax-drift" data-drift-factor="0.08" aria-hidden="true">
+          <div class="ambient-float">
+            <img src="../images/service-detail-android-hero.png" alt="Android App Development visual with smartphone, Android mascot, and key architectural highlights" width="440" height="278">
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Key Highlights Row (3 Columns) -->
+      <div class="service-detail__highlights">
+        <!-- Item 1 -->
+        <div class="service-detail__highlight-item">
+          <div class="service-detail__highlight-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M12 12l3-3"/>
+              <path d="M12 7v1"/>
+              <path d="M7 12h1"/>
+              <path d="M16 12h1"/>
+            </svg>
+          </div>
+          <div class="service-detail__highlight-content">
+            <h3>High Performance</h3>
+            <p>Optimized and efficient apps</p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="service-detail__highlight-item">
+          <div class="service-detail__highlight-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+          </div>
+          <div class="service-detail__highlight-content">
+            <h3>Best Practices</h3>
+            <p>Clean and maintainable code</p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="service-detail__highlight-item">
+          <div class="service-detail__highlight-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+              <line x1="12" y1="18" x2="12.01" y2="18"/>
+            </svg>
+          </div>
+          <div class="service-detail__highlight-content">
+            <h3>Wide Compatibility</h3>
+            <p>Supports latest Android versions</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. What I Offer (2x2 Grid) -->
+      <section class="service-detail__offerings-section" aria-labelledby="offerings-title">
+        <div class="service-detail__section-header">
+          <span class="service-detail__section-dash" aria-hidden="true">—</span>
+          <h2 id="offerings-title" class="service-detail__section-title">What I Offer</h2>
+        </div>
+
+        <div class="service-detail__offerings-grid">
+          <!-- Card 1 -->
+          <div class="service-detail__offer-card">
+            <div class="service-detail__offer-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+            </div>
+            <div class="service-detail__offer-info">
+              <h3>Custom Android Apps</h3>
+              <p>Tailored solutions for your business needs.</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="service-detail__offer-card">
+            <div class="service-detail__offer-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+              </svg>
+            </div>
+            <div class="service-detail__offer-info">
+              <h3>UI/UX Implementation</h3>
+              <p>Modern and intuitive user interfaces using Material Design.</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="service-detail__offer-card">
+            <div class="service-detail__offer-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <div class="service-detail__offer-info">
+              <h3>API Integration</h3>
+              <p>Seamless integration with REST APIs and third-party services.</p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="service-detail__offer-card">
+            <div class="service-detail__offer-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+              </svg>
+            </div>
+            <div class="service-detail__offer-info">
+              <h3>App Maintenance</h3>
+              <p>Ongoing support, bug fixes, and feature enhancements.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Technologies I Use -->
+      <section class="service-detail__tech-section" aria-labelledby="tech-title">
+        <div class="service-detail__section-header">
+          <span class="service-detail__section-dash" aria-hidden="true">—</span>
+          <h2 id="tech-title" class="service-detail__section-title">Technologies I Use</h2>
+        </div>
+
+        <div class="service-detail__tech-grid">
+          <!-- 1. Kotlin -->
+          <div class="service-detail__tech-pill">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M24 24H0V0H24L12 12L24 24Z" fill="url(#kotlin-pill-grad)"/>
+              <defs>
+                <linearGradient id="kotlin-pill-grad" x1="0" y1="24" x2="24" y2="0" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#0095D5"/>
+                  <stop offset="0.3" stop-color="#387EB8"/>
+                  <stop offset="0.5" stop-color="#7F52FF"/>
+                  <stop offset="0.75" stop-color="#C711E1"/>
+                  <stop offset="1" stop-color="#E4485D"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <span>Kotlin</span>
+          </div>
+
+          <!-- 2. Android Studio -->
+          <div class="service-detail__tech-pill">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2L3 21h4.5l2-4.5h5l2 4.5H21L12 2zm0 6l1.8 4h-3.6L12 8z" fill="#3DDC84"/>
+              <circle cx="12" cy="11" r="2.5" fill="#4285F4"/>
+            </svg>
+            <span>Android Studio</span>
+          </div>
+
+          <!-- 3. Jetpack Compose -->
+          <div class="service-detail__tech-pill">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2L20.66 7V17L12 22L3.34 17V7L12 2Z" fill="#4285F4" fill-opacity="0.25" stroke="#4285F4" stroke-width="2"/>
+              <path d="M12 7L16.5 9.5V14.5L12 17L7.5 14.5V9.5L12 7Z" fill="#4285F4"/>
+            </svg>
+            <span>Jetpack Compose</span>
+          </div>
+
+          <!-- 4. Retrofit -->
+          <div class="service-detail__tech-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#00BFA5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="4"/>
+              <path d="M8 12h8M12 8l4 4-4 4"/>
+            </svg>
+            <span>Retrofit</span>
+          </div>
+
+          <!-- 5. Room -->
+          <div class="service-detail__tech-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <ellipse cx="12" cy="5" rx="9" ry="3"/>
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+            </svg>
+            <span>Room</span>
+          </div>
+
+          <!-- 6. Firebase -->
+          <div class="service-detail__tech-pill">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4.6 15.8L7.8 2.2c.1-.4.6-.5.8-.2l3.4 6.3-7.4 7.5z" fill="#FFA000"/>
+              <path d="M4.6 15.8l9.6-9.7c.2-.2.6-.1.6.2l1.6 9.5-11.8 0z" fill="#F57C00"/>
+              <path d="M12.4 22c-.2 0-.4-.1-.5-.2L3.3 14.8l8.6-8.7c.2-.2.5-.2.7 0l9.3 8.7-9.5 7.2z" fill="#FFCA28"/>
+            </svg>
+            <span>Firebase</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Process (4 Steps) -->
+      <section class="service-detail__process-section" aria-labelledby="process-title">
+        <div class="service-detail__section-header">
+          <span class="service-detail__section-dash" aria-hidden="true">—</span>
+          <h2 id="process-title" class="service-detail__section-title">Process</h2>
+        </div>
+
+        <div class="service-detail__process-grid">
+          <!-- Step 01 -->
+          <div class="service-detail__process-step">
+            <div class="service-detail__process-num">01</div>
+            <h3 class="service-detail__process-title">Discuss</h3>
+            <p class="service-detail__process-desc">Understand your requirements</p>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="service-detail__process-step">
+            <div class="service-detail__process-num">02</div>
+            <h3 class="service-detail__process-title">Plan</h3>
+            <p class="service-detail__process-desc">Define features and architecture</p>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="service-detail__process-step">
+            <div class="service-detail__process-num">03</div>
+            <h3 class="service-detail__process-title">Build</h3>
+            <p class="service-detail__process-desc">Develop and test the app</p>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="service-detail__process-step">
+            <div class="service-detail__process-num">04</div>
+            <h3 class="service-detail__process-title">Deploy</h3>
+            <p class="service-detail__process-desc">Launch on Play Store or internal distribution</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Bottom CTA Banner -->
+      <div class="service-detail__cta">
+        <div class="service-detail__cta-left">
+          <div class="service-detail__cta-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+              <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+              <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+              <path d="M12 9V4s3.03.55 4 2c1.08 1.62 0 5 0 5"/>
+            </svg>
+          </div>
+          <div class="service-detail__cta-info">
+            <h3>Ready to Build Your Android App?</h3>
+            <p>Turn your idea into a high-quality Android application.</p>
+          </div>
+        </div>
+        <a href="contact.html?service=android" class="service-detail__cta-btn">
+          <span>Get in Touch</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER (Synchronized with index.html & services.html)
+       ========================================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Col 1: Manifesto & Brand Identity -->
+        <div class="footer__col footer__col--brand">
+          <div class="footer__tag">[ BUILD • LEARN • SHIP ]</div>
+          <h2 class="footer__headline">
+            Good Software<br>
+            <span class="highlight">Matters.</span>
+          </h2>
+          <p class="footer__desc">
+            Ideas to real products. One build at a time.
+          </p>
+          <div class="footer__socials">
+            <a href="https://github.com/ankitkumar" target="_blank" rel="noopener noreferrer" class="social-icon-box" aria-label="Ankit Kumar GitHub Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/ankitkumar" target="_blank" rel="noopener noreferrer" class="social-icon-box" aria-label="Ankit Kumar LinkedIn Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer__col footer__col--nav">
+          <div class="footer__section-title">NAVIGATE</div>
+          <ul class="footer__links">
+            <li><a href="projects.html" class="footer__link"><span>Work</span> <span class="arrow" aria-hidden="true">→</span></a></li>
+            <li><a href="services.html" class="footer__link"><span>Services</span> <span class="arrow" aria-hidden="true">→</span></a></li>
+            <li><a href="about.html" class="footer__link"><span>About</span> <span class="arrow" aria-hidden="true">→</span></a></li>
+            <li><a href="contact.html" class="footer__link"><span>Contact</span> <span class="arrow" aria-hidden="true">→</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: CTA & Engineering Focus + Diagram -->
+        <div class="footer__col footer__col--cta">
+          <div class="footer__cta-content">
+            <div class="footer__status-badge">
+              <span class="pulse-dot" aria-hidden="true"></span>
+              <span>LET'S BUILD</span>
+            </div>
+            <h3 class="footer__cta-title">
+              Software engineer building reliable systems and useful products.
+            </h3>
+            <p class="footer__cta-sub">
+              Available for freelance projects — from a single backend to a complete product.
+            </p>
+            <a href="contact.html" class="footer__btn-cta">
+              <span>START A PROJECT</span>
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <!-- Technical Coordinate Grid Graphic with Crosshairs -->
+          <div class="footer__tech-grid" aria-hidden="true">
+            <div class="footer__grid-wireframe">
+              <svg class="footer__grid-svg" width="130" height="150" viewBox="0 0 130 150" fill="none">
+                <defs>
+                  <linearGradient id="footer-glow-vert-srvd" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#a3e635" stop-opacity="0"/>
+                    <stop offset="50%" stop-color="#a3e635" stop-opacity="0.85"/>
+                    <stop offset="100%" stop-color="#a3e635" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="footer-glow-horiz-srvd" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#a3e635" stop-opacity="0"/>
+                    <stop offset="50%" stop-color="#a3e635" stop-opacity="0.85"/>
+                    <stop offset="100%" stop-color="#a3e635" stop-opacity="0"/>
+                  </linearGradient>
+                  <filter id="glow-filter-srvd" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+                    <feMerge>
+                      <feMergeNode in="coloredBlur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <!-- Subtle Technical Grid Lines -->
+                <line x1="35" y1="0" x2="35" y2="150" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+                <line x1="95" y1="0" x2="95" y2="150" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+                <line x1="0" y1="45" x2="130" y2="45" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+                <line x1="0" y1="100" x2="130" y2="100" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+
+                <!-- Upper Crosshair Beam & Plus at (95, 45) -->
+                <line x1="95" y1="5" x2="95" y2="85" stroke="url(#footer-glow-vert-srvd)" stroke-width="1.5"/>
+                <circle cx="95" cy="45" r="12" fill="#a3e635" fill-opacity="0.12"/>
+                <g filter="url(#glow-filter-srvd)">
+                  <line x1="95" y1="38" x2="95" y2="52" stroke="#a3e635" stroke-width="1.75" stroke-linecap="square"/>
+                  <line x1="88" y1="45" x2="102" y2="45" stroke="#a3e635" stroke-width="1.75" stroke-linecap="square"/>
+                </g>
+
+                <!-- Lower Crosshair Beam & Plus at (35, 100) -->
+                <line x1="0" y1="100" x2="80" y2="100" stroke="url(#footer-glow-horiz-srvd)" stroke-width="1.5"/>
+                <circle cx="35" cy="100" r="12" fill="#a3e635" fill-opacity="0.12"/>
+                <g filter="url(#glow-filter-srvd)">
+                  <line x1="35" y1="93" x2="35" y2="107" stroke="#a3e635" stroke-width="1.75" stroke-linecap="square"/>
+                  <line x1="28" y1="100" x2="42" y2="100" stroke="#a3e635" stroke-width="1.75" stroke-linecap="square"/>
+                </g>
+              </svg>
+            </div>
+
+            <!-- Vertical Word Stack -->
+            <div class="footer__tech-words">
+              <span>IDEAS</span>
+              <span>CODE</span>
+              <span>PEOPLE</span>
+              <span>IMPACT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar: Copyright, Philosophy & Made-With -->
+      <div class="footer__bottom">
+        <div class="footer__copyright">© 2026 Ankit Kumar. All rights reserved.</div>
+        <div class="footer__philosophy">
+          <span class="slash">//</span> SAME IDEAS. BIGGER POSSIBILITIES.
+        </div>
+        <div class="footer__made-with">
+          <span>MADE WITH</span>
+          <span class="code-icon">&lt;/&gt;</span>
+          <span>AND</span>
+          <svg class="coffee-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="7" cy="4" r="0.75" fill="#a3e635"/>
+            <circle cx="11" cy="2" r="0.75" fill="#a3e635"/>
+            <circle cx="15" cy="4" r="0.75" fill="#a3e635"/>
+            <path d="M17 9h1a4 4 0 0 1 0 8h-1"/>
+            <path d="M3 9h14v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=1.1"></script>
+</body>
+</html>
+

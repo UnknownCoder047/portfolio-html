@@ -1,0 +1,177 @@
+- generic [active] [ref=f4e1]:
+  - banner [ref=f4e2]:
+    - generic [ref=f4e3]:
+      - link "A/ - Home" [ref=f4e4] [cursor=pointer]:
+        - /url: ../index.html
+        - generic [ref=f4e5]: A
+        - generic [ref=f4e6]: /
+      - navigation "Primary Navigation" [ref=f4e7]:
+        - list [ref=f4e8]:
+          - listitem [ref=f4e9]:
+            - link "Home" [ref=f4e10] [cursor=pointer]:
+              - /url: ../index.html
+          - listitem [ref=f4e12]:
+            - link "Projects" [ref=f4e13] [cursor=pointer]:
+              - /url: projects.html
+          - listitem [ref=f4e15]:
+            - link "Services" [ref=f4e16] [cursor=pointer]:
+              - /url: services.html
+          - listitem [ref=f4e18]:
+            - link "About" [ref=f4e19] [cursor=pointer]:
+              - /url: about.html
+          - listitem [ref=f4e22]:
+            - link "Contact" [ref=f4e23] [cursor=pointer]:
+              - /url: contact.html
+      - link "LET'S TALK" [ref=f4e26] [cursor=pointer]:
+        - /url: contact.html
+        - generic [aria-hidden] [ref=f4e28]: →
+    - generic [aria-hidden]:
+      - generic:
+        - navigation:
+          - list:
+            - listitem:
+              - link:
+                - /url: ../index.html
+                - generic: Home
+            - listitem:
+              - link:
+                - /url: projects.html
+                - generic: Projects
+            - listitem:
+              - link:
+                - /url: services.html
+                - generic: Services
+            - listitem:
+              - link:
+                - /url: about.html
+                - generic: About
+            - listitem:
+              - link:
+                - /url: contact.html
+                - generic: Contact
+        - generic:
+          - link:
+            - /url: contact.html
+            - generic: LET'S TALK
+            - generic [aria-hidden]: →
+  - main [ref=f4e29]:
+    - generic [ref=f4e31]:
+      - generic [ref=f4e32]:
+        - generic [ref=f4e33]:
+          - generic [ref=f4e34]: ABOUT ME
+          - heading "Building Ideas Into Real Products." [level=1] [ref=f4e35]
+          - paragraph [ref=f4e36]: I'm Ankit Kumar, a software engineer who loves turning complex problems into simple, scalable solutions. I enjoy working across backend systems, mobile apps, and full-stack products, always with a focus on real-world impact.
+        - img "Ankit Kumar portrait with Clean Code and Always Curious badges" [ref=f4e41]
+      - generic "Key Statistics" [ref=f4e42]:
+        - generic [ref=f4e43]:
+          - generic [ref=f4e44]: 3+
+          - generic [ref=f4e45]: Years of Experience
+        - generic [ref=f4e46]:
+          - generic [ref=f4e47]: 10+
+          - generic [ref=f4e48]: Projects Built
+        - generic [ref=f4e49]:
+          - generic [ref=f4e50]: 5+
+          - generic [ref=f4e51]: Technologies
+        - generic [ref=f4e52]:
+          - generic [ref=f4e53]: 100%
+          - generic [ref=f4e54]: Commitment to Learning
+      - generic [ref=f4e55]:
+        - generic [ref=f4e56]:
+          - generic [ref=f4e57]: WHAT I DO
+          - heading "From Backend to Mobile, I Build End-to-End Solutions." [level=2] [ref=f4e58]
+          - generic [ref=f4e59]:
+            - article [ref=f4e60]:
+              - heading "Backend Development" [level=3] [ref=f4e66]
+              - paragraph [ref=f4e67]: Designing reliable APIs and scalable systems.
+            - article [ref=f4e68]:
+              - heading "Android Development" [level=3] [ref=f4e72]
+              - paragraph [ref=f4e73]: Building modern, user-friendly mobile apps with Kotlin.
+            - article [ref=f4e74]:
+              - heading "Product Development" [level=3] [ref=f4e79]
+              - paragraph [ref=f4e80]: Turning ideas into real-world products.
+            - article [ref=f4e81]:
+              - heading "Database Design" [level=3] [ref=f4e87]
+              - paragraph [ref=f4e88]: Creating efficient and maintainable data models.
+            - article [ref=f4e89]:
+              - heading "System Architecture" [level=3] [ref=f4e93]
+              - paragraph [ref=f4e94]: Designing scalable and resilient architectures.
+            - article [ref=f4e95]:
+              - heading "Tools & Automation" [level=3] [ref=f4e100]
+              - paragraph [ref=f4e101]: Improving developer productivity with the right tools.
+        - generic [ref=f4e102]:
+          - generic [ref=f4e103]: MY APPROACH
+          - heading "Solve. Build. Improve. Repeat." [level=2] [ref=f4e104]
+          - generic [ref=f4e105]:
+            - generic [ref=f4e114]:
+              - heading "Understand" [level=3] [ref=f4e115]
+              - paragraph [ref=f4e116]: I take time to understand the real problem and the people it impacts.
+            - generic [ref=f4e124]:
+              - heading "Plan" [level=3] [ref=f4e125]
+              - paragraph [ref=f4e126]: Design a simple and scalable solution.
+            - generic [ref=f4e135]:
+              - heading "Build" [level=3] [ref=f4e136]
+              - paragraph [ref=f4e137]: Write clean, maintainable code with best practices.
+            - generic [ref=f4e143]:
+              - heading "Improve" [level=3] [ref=f4e144]
+              - paragraph [ref=f4e145]: Get feedback, learn, and keep iterating.
+      - generic [ref=f4e146]:
+        - generic [ref=f4e154]:
+          - generic [ref=f4e155]: BEYOND CODE
+          - heading "I Believe in Building a Better Tomorrow." [level=3] [ref=f4e156]
+          - paragraph [ref=f4e157]: Through technology, continuous learning, and meaningful products, I aim to create a positive impact.
+        - paragraph [ref=f4e159]: “Good software isn't just about code, it's about the people it helps.”
+  - contentinfo [ref=f4e161]:
+    - generic [ref=f4e162]:
+      - generic [ref=f4e163]:
+        - generic [ref=f4e164]:
+          - generic [ref=f4e165]: "[ BUILD • LEARN • SHIP ]"
+          - heading "Good Software Matters." [level=3] [ref=f4e166]: GoodSoftwareMatters.
+          - paragraph [ref=f4e167]: Ideas to real products. One build at a time.
+          - generic [ref=f4e168]:
+            - link "GitHub" [ref=f4e169] [cursor=pointer]:
+              - /url: https://github.com/ankitkumar
+            - link "LinkedIn" [ref=f4e172] [cursor=pointer]:
+              - /url: https://linkedin.com/in/ankitkumar
+        - generic [ref=f4e175]:
+          - heading "NAVIGATE" [level=4] [ref=f4e176]
+          - list [ref=f4e177]:
+            - listitem [ref=f4e178]:
+              - link "Work →" [ref=f4e179] [cursor=pointer]:
+                - /url: projects.html
+                - generic [ref=f4e180]: Work
+                - generic [ref=f4e181]: →
+            - listitem [ref=f4e182]:
+              - link "Services →" [ref=f4e183] [cursor=pointer]:
+                - /url: services.html
+                - generic [ref=f4e184]: Services
+                - generic [ref=f4e185]: →
+            - listitem [ref=f4e186]:
+              - link "About →" [ref=f4e187] [cursor=pointer]:
+                - /url: about.html
+                - generic [ref=f4e188]: About
+                - generic [ref=f4e189]: →
+            - listitem [ref=f4e190]:
+              - link "Contact →" [ref=f4e191] [cursor=pointer]:
+                - /url: contact.html
+                - generic [ref=f4e192]: Contact
+                - generic [ref=f4e193]: →
+        - generic [ref=f4e194]:
+          - generic [ref=f4e195]:
+            - generic [ref=f4e196]: LET'S BUILD
+            - heading "Software engineer building reliable systems and useful products." [level=4] [ref=f4e199]: Software engineer building reliablesystems and useful products.
+            - paragraph [ref=f4e200]: Available for freelance projects — from asingle backend to a complete product.
+            - link "START A PROJECT" [ref=f4e201] [cursor=pointer]:
+              - /url: contact.html
+          - generic [aria-hidden]:
+            - generic:
+              - generic: IDEAS
+              - generic: CODE
+              - generic: PEOPLE
+              - generic: IMPACT
+      - generic [ref=f4e205]:
+        - generic [ref=f4e206]: © 2026 Ankit Kumar. All rights reserved.
+        - generic [ref=f4e207]: // SAME IDEAS. BIGGER POSSIBILITIES.
+        - generic [ref=f4e208]:
+          - generic [ref=f4e209]: MADE WITH
+          - generic [ref=f4e210]: </>
+          - generic [ref=f4e211]: AND

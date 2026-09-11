@@ -1,0 +1,17 @@
+{
+  "name": "ankit-kumar-portfolio",
+  "version": "1.0.0",
+  "description": "High-end, responsive dark-mode portfolio for Ankit Kumar built with semantic HTML5 and pure SCSS",
+  "scripts": {
+    "build:sass": "sass scss/main.scss css/style.css --no-source-map",
+    "build:sass:min": "sass scss/main.scss css/style.min.css --style=compressed --no-source-map",
+    "build": "npm run build:sass && npm run build:sass:min",
+    "dev": "node scripts/dev.js",
+    "watch": "node scripts/watch-scss.js",
+    "watch:sass": "sass --watch scss/main.scss:css/style.css"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "sass": "^1.104.0"
+  }
+}

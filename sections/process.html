@@ -1,0 +1,245 @@
+<!-- ==========================================================================
+     THE PROCESS SECTION (designs/the-process.png)
+     ========================================================================== -->
+<section class="section process" id="process" aria-labelledby="process-title">
+  <div class="container">
+    <!-- Header: Title Block + Right Philosophy Text -->
+    <header class="process__header reveal-on-scroll">
+      <div class="process__title-group">
+        <div class="process__badge">
+          <span>[ THE PROCESS ]</span>
+        </div>
+        <h2 id="process-title" class="process__headline">
+          MORE THAN<br>
+          <span class="text-accent">JUST CODE.</span>
+        </h2>
+      </div>
+
+      <div class="process__philosophy">
+        <p class="process__lead code-meta">
+          <span class="meta-prefix">//</span>
+          <span class="meta-lines">Good software starts long before implementation. Here’s how I turn ideas into real products.</span>
+        </p>
+      </div>
+    </header>
+
+    <!-- Interactive Process Flow Timeline -->
+    <div class="process__flow">
+      <!-- Desktop Continuous Wave Spline with Glowing Nodes & Trajectory Arrow -->
+      <div class="process__wave-wrap" aria-hidden="true">
+        <svg class="process__wave-svg" viewBox="0 0 1200 440" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <defs>
+            <filter id="proc-glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="3" result="b1" />
+              <feGaussianBlur stdDeviation="8" result="b2" />
+              <feMerge>
+                <feMergeNode in="b2" />
+                <feMergeNode in="b1" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+            <filter id="proc-line-glow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+            <marker id="proc-arrow" viewBox="0 0 12 12" refX="8" refY="6" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+              <path d="M 1 2 L 10 6 L 1 10 z" fill="#a3e635" />
+            </marker>
+          </defs>
+
+          <!-- Ambient glow under the spline -->
+          <path d="M 0 255 C 80 255, 140 245, 220 235 C 310 220, 370 175, 446 175 C 530 175, 660 295, 754 295 C 830 295, 920 265, 990 245 C 1040 230, 1090 210, 1145 195"
+                stroke="rgba(163, 230, 53, 0.18)" stroke-width="5" fill="none" filter="url(#proc-line-glow)" />
+
+          <!-- Main Spline Track -->
+          <path class="process__spline-draw" d="M 0 255 C 80 255, 140 245, 220 235 C 310 220, 370 175, 446 175 C 530 175, 660 295, 754 295 C 830 295, 920 265, 990 245 C 1040 230, 1090 210, 1145 195"
+                stroke="rgba(163, 230, 53, 0.65)" stroke-width="2" fill="none" marker-end="url(#proc-arrow)" />
+
+          <!-- Seamless Fiber-Optic Energy Pulse (Concept 2) -->
+          <path class="process__spline-pulse-aura" d="M 0 255 C 80 255, 140 245, 220 235 C 310 220, 370 175, 446 175 C 530 175, 660 295, 754 295 C 830 295, 920 265, 990 245 C 1040 230, 1090 210, 1145 195"
+                pathLength="1195" fill="none" />
+          <path class="process__spline-pulse" d="M 0 255 C 80 255, 140 245, 220 235 C 310 220, 370 175, 446 175 C 530 175, 660 295, 754 295 C 830 295, 920 265, 990 245 C 1040 230, 1090 210, 1145 195"
+                pathLength="1195" fill="none" />
+
+          <!-- Dashed connector for step 3 -->
+          <line x1="754" y1="215" x2="754" y2="295" stroke="rgba(163, 230, 53, 0.45)" stroke-width="1.5" stroke-dasharray="3 3" />
+
+          <!-- Milestone Node 1: Understand (220, 235) -->
+          <g class="process__node process__node--1">
+            <circle cx="220" cy="235" r="14" fill="rgba(163, 230, 53, 0.08)" />
+            <circle cx="220" cy="235" r="8" fill="none" stroke="rgba(163, 230, 53, 0.5)" stroke-width="1.5" />
+            <circle cx="220" cy="235" r="4.5" fill="#a3e635" filter="url(#proc-glow)" />
+          </g>
+
+          <!-- Milestone Node 2: Design (446, 175) -->
+          <g class="process__node process__node--2">
+            <circle cx="446" cy="175" r="14" fill="rgba(163, 230, 53, 0.08)" />
+            <circle cx="446" cy="175" r="8" fill="none" stroke="rgba(163, 230, 53, 0.5)" stroke-width="1.5" />
+            <circle cx="446" cy="175" r="4.5" fill="#a3e635" filter="url(#proc-glow)" />
+          </g>
+
+          <!-- Milestone Node 3: Build (754, 295) -->
+          <g class="process__node process__node--3">
+            <circle cx="754" cy="295" r="14" fill="rgba(163, 230, 53, 0.08)" />
+            <circle cx="754" cy="295" r="8" fill="none" stroke="rgba(163, 230, 53, 0.5)" stroke-width="1.5" />
+            <circle cx="754" cy="295" r="4.5" fill="#a3e635" filter="url(#proc-glow)" />
+          </g>
+
+          <!-- Milestone Node 4: Ship (990, 245) -->
+          <g class="process__node process__node--4">
+            <circle cx="990" cy="245" r="14" fill="rgba(163, 230, 53, 0.08)" />
+            <circle cx="990" cy="245" r="8" fill="none" stroke="rgba(163, 230, 53, 0.5)" stroke-width="1.5" />
+            <circle cx="990" cy="245" r="4.5" fill="#a3e635" filter="url(#proc-glow)" />
+          </g>
+        </svg>
+      </div>
+
+      <!-- 4 Process Step Cards Grid -->
+      <div class="process__grid reveal-cascade cascade--4col">
+        <!-- Step 01: UNDERSTAND -->
+        <article class="process-card process-card--1 reveal-on-scroll" aria-labelledby="step-01-title">
+          <div class="process-card__visual-wrap">
+            <div class="process-card__visual">
+              <img src="images/process-01-understand.png" alt="Wireframe analysis and user research cube network" class="process-card__img" width="220" height="145" loading="lazy">
+            </div>
+            <div class="process-card__meta process-card__meta--right">
+              <span class="meta-title">A PROBLEM <span class="meta-dash">—</span></span>
+              <ul class="meta-tags reveal-cascade-pills">
+                <li>IDEAS</li>
+                <li>REQUIREMENTS</li>
+                <li>CONSTRAINTS</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-card__marker" aria-hidden="true">
+            <span class="process-card__dot"></span>
+          </div>
+
+          <div class="process-card__content">
+            <div class="process-card__number">01 <span class="process-card__cursor">_</span></div>
+            <h3 id="step-01-title" class="process-card__title">UNDERSTAND</h3>
+            <p class="process-card__desc">Understand the problem, users, requirements and constraints.</p>
+          </div>
+        </article>
+
+        <!-- Step 02: DESIGN -->
+        <article class="process-card process-card--2 reveal-on-scroll" aria-labelledby="step-02-title">
+          <div class="process-card__visual-wrap">
+            <div class="process-card__visual">
+              <img src="images/process-02-design.png" alt="System architecture layers and technical blueprint" class="process-card__img" width="170" height="165" loading="lazy">
+            </div>
+            <div class="process-card__meta process-card__meta--right">
+              <span class="meta-title"><span class="meta-dash">—</span> A SOLUTION</span>
+              <ul class="meta-tags reveal-cascade-pills">
+                <li>RESEARCH</li>
+                <li>ARCHITECTURE</li>
+                <li>PLANNING</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-card__marker" aria-hidden="true">
+            <span class="process-card__dot"></span>
+          </div>
+
+          <div class="process-card__content">
+            <div class="process-card__number">02 <span class="process-card__cursor">_</span></div>
+            <h3 id="step-02-title" class="process-card__title">DESIGN</h3>
+            <p class="process-card__desc">Turn the problem into a practical technical solution.</p>
+          </div>
+        </article>
+
+        <!-- Step 03: BUILD -->
+        <article class="process-card process-card--3 reveal-on-scroll" aria-labelledby="step-03-title">
+          <div class="process-card__visual-wrap">
+            <div class="process-card__visual">
+              <img src="images/process-03-build.png" alt="Code editors and fullstack development panes" class="process-card__img" width="155" height="215" loading="lazy">
+            </div>
+            <div class="process-card__meta process-card__meta--right">
+              <span class="meta-title"><span class="meta-dash">—</span> A SYSTEM</span>
+              <ul class="meta-tags reveal-cascade-pills">
+                <li>DEVELOPMENT</li>
+                <li>INTEGRATION</li>
+                <li>TESTING</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-card__marker" aria-hidden="true">
+            <span class="process-card__dot"></span>
+          </div>
+
+          <div class="process-card__content">
+            <div class="process-card__number">03 <span class="process-card__cursor">_</span></div>
+            <h3 id="step-03-title" class="process-card__title">BUILD</h3>
+            <p class="process-card__desc">Build reliable software across backend, APIs and mobile.</p>
+          </div>
+        </article>
+
+        <!-- Step 04: SHIP -->
+        <article class="process-card process-card--4 reveal-on-scroll" aria-labelledby="step-04-title">
+          <div class="process-card__visual-wrap">
+            <div class="process-card__visual">
+              <img src="images/process-04-ship.png" alt="Live production device with analytics chart" class="process-card__img" width="220" height="250" loading="lazy">
+            </div>
+            <div class="process-card__meta process-card__meta--right">
+              <span class="meta-title"><span class="meta-dash">—</span> A PRODUCT</span>
+              <ul class="meta-tags reveal-cascade-pills">
+                <li>REAL USERS</li>
+                <li>REAL IMPACT</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-card__marker" aria-hidden="true">
+            <span class="process-card__dot"></span>
+          </div>
+
+          <div class="process-card__content">
+            <div class="process-card__number">04 <span class="process-card__cursor">_</span></div>
+            <h3 id="step-04-title" class="process-card__title">SHIP</h3>
+            <p class="process-card__desc">Refine, deploy and take ownership of the final product.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Bottom Status Track -->
+    <div class="process__track reveal-on-scroll" role="region" aria-label="Process progression milestones">
+      <div class="process__track-item process__track-item--1 is-active">
+        <span class="process__track-dot" aria-hidden="true"></span>
+        <span class="process__track-label">[ PROBLEM ]</span>
+      </div>
+      <div class="process__track-line process__track-line--1" aria-hidden="true">
+        <span class="process__track-bar"></span>
+        <span class="process__track-particle"></span>
+      </div>
+      <div class="process__track-item process__track-item--2">
+        <span class="process__track-dot" aria-hidden="true"></span>
+        <span class="process__track-label">[ SOLUTION ]</span>
+      </div>
+      <div class="process__track-line process__track-line--2" aria-hidden="true">
+        <span class="process__track-bar"></span>
+        <span class="process__track-particle"></span>
+      </div>
+      <div class="process__track-item process__track-item--3">
+        <span class="process__track-dot" aria-hidden="true"></span>
+        <span class="process__track-label">[ SYSTEM ]</span>
+      </div>
+      <div class="process__track-line process__track-line--3" aria-hidden="true">
+        <span class="process__track-bar"></span>
+        <span class="process__track-particle"></span>
+      </div>
+      <div class="process__track-item process__track-item--4 is-highlight">
+        <span class="process__track-dot" aria-hidden="true"></span>
+        <span class="process__track-label">[ PRODUCT ]</span>
+        <span class="process__track-arrow arrow" aria-hidden="true">→</span>
+      </div>
+    </div>
+  </div>
+</section>
+

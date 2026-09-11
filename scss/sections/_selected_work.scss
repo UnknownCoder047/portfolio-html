@@ -1,0 +1,460 @@
+// -----------------------------------------------------------------------------
+// SELECTED WORK SECTION (designs/fetaured-projects.png)
+// High-craft engineering & dark cyberpunk minimalist aesthetics
+// -----------------------------------------------------------------------------
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.selected-work {
+  position: relative;
+  overflow: hidden;
+  padding-top: $spacing-4xl;
+  padding-bottom: $spacing-4xl;
+
+  @include max-md {
+    padding-top: $spacing-3xl;
+    padding-bottom: $spacing-3xl;
+  }
+
+  // Background coordinate crosshairs (+)
+  &__bg-cross {
+    position: absolute;
+    font-family: $font-mono;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(163, 230, 53, 0.22);
+    pointer-events: none;
+    user-select: none;
+    z-index: 1;
+
+    &--1 {
+      top: 22%;
+      right: 32%;
+
+      @include max-lg {
+        display: none;
+      }
+    }
+
+    &--2 {
+      top: 50%;
+      right: 38%;
+
+      @include max-lg {
+        display: none;
+      }
+    }
+  }
+
+  // Section Header: Left title block + Right technical note
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: $spacing-xl;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+
+    @include max-md {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $spacing-md;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__title-group {
+    max-width: 720px;
+  }
+
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 12px;
+    border-radius: $radius-full;
+    background: rgba(163, 230, 53, 0.06);
+    border: 1px solid rgba(163, 230, 53, 0.35);
+    font-family: $font-mono;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: $color-accent;
+    margin-bottom: $spacing-md;
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $color-accent;
+      box-shadow: 0 0 8px $color-accent;
+    }
+  }
+
+  &__headline {
+    font-family: $font-sans;
+    font-weight: 900;
+    font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+    color: $color-text-white;
+    margin-bottom: $spacing-sm;
+    text-transform: uppercase;
+  }
+
+  &__lead {
+    font-size: clamp(1rem, 1.3vw, 1.15rem);
+    color: $color-text-secondary;
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 320px;
+    align-self: flex-end;
+    margin-bottom: 4px;
+
+    @include max-md {
+      align-self: flex-start;
+      max-width: 100%;
+    }
+
+    .meta-prefix {
+      font-family: $font-mono;
+      font-size: 15px;
+      font-weight: 700;
+      color: rgba(163, 230, 53, 0.7);
+      line-height: 1.4;
+      flex-shrink: 0;
+    }
+
+    .meta-text {
+      font-size: 13px;
+      color: #8892b0;
+      line-height: 1.6;
+      margin: 0;
+    }
+  }
+
+  // 3-Column Grid for cards
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+
+    @include max-lg {
+      grid-template-columns: 1fr;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+      gap: 24px;
+    }
+
+    @include max-md {
+      max-width: 100%;
+      gap: 20px;
+    }
+  }
+
+  // Bottom Banner: Explore All Projects
+  &__banner {
+    background: rgba(13, 17, 14, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: $radius-lg;
+    padding: 22px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    transition: border-color $transition-normal, box-shadow $transition-normal;
+
+    &:hover {
+      border-color: rgba(163, 230, 53, 0.3);
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8), 0 0 20px -8px rgba(163, 230, 53, 0.12);
+    }
+
+    @include max-lg {
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include max-md {
+      max-width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px;
+    }
+
+    &-left {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+
+      @include max-sm {
+        gap: 16px;
+      }
+
+      .banner-tag {
+        border-left: 2px solid rgba(163, 230, 53, 0.6);
+        padding-left: 12px;
+        display: flex;
+        flex-direction: column;
+        font-family: $font-mono;
+        font-size: 10px;
+        font-weight: 700;
+        color: #718077;
+        letter-spacing: 0.08em;
+        line-height: 1.25;
+        text-transform: uppercase;
+      }
+
+      .banner-link {
+        font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+        font-weight: 700;
+        color: #ffffff;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: color $transition-fast;
+
+        .banner-arrow {
+          color: $color-accent;
+          font-weight: 400;
+          display: inline-block;
+        }
+
+        &:hover {
+          color: $color-accent;
+        }
+      }
+    }
+
+    &-right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      text-align: right;
+
+      @include max-md {
+        width: 100%;
+        justify-content: space-between;
+        text-align: left;
+        padding-top: 14px;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .banner-philosophy {
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+        color: #8892b0;
+        line-height: 1.45;
+      }
+
+      .banner-icon {
+        flex-shrink: 0;
+        opacity: 0.75;
+        transition: opacity $transition-fast;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// WORK CARD COMPONENT
+// -----------------------------------------------------------------------------
+.work-card {
+  background: #0b0e0c;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: rgba(163, 230, 53, 0.35);
+    box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.8),
+                0 0 30px -10px rgba(163, 230, 53, 0.15);
+
+    .work-card__img {
+      transform: scale(1.025);
+    }
+  }
+
+  // Top header in card: index + category pill
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+  }
+
+  &__number {
+    font-family: $font-mono;
+    font-size: 14px;
+    font-weight: 600;
+    color: $color-accent;
+  }
+
+  &__category {
+    font-family: $font-mono;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 3px 9px;
+    border-radius: 4px;
+    background: rgba(163, 230, 53, 0.08);
+    border: 1px solid rgba(163, 230, 53, 0.3);
+    color: $color-accent;
+    text-transform: uppercase;
+  }
+
+  // Visual preview graphic container (responsive aspect ratio prevents clipping)
+  &__visual {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 454 / 260;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #060907;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  // Card Content Body
+  &__body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__title {
+    font-family: $font-sans;
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: $color-text-white;
+    margin-bottom: 10px;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+  }
+
+  &__desc {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    line-height: 1.55;
+    margin-bottom: 18px;
+    min-height: 66px;
+    flex-grow: 1;
+  }
+
+  // Tech stack pills (fitted onto a single line matching design)
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+
+    .tag-pill {
+      font-family: $font-sans;
+      font-size: 10.5px;
+      font-weight: 500;
+      color: #d1d5db;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      padding: 3px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+      transition: all $transition-fast;
+
+      &:hover {
+        background: rgba(163, 230, 53, 0.08);
+        border-color: rgba(163, 230, 53, 0.25);
+        color: #ffffff;
+      }
+    }
+  }
+
+  // Card footer with CTA button & note
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    margin-top: auto;
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: $font-mono;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $color-accent;
+    background: rgba(163, 230, 53, 0.03);
+    border: 1px solid rgba(163, 230, 53, 0.45);
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all $transition-fast;
+
+    .cta-arrow {
+      display: inline-block;
+    }
+
+    &:hover {
+      background: $color-accent;
+      color: #070908;
+      border-color: $color-accent;
+      box-shadow: 0 0 16px rgba(163, 230, 53, 0.35);
+    }
+  }
+
+  &__note {
+    display: flex;
+    flex-direction: column;
+    font-size: 11px;
+    color: #718077;
+    text-align: right;
+    line-height: 1.35;
+    font-family: $font-sans;
+  }
+}

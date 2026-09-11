@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Ankit Kumar</title>
+  <meta name="description" content="About Ankit Kumar - Software Engineer building reliable backend systems, Android applications, and scalable end-to-end products.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../css/style.css?v=15">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER / NAVBAR SECTION (Synchronized with index.html)
+       ========================================================================== -->
+  <header class="header" id="main-header">
+    <div class="header__container">
+      <!-- Brand Logo: Slanted White "A" with Neon Lime "/" -->
+      <a href="../index.html" class="header__logo" aria-label="A/ - Home">
+        <span class="logo-letter">A</span><span class="logo-slash">/</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="header__nav" aria-label="Primary Navigation">
+        <ul class="header__menu">
+          <li>
+            <a href="../index.html" class="header__link">
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="projects.html" class="header__link">
+              <span>Projects</span>
+            </a>
+          </li>
+          <li>
+            <a href="services.html" class="header__link">
+              <span>Services</span>
+            </a>
+          </li>
+          <li>
+            <a href="about.html" class="header__link active" aria-current="page">
+              <span class="nav-dot" aria-hidden="true"></span>
+              <span>About</span>
+            </a>
+          </li>
+          <li>
+            <a href="contact.html" class="header__link">
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions: "LET'S TALK ->" Button & Mobile Toggle -->
+      <div class="header__actions">
+        <a href="contact.html" class="btn-talk">
+          <span class="btn-talk__text">LET'S TALK</span>
+          <span class="btn-talk__arrow" aria-hidden="true">→</span>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="header__toggle" id="header-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <span class="bar bar--1"></span>
+          <span class="bar bar--2"></span>
+          <span class="bar bar--3"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="header__mobile-drawer" id="mobile-drawer" aria-hidden="true">
+      <div class="drawer-inner">
+        <nav class="drawer-nav" aria-label="Mobile Navigation">
+          <ul class="drawer-menu">
+            <li>
+              <a href="../index.html" class="drawer-link">
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="projects.html" class="drawer-link">
+                <span>Projects</span>
+              </a>
+            </li>
+            <li>
+              <a href="services.html" class="drawer-link">
+                <span>Services</span>
+              </a>
+            </li>
+            <li>
+              <a href="about.html" class="drawer-link active">
+                <span class="drawer-dot"></span>
+                <span>About</span>
+              </a>
+            </li>
+            <li>
+              <a href="contact.html" class="drawer-link">
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="drawer-action">
+          <a href="contact.html" class="btn-talk btn-talk--full">
+            <span>LET'S TALK</span>
+            <span class="btn-talk__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MAIN ABOUT CONTENT (Matched to designs/anout-me.png)
+       ========================================================================== -->
+  <main>
+    <section class="section about-page" id="about">
+      <div class="container">
+        
+        <!-- 1. Hero / Intro Row -->
+        <div class="about-hero__grid">
+          <!-- Left Column: Typography & Story -->
+          <div class="about-hero__content reveal-on-scroll">
+            <span class="about-tag">ABOUT ME</span>
+            <h1 class="about-hero__headline">
+              Building Ideas<br>
+              Into <span class="highlight">Real Products.</span>
+            </h1>
+            <p class="about-hero__lead">
+              I'm Ankit Kumar, a software engineer who loves turning complex problems into simple, scalable solutions. I enjoy working across backend systems, mobile apps, and full-stack products, always with a focus on real-world impact.
+            </p>
+            <div class="about-hero__annotation" aria-hidden="true">
+              <img src="../images/about-handwritten-badge.png" alt="Code Build Learn Repeat" width="110" height="105" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Composition with Tilted Glow Card and Badges -->
+          <div class="about-hero__visual parallax-drift" data-drift-factor="0.07">
+            <div class="ambient-float reveal-on-scroll" data-reveal-delay="150">
+              <img src="../images/about-portrait-full.png" alt="Ankit Kumar portrait with Clean Code and Always Curious badges" class="about-hero__portrait-img" width="640" height="425" loading="eager">
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Four Stats Counter Bar -->
+        <div class="about-stats reveal-on-scroll" aria-label="Key Statistics">
+          <div class="about-stats__item">
+            <div class="about-stats__val" data-counter="3" data-suffix="+">3+</div>
+            <div class="about-stats__label">Years of Experience</div>
+          </div>
+          <div class="about-stats__item">
+            <div class="about-stats__val" data-counter="10" data-suffix="+">10+</div>
+            <div class="about-stats__label">Projects Built</div>
+          </div>
+          <div class="about-stats__item">
+            <div class="about-stats__val" data-counter="5" data-suffix="+">5+</div>
+            <div class="about-stats__label">Technologies</div>
+          </div>
+          <div class="about-stats__item">
+            <div class="about-stats__val" data-counter="100" data-suffix="%">100%</div>
+            <div class="about-stats__label">Commitment to Learning</div>
+          </div>
+        </div>
+
+        <!-- 3. Two-Column Layout: What I Do (Left) & My Approach (Right) -->
+        <div class="about-duo">
+          
+          <!-- Left Column: What I Do (6 Cards in 3x2 Grid) -->
+          <div class="about-duo__left reveal-on-scroll">
+            <span class="about-tag">WHAT I DO</span>
+            <h2 class="about-duo__headline">
+              From Backend to Mobile,<br>
+              I Build <span class="highlight">End-to-End Solutions.</span>
+            </h2>
+
+            <div class="about-duo__cards-grid reveal-cascade cascade--3col">
+              <!-- Card 1: Backend Development -->
+              <article class="about-card reveal-on-scroll">
+                <div class="about-card__icon" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                  </svg>
+                </div>
+                <h3 class="about-card__title">Backend Development</h3>
+                <p class="about-card__desc">Designing reliable APIs and scalable systems.</p>
+              </article>
+
+              <!-- Card 2: Android Development -->
+              <article class="about-card reveal-on-scroll">
+                <div class="about-card__icon" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                    <line x1="12" y1="18" x2="12.01" y2="18"/>
+                  </svg>
+                </div>
+                <h3 class="about-card__title">Android Development</h3>
+                <p class="about-card__desc">Building modern, user-friendly mobile apps with Kotlin.</p>
+              </article>
+
+              <!-- Card 3: Product Development -->
+              <article class="about-card reveal-on-scroll">
+                <div class="about-card__icon" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                    <line x1="12" y1="22.08" x2="12" y2="12"/>
+                  </svg>
+                </div>
+                <h3 class="about-card__title">Product Development</h3>
+                <p class="about-card__desc">Turning ideas into real-world products.</p>
+              </article>
+
+              <!-- Card 4: Database Design -->
+              <article class="about-card reveal-on-scroll">
+                <div class="about-card__icon" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                    <ellipse cx="12" cy="6" rx="8" ry="3"/>
+                    <path d="M4 6v6c0 1.66 3.58 3 8 3s8-1.34 8-3V6"/>
+                    <path d="M4 12v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6"/>
+                  </svg>
+                </div>
+                <h3 class="about-card__title">Database Design</h3>
+                <p class="about-card__desc">Creating efficient and maintainable data models.</p>
+              </article>
+
+              <!-- Card 5: System Architecture -->
+              <article class="about-card reveal-on-scroll">
+                <div class="about-card__icon" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                  </svg>
+                </div>
+                <h3 class="about-card__title">System Architecture</h3>
+                <p class="about-card__desc">Designing scalable and resilient architectures.</p>
+              </article>
+
+              <!-- Card 6: Tools & Automation -->
+              <article class="about-card reveal-on-scroll">
+                <div class="about-card__icon" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                  </svg>
+                </div>
+                <h3 class="about-card__title">Tools & Automation</h3>
+                <p class="about-card__desc">Improving developer productivity with the right tools.</p>
+              </article>
+            </div>
+          </div>
+
+          <!-- Right Column: My Approach (4 Steps Timeline) -->
+          <div class="about-duo__right reveal-on-scroll" data-reveal-delay="150">
+            <span class="about-tag">MY APPROACH</span>
+            <h2 class="about-duo__headline">
+              Solve. Build. Improve. <span class="highlight">Repeat.</span>
+            </h2>
+
+            <div class="about-timeline">
+              <!-- Step 1: Understand -->
+              <div class="about-timeline__step about-timeline__step--1">
+                <div class="about-timeline__track">
+                  <div class="about-timeline__line" aria-hidden="true">
+                    <span class="about-timeline__bar"></span>
+                    <span class="about-timeline__particle"></span>
+                  </div>
+                  <div class="about-timeline__dot" aria-hidden="true"></div>
+                </div>
+                <div class="about-timeline__body">
+                  <div class="about-timeline__icon-box" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="11" cy="11" r="8"/>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    </svg>
+                  </div>
+                  <div class="about-timeline__content">
+                    <h3 class="about-timeline__title">Understand</h3>
+                    <p class="about-timeline__desc">I take time to understand the real problem and the people it impacts.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 2: Plan -->
+              <div class="about-timeline__step about-timeline__step--2">
+                <div class="about-timeline__track">
+                  <div class="about-timeline__line" aria-hidden="true">
+                    <span class="about-timeline__bar"></span>
+                    <span class="about-timeline__particle"></span>
+                  </div>
+                  <div class="about-timeline__dot" aria-hidden="true"></div>
+                </div>
+                <div class="about-timeline__body">
+                  <div class="about-timeline__icon-box" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9 18h6"/>
+                      <path d="M10 22h4"/>
+                      <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A6 6 0 0 0 12 2a6 6 0 0 0-4.5 9.5c.76.76 1.23 1.52 1.41 2.5"/>
+                    </svg>
+                  </div>
+                  <div class="about-timeline__content">
+                    <h3 class="about-timeline__title">Plan</h3>
+                    <p class="about-timeline__desc">Design a simple and scalable solution.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 3: Build -->
+              <div class="about-timeline__step about-timeline__step--3">
+                <div class="about-timeline__track">
+                  <div class="about-timeline__line" aria-hidden="true">
+                    <span class="about-timeline__bar"></span>
+                    <span class="about-timeline__particle"></span>
+                  </div>
+                  <div class="about-timeline__dot" aria-hidden="true"></div>
+                </div>
+                <div class="about-timeline__body">
+                  <div class="about-timeline__icon-box" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="16 18 22 12 16 6"/>
+                      <polyline points="8 6 2 12 8 18"/>
+                    </svg>
+                  </div>
+                  <div class="about-timeline__content">
+                    <h3 class="about-timeline__title">Build</h3>
+                    <p class="about-timeline__desc">Write clean, maintainable code with best practices.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 4: Improve -->
+              <div class="about-timeline__step about-timeline__step--4">
+                <div class="about-timeline__track">
+                  <div class="about-timeline__dot" aria-hidden="true"></div>
+                </div>
+                <div class="about-timeline__body">
+                  <div class="about-timeline__icon-box" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="18" y1="20" x2="18" y2="10"/>
+                      <line x1="12" y1="20" x2="12" y2="4"/>
+                      <line x1="6" y1="20" x2="6" y2="14"/>
+                    </svg>
+                  </div>
+                  <div class="about-timeline__content">
+                    <h3 class="about-timeline__title">Improve</h3>
+                    <p class="about-timeline__desc">Get feedback, learn, and keep iterating.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Philosophy Callout ("Beyond Code") -->
+        <div class="about-philosophy reveal-on-scroll">
+          <div class="about-philosophy__left">
+            <div class="about-philosophy__icon" aria-hidden="true">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+                <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+                <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+                <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+              </svg>
+            </div>
+            <div class="about-philosophy__text">
+              <span class="about-tag">BEYOND CODE</span>
+              <h3 class="about-philosophy__title">
+                I Believe in Building a <span class="highlight">Better Tomorrow.</span>
+              </h3>
+              <p class="about-philosophy__desc">
+                Through technology, continuous learning, and meaningful products, I aim to create a positive impact.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-philosophy__right">
+            <p class="about-philosophy__quote">
+              “Good software isn't just about code, it's about the people it helps.”
+            </p>
+            <div class="about-philosophy__quote-line line-draw" aria-hidden="true"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       FOOTER SECTION (Synchronized with index.html)
+       ===================================================================== -->
+  <footer class="footer" id="main-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Column 1: Brand & Socials -->
+        <div class="footer__brand">
+          <span class="footer__brand-tag">[ BUILD • LEARN • SHIP ]</span>
+          <h3 class="footer__brand-title">Good<br>Software<br><span class="highlight">Matters.</span></h3>
+          <p class="footer__brand-sub">Ideas to real products. One build at a time.</p>
+          <div class="footer__social-links">
+            <a href="https://github.com/ankitkumar" target="_blank" rel="noopener noreferrer" class="footer__social-btn" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/ankitkumar" target="_blank" rel="noopener noreferrer" class="footer__social-btn" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Navigate -->
+        <div class="footer__nav">
+          <h4 class="footer__nav-header">NAVIGATE</h4>
+          <ul class="footer__nav-list">
+            <li><a href="projects.html"><span>Work</span> <span class="arrow">→</span></a></li>
+            <li><a href="services.html"><span>Services</span> <span class="arrow">→</span></a></li>
+            <li><a href="about.html"><span>About</span> <span class="arrow">→</span></a></li>
+            <li><a href="contact.html"><span>Contact</span> <span class="arrow">→</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Let's Build CTA & Technical Coordinate Grid Graphic -->
+        <div class="footer__cta-wrap">
+          <div class="footer__cta-content">
+            <div class="footer__status">
+              <span class="footer__status-dot"></span>
+              <span class="footer__status-text">LET'S BUILD</span>
+            </div>
+            <h4 class="footer__cta-heading">Software engineer building reliable<br>systems and useful products.</h4>
+            <p class="footer__cta-sub">Available for freelance projects — from a<br>single backend to a complete product.</p>
+            <a href="contact.html" class="footer__cta-btn">
+              <span>START A PROJECT</span>
+              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10m0 0L8.5 3.5M13 8l-4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Technical Coordinate Grid with Glowing Crosshairs and Keyword Stack -->
+          <div class="footer__tech-grid" aria-hidden="true">
+            <div class="footer__grid-wireframe">
+              <svg class="footer__grid-svg" width="130" height="150" viewBox="0 0 130 150" fill="none">
+                <defs>
+                  <linearGradient id="footer-glow-vert" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#a3e635" stop-opacity="0"/>
+                    <stop offset="50%" stop-color="#a3e635" stop-opacity="0.85"/>
+                    <stop offset="100%" stop-color="#a3e635" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="footer-glow-horiz" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#a3e635" stop-opacity="0"/>
+                    <stop offset="50%" stop-color="#a3e635" stop-opacity="0.85"/>
+                    <stop offset="100%" stop-color="#a3e635" stop-opacity="0"/>
+                  </linearGradient>
+                  <filter id="glow-filter" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+                    <feMerge>
+                      <feMergeNode in="coloredBlur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <!-- Subtle Technical Grid Lines -->
+                <line x1="35" y1="0" x2="35" y2="150" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+                <line x1="95" y1="0" x2="95" y2="150" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+                <line x1="0" y1="45" x2="130" y2="45" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+                <line x1="0" y1="100" x2="130" y2="100" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+
+                <!-- Upper Crosshair Beam & Plus at (95, 45) -->
+                <line x1="95" y1="5" x2="95" y2="85" stroke="url(#footer-glow-vert)" stroke-width="1.5"/>
+                <circle cx="95" cy="45" r="12" fill="#a3e635" fill-opacity="0.12"/>
+                <g filter="url(#glow-filter)">
+                  <line x1="95" y1="38" x2="95" y2="52" stroke="#a3e635" stroke-width="1.75" stroke-linecap="square"/>
+                  <line x1="88" y1="45" x2="102" y2="45" stroke="#a3e635" stroke-width="1.75" stroke-linecap="square"/>
+                </g>
+
+                <!-- Lower Crosshair Beam & Plus at (35, 100) -->
+                <line x1="0" y1="100" x2="80" y2="100" stroke="url(#footer-glow-horiz)" stroke-width="1.5"/>
+                <circle cx="35" cy="100" r="12" fill="#a3e635" fill-opacity="0.12"/>
+                <g filter="url(#glow-filter)">
+                  <line x1="35" y1="93" x2="35" y2="107" stroke="#a3e635" stroke-width="1.75" stroke-linecap="square"/>
+                  <line x1="28" y1="100" x2="42" y2="100" stroke="#a3e635" stroke-width="1.75" stroke-linecap="square"/>
+                </g>
+              </svg>
+            </div>
+
+            <!-- Vertical Word Stack -->
+            <div class="footer__tech-words">
+              <span>IDEAS</span>
+              <span>CODE</span>
+              <span>PEOPLE</span>
+              <span>IMPACT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar: Copyright, Philosophy & Made-With -->
+      <div class="footer__bottom">
+        <div class="footer__copyright">© 2026 Ankit Kumar. All rights reserved.</div>
+        <div class="footer__philosophy">
+          <span class="slash">//</span> SAME IDEAS. BIGGER POSSIBILITIES.
+        </div>
+        <div class="footer__made-with">
+          <span>MADE WITH</span>
+          <span class="code-icon">&lt;/&gt;</span>
+          <span>AND</span>
+          <svg class="coffee-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="7" cy="4" r="0.75" fill="#a3e635"/>
+            <circle cx="11" cy="2" r="0.75" fill="#a3e635"/>
+            <circle cx="15" cy="4" r="0.75" fill="#a3e635"/>
+            <path d="M17 9h1a4 4 0 0 1 0 8h-1"/>
+            <path d="M3 9h14v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!-- ==========================================================================
+     LET'S BUILD / CTA SECTION (designs/cta.png)
+     ========================================================================== -->
+<section class="section cta" id="cta" aria-labelledby="cta-title">
+  <div class="container cta__container">
+    <!-- Top Metadata / Micro-labels & Badge Row -->
+    <div class="cta__top-bar reveal-on-scroll">
+      <!-- Left Micro-labels -->
+      <div class="cta__meta cta__meta--left" aria-hidden="true">
+        <span class="cta__meta-item">IDEAS</span>
+        <span class="cta__meta-item">PROBLEMS</span>
+        <span class="cta__meta-item">SOLUTIONS</span>
+        <span class="cta__meta-item cta__meta-item--underlined">REAL IMPACT</span>
+      </div>
+
+      <!-- Center Status Badge -->
+      <div class="cta__badge">
+        <span class="status-badge"><span class="dot"></span> LET'S BUILD</span>
+      </div>
+
+      <!-- Right Micro-labels -->
+      <div class="cta__meta cta__meta--right" aria-hidden="true">
+        <span class="cta__meta-item">DISCUSS</span>
+        <span class="cta__meta-item">PLAN</span>
+        <span class="cta__meta-item">BUILD</span>
+        <span class="cta__meta-item cta__meta-item--underlined">SHIP</span>
+      </div>
+    </div>
+
+    <!-- Main Title & Subtitle Block -->
+    <div class="cta__header reveal-on-scroll" data-reveal-delay="100">
+      <h2 id="cta-title" class="cta__title">
+        GOT SOMETHING WORTH<br>
+        <span class="cta__title-highlight">BUILDING?</span>
+      </h2>
+      <p class="cta__desc">
+        Have an idea, an existing product, or a technical problem?<br class="cta__desc-break">
+        Let's turn it into something people can actually use.
+      </p>
+    </div>
+
+    <!-- Visual Flow Diagram with Center Action Buttons & Connecting Wave -->
+    <div class="cta__flow reveal-on-scroll" data-reveal-delay="200">
+      <!-- Left Art: Circle & Rounded Square Diagram -->
+      <div class="cta__art-col cta__art-col--left parallax-drift" data-drift-factor="0.06">
+        <div class="cta__art-box cta__art-box--left">
+          <img src="images/cta-diagram-left.png" alt="Concept to Product Flow: Idea to Product" class="cta__art-img" width="465" height="475" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Center Interactive Column: Action Buttons + Glowing Wave Spline -->
+      <div class="cta__center-col">
+        <!-- Buttons Cluster -->
+        <div class="cta__buttons">
+          <a href="pages/contact.html" class="btn btn--primary cta__btn cta__btn--primary">
+            <span>START A PROJECT</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="pages/contact.html" class="btn btn--outline cta__btn cta__btn--outline">
+            <span>GET IN TOUCH</span>
+          </a>
+        </div>
+
+        <!-- Wave Spline Connector -->
+        <div class="cta__wave-wrap" aria-hidden="true">
+          <svg class="cta__wave-svg" viewBox="0 0 500 140" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="cta-line-glow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="3" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+
+            <!-- Ambient Glow Wave -->
+            <path d="M 0 52 C 140 52, 175 110, 250 110 C 325 110, 410 24, 500 24"
+                  stroke="rgba(163, 230, 53, 0.28)" stroke-width="5" filter="url(#cta-line-glow)" />
+
+            <!-- Main Neon Wave Spline -->
+            <path d="M 0 52 C 140 52, 175 110, 250 110 C 325 110, 410 24, 500 24"
+                  stroke="#a3e635" stroke-width="1.8" />
+
+            <!-- Glowing Center Node ▪ -->
+            <rect x="246" y="106" width="8" height="8" fill="#a3e635" filter="url(#cta-line-glow)" />
+          </svg>
+
+          <!-- Motto under wave -->
+          <div class="cta__motto">
+            <span>SAME IDEAS.</span>
+            <span>BIGGER POSSIBILITIES.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Art: Isometric Tier Stack Diagram -->
+      <div class="cta__art-col cta__art-col--right parallax-drift" data-drift-factor="0.06">
+        <div class="cta__art-box cta__art-box--right">
+          <img src="images/cta-diagram-right.png" alt="Engineering System Flow: Build to Real Impact" class="cta__art-img" width="460" height="460" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar: Execution Motto & Tech Domain Tags -->
+    <div class="cta__bottom-bar reveal-on-scroll">
+      <div class="cta__bottom-left">
+        <span class="cta__bottom-prefix" aria-hidden="true">//</span>
+        <span class="cta__bottom-divider" aria-hidden="true"></span>
+        <div class="cta__bottom-quote">
+          <span>GOOD IDEAS DESERVE</span>
+          <span>GREAT EXECUTION.</span>
+        </div>
+      </div>
+
+      <div class="cta__bottom-right">
+        <ul class="cta__tech-list" aria-label="Core Engineering Disciplines">
+          <li>SOFTWARE</li>
+          <li>MOBILE APPS</li>
+          <li>APIS</li>
+          <li class="cta__tech-list-accent">SYSTEMS</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+

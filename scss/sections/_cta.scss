@@ -1,0 +1,524 @@
+// -----------------------------------------------------------------------------
+// LET'S BUILD / CTA SECTION (designs/cta.png)
+// Pixel-perfect implementation matching designs/cta.png
+// -----------------------------------------------------------------------------
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.cta {
+  position: relative;
+  overflow: hidden;
+  padding: 90px 0 70px;
+  scroll-margin-top: 90px;
+
+  @include max-lg {
+    padding: 70px 0 50px;
+    scroll-margin-top: 80px;
+  }
+
+  @include max-md {
+    padding: 60px 0 45px;
+    scroll-margin-top: 70px;
+  }
+
+  &__container {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding-left: 28px;
+    padding-right: 28px;
+
+    @include max-md {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Top Row: Micro-labels & Status Badge
+  // ---------------------------------------------------------------------------
+  &__top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 28px;
+
+    @include max-md {
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__meta {
+    font-family: $font-mono;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.8;
+    letter-spacing: 0.14em;
+    color: #718077;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+
+    &--left {
+      text-align: left;
+
+      .cta__meta-item--underlined {
+        border-bottom: 1.5px solid rgba(255, 255, 255, 0.35);
+        padding-bottom: 2px;
+        align-self: flex-start;
+        color: $color-text-secondary;
+      }
+    }
+
+    &--right {
+      text-align: right;
+
+      .cta__meta-item--underlined {
+        border-bottom: 1.5px solid rgba(255, 255, 255, 0.35);
+        padding-bottom: 2px;
+        align-self: flex-end;
+        color: $color-text-secondary;
+      }
+    }
+
+    @include max-md {
+      display: none;
+    }
+  }
+
+  &__badge {
+    flex-shrink: 0;
+
+    .status-badge {
+      font-family: $font-mono;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: $color-accent;
+      background: rgba(163, 230, 53, 0.08);
+      border: 1px solid rgba(163, 230, 53, 0.28);
+      padding: 6px 16px;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      .dot {
+        width: 6px;
+        height: 6px;
+        background: $color-accent;
+        border-radius: 50%;
+        box-shadow: 0 0 10px $color-accent;
+      }
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Main Title & Subtitle
+  // ---------------------------------------------------------------------------
+  &__header {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    font-family: $font-sans;
+    font-size: clamp(2.4rem, 5.2vw, 4.4rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: $color-text-white;
+    margin-bottom: 18px;
+
+    &-highlight {
+      color: $color-accent;
+      text-shadow: 0 0 35px rgba(163, 230, 53, 0.5), 0 0 70px rgba(163, 230, 53, 0.25);
+    }
+  }
+
+  &__desc {
+    font-family: $font-sans;
+    font-size: 17px;
+    line-height: 1.6;
+    color: $color-text-secondary;
+    max-width: 640px;
+    margin: 0 auto;
+
+    @include max-sm {
+      font-size: 15px;
+    }
+
+    &-break {
+      @include max-sm {
+        display: none;
+      }
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Visual Flow Diagram (Left Art, Center Wave + Buttons, Right Art)
+  // ---------------------------------------------------------------------------
+  &__flow {
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) minmax(360px, 1.25fr) minmax(280px, 1fr);
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 50px;
+    position: relative;
+
+    @include max-lg {
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    @include max-sm {
+      grid-template-columns: 1fr;
+      gap: 28px;
+      margin-bottom: 36px;
+    }
+  }
+
+  &__art-col {
+    display: flex;
+    align-items: center;
+
+    &--left {
+      justify-content: flex-start;
+
+      @include max-lg {
+        justify-content: center;
+        order: 2;
+      }
+    }
+
+    &--right {
+      justify-content: flex-end;
+
+      @include max-lg {
+        justify-content: center;
+        order: 3;
+      }
+    }
+  }
+
+  &__art-box {
+    max-width: 440px;
+    width: 100%;
+    position: relative;
+    transform-origin: center center;
+    will-change: transform, filter;
+
+    @include max-lg {
+      max-width: 340px;
+    }
+
+    @include max-sm {
+      max-width: 290px;
+    }
+
+    &--left {
+      animation: ctaHoloFloatLeft 5.6s ease-in-out infinite;
+    }
+
+    &--right {
+      animation: ctaHoloFloatRight 6.4s ease-in-out infinite 0.8s;
+    }
+  }
+
+  &__art-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    mix-blend-mode: screen;
+    pointer-events: auto;
+    transform-origin: center center;
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), filter 0.45s ease;
+
+    .cta__art-box:hover & {
+      transform: scale(1.028);
+      filter: drop-shadow(0 0 16px rgba($color-accent, 0.42));
+    }
+  }
+
+  &__center-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+
+    @include max-lg {
+      grid-column: 1 / -1;
+      order: 1;
+      margin-bottom: 12px;
+    }
+  }
+
+  // Buttons Cluster
+  &__buttons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+
+    @include max-sm {
+      flex-direction: column;
+      width: 100%;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__btn {
+    font-family: $font-mono;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 13px 26px;
+    border-radius: $radius-sm;
+    transition: all $transition-normal;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    cursor: pointer;
+
+    @include max-sm {
+      width: 100%;
+      padding: 14px 20px;
+    }
+
+    &--primary {
+      background: $color-accent;
+      color: #070908;
+      border: 1px solid $color-accent;
+      box-shadow: 0 0 20px rgba(163, 230, 53, 0.25);
+
+      .arrow {
+        display: inline-block;
+      }
+
+      &:hover {
+        background: $color-accent-light;
+        border-color: $color-accent-light;
+        box-shadow: 0 0 30px rgba(163, 230, 53, 0.5);
+        transform: translateY(-2px);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+
+    &--outline {
+      background: rgba(11, 15, 13, 0.8);
+      color: $color-accent;
+      border: 1px solid rgba(163, 230, 53, 0.45);
+
+      &:hover {
+        border-color: $color-accent;
+        background: rgba(163, 230, 53, 0.1);
+        box-shadow: 0 0 25px rgba(163, 230, 53, 0.3);
+        transform: translateY(-2px);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  // Wave Spline
+  &__wave-wrap {
+    width: calc(100% + 24px);
+    margin-left: -12px;
+    margin-right: -12px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include max-lg {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    @include max-sm {
+      display: none;
+    }
+  }
+
+  &__wave-svg {
+    width: 100%;
+    height: 120px;
+    display: block;
+    overflow: visible;
+
+    @include max-lg {
+      display: none;
+    }
+  }
+
+  &__motto {
+    font-family: $font-mono;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    color: #718077;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    line-height: 1.4;
+
+    @include max-lg {
+      margin-top: 0;
+      color: $color-text-secondary;
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Bottom Bar: Philosophy & Domain Tags
+  // ---------------------------------------------------------------------------
+  &__bottom-bar {
+    position: relative;
+    border-top: none;
+    padding-top: 28px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+
+    @include max-md {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      padding-top: 20px;
+    }
+  }
+
+  &__bottom-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__bottom-prefix {
+    font-family: $font-mono;
+    font-size: 16px;
+    font-weight: 700;
+    color: $color-accent;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  &__bottom-divider {
+    width: 1px;
+    height: 28px;
+    background: rgba(255, 255, 255, 0.14);
+    flex-shrink: 0;
+  }
+
+  &__bottom-quote {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-mono;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    line-height: 1.4;
+    color: $color-text-secondary;
+    text-transform: uppercase;
+  }
+
+  &__bottom-right {
+    flex-shrink: 0;
+
+    @include max-md {
+      width: 100%;
+    }
+  }
+
+  &__tech-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+    font-family: $font-mono;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    color: #718077;
+    text-transform: uppercase;
+
+    @include max-md {
+      align-items: flex-start;
+    }
+
+    &-accent {
+      color: $color-text-white;
+      border-bottom: 2px solid $color-accent;
+      padding-bottom: 3px;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Concept 01: Holographic Floating & Ambient Breathing for 3D CTA Diagrams
+// Refined, subtle luminescence with zero abrupt freezing
+// -----------------------------------------------------------------------------
+@keyframes ctaHoloFloatLeft {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    filter: drop-shadow(0 0 8px rgba($color-accent, 0.12));
+  }
+  50% {
+    transform: translateY(-12px) rotate(-0.5deg);
+    filter: drop-shadow(0 0 18px rgba($color-accent, 0.28));
+  }
+}
+
+@keyframes ctaHoloFloatRight {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    filter: drop-shadow(0 0 8px rgba($color-accent, 0.12));
+  }
+  50% {
+    transform: translateY(-13px) rotate(0.5deg);
+    filter: drop-shadow(0 0 20px rgba($color-accent, 0.3));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta__art-box {
+    animation: none !important;
+    transform: none !important;
+  }
+}

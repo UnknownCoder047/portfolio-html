@@ -1,0 +1,136 @@
+// -----------------------------------------------------------------------------
+// COMPONENTS: SCROLL TO TOP BUTTON WITH CIRCULAR PROGRESS
+// -----------------------------------------------------------------------------
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(11, 15, 13, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-text-secondary;
+  cursor: pointer;
+  z-index: 99;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(16px) scale(0.9);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.2s ease,
+              border-color 0.2s ease,
+              color 0.2s ease,
+              box-shadow 0.2s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+  &.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+  }
+
+  &:hover {
+    background: rgba(16, 22, 18, 0.95);
+    border-color: rgba(163, 230, 53, 0.45);
+    color: $color-accent;
+    box-shadow: 0 0 24px rgba(163, 230, 53, 0.3), 0 4px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px) scale(1.04);
+
+    .scroll-top-btn__icon {
+      transform: translateY(-2px);
+    }
+  }
+
+  &:active {
+    transform: scale(0.94);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-accent;
+    outline-offset: 3px;
+  }
+
+  &__progress {
+    position: absolute;
+    inset: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    pointer-events: none;
+    transform: rotate(-90deg);
+  }
+
+  &__track {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.08);
+    stroke-width: 2.5;
+  }
+
+  &__circle {
+    fill: none;
+    stroke: $color-accent;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-dasharray: 125.66;
+    stroke-dashoffset: 125.66;
+    transition: stroke-dashoffset 0.08s linear;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    transition: transform $transition-fast;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      stroke-width: 2.25;
+    }
+  }
+
+  @include max-md {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 44px;
+    height: 44px;
+
+    &__icon svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-top-btn {
+    transition: opacity 0.2s ease !important;
+    transform: none !important;
+
+    &:hover,
+    &:active,
+    &.is-visible {
+      transform: none !important;
+    }
+
+    &__circle {
+      transition: none !important;
+    }
+
+    &__icon {
+      transition: none !important;
+    }
+  }
+}

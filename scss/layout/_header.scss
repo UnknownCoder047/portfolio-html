@@ -1,0 +1,312 @@
+// -----------------------------------------------------------------------------
+// HEADER / NAVBAR STYLES
+// Recreated pixel-perfect from designs/hero.png
+// -----------------------------------------------------------------------------
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 86px;
+  display: flex;
+  align-items: center;
+  background: rgba(7, 9, 8, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all $transition-normal;
+
+  &--scrolled {
+    height: 72px;
+    background: rgba(7, 9, 8, 0.94);
+    border-bottom-color: rgba(255, 255, 255, 0.09);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8);
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include max-lg {
+      padding: 0 28px;
+    }
+
+    @include max-sm {
+      padding: 0 20px;
+    }
+  }
+
+  // 1. Logo "A/"
+  &__logo {
+    display: inline-flex;
+    align-items: baseline;
+    font-size: 27px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    text-decoration: none;
+    transition: opacity $transition-fast;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    .logo-letter {
+      color: #ffffff;
+      font-family: $font-sans;
+      font-weight: 900;
+    }
+
+    .logo-slash {
+      color: $color-accent;
+      font-family: $font-sans;
+      font-weight: 900;
+      margin-left: 2px;
+      text-shadow: 0 0 16px rgba(163, 230, 53, 0.6);
+    }
+  }
+
+  // 2. Desktop Navigation
+  &__nav {
+    display: flex;
+    align-items: center;
+
+    @include max-md {
+      display: none; // Hidden on mobile/tablet viewports
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @include max-lg {
+      gap: 28px;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__link {
+    font-size: 15px;
+    font-weight: 500;
+    color: #9ca3af;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 0.01em;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: #ffffff;
+    }
+
+    &.active {
+      color: $color-accent;
+      font-weight: 600;
+
+      .nav-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: $color-accent;
+        box-shadow: 0 0 8px $color-accent, 0 0 16px rgba(163, 230, 53, 0.4);
+        display: inline-block;
+      }
+    }
+  }
+
+  // 3. Actions: "LET'S TALK ->" & Toggle
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  // 4. Mobile Hamburger Toggle
+  &__toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(18, 24, 20, 0.7);
+    color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: all $transition-fast;
+
+    .bar {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: #ffffff;
+      border-radius: 2px;
+      transition: all $transition-normal;
+    }
+
+    &:hover {
+      border-color: $color-accent;
+      background: rgba(163, 230, 53, 0.1);
+    }
+
+    @include max-md {
+      display: flex;
+    }
+
+    &.open {
+      .bar--1 {
+        transform: translateY(7px) rotate(45deg);
+      }
+      .bar--2 {
+        opacity: 0;
+      }
+      .bar--3 {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+    }
+  }
+
+  // 5. Mobile Drawer
+  &__mobile-drawer {
+    position: fixed;
+    top: 86px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: calc(100vh - 86px);
+    background: rgba(7, 9, 8, 0.98);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    z-index: 999;
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-12px);
+    transition: all $transition-normal;
+
+    &.open {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .drawer-inner {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
+    }
+
+    .drawer-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .drawer-link {
+      font-size: 24px;
+      font-weight: 800;
+      color: #f3f4f6;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: color $transition-fast;
+
+      .drawer-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: $color-accent;
+        box-shadow: 0 0 10px $color-accent;
+      }
+
+      &.active {
+        color: $color-accent;
+      }
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
+
+    .drawer-action {
+      margin-top: auto;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  }
+}
+
+// Dedicated "LET'S TALK ->" button
+.btn-talk {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border: 1px solid rgba(163, 230, 53, 0.4);
+  border-radius: 4px;
+  background: rgba(163, 230, 53, 0.02);
+  color: $color-accent;
+  font-family: $font-mono;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all $transition-normal;
+  white-space: nowrap;
+
+  .btn-talk__arrow {
+    font-size: 15px;
+    line-height: 1;
+    transition: transform $transition-fast;
+    color: $color-accent;
+  }
+
+  &:hover {
+    border-color: $color-accent;
+    background: rgba(163, 230, 53, 0.1);
+    box-shadow: 0 0 22px rgba(163, 230, 53, 0.25);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &--full {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 24px;
+    font-size: 14px;
+  }
+}

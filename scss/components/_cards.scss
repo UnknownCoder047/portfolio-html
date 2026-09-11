@@ -1,0 +1,93 @@
+// -----------------------------------------------------------------------------
+// CARDS & SURFACE CONTAINERS
+// -----------------------------------------------------------------------------
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.card {
+  @include glass-surface;
+  padding: $spacing-xl;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  // Ambient top light highlight
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: $spacing-md;
+  }
+
+  &__number {
+    font-family: $font-mono;
+    font-size: $font-size-sm;
+    color: $color-text-muted;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  &__arrow {
+    color: $color-text-muted;
+    font-size: $font-size-base;
+    transition: all $transition-fast;
+  }
+
+  &:hover &__arrow {
+    color: $color-accent;
+    transform: translate(2px, -2px);
+  }
+
+  &__title {
+    font-size: $font-size-xl;
+    font-weight: 800;
+    color: $color-text-white;
+    margin-bottom: $spacing-sm;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+  }
+
+  &__desc {
+    font-size: $font-size-sm;
+    color: $color-text-secondary;
+    margin-bottom: $spacing-lg;
+    flex-grow: 1;
+    line-height: 1.6;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+  }
+
+  &__visual {
+    margin: $spacing-md 0;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+}

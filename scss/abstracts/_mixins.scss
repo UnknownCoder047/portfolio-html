@@ -1,0 +1,96 @@
+// -----------------------------------------------------------------------------
+// SCSS MIXINS & UTILITIES
+// -----------------------------------------------------------------------------
+@use 'variables' as *;
+
+// Responsive Media Queries
+@mixin sm {
+  @media (min-width: $bp-sm) { @content; }
+}
+
+@mixin md {
+  @media (min-width: $bp-md) { @content; }
+}
+
+@mixin lg {
+  @media (min-width: $bp-lg) { @content; }
+}
+
+@mixin xl {
+  @media (min-width: $bp-xl) { @content; }
+}
+
+@mixin max-sm {
+  @media (max-width: ($bp-sm - 1px)) { @content; }
+}
+
+@mixin max-md {
+  @media (max-width: ($bp-md - 1px)) { @content; }
+}
+
+@mixin max-lg {
+  @media (max-width: ($bp-lg - 1px)) { @content; }
+}
+
+// Glassmorphism Surface
+@mixin glass-surface {
+  background: $color-bg-card;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid $border-color-subtle;
+  border-radius: $radius-lg;
+  transition: all $transition-normal;
+
+  &:hover {
+    border-color: $border-color-accent;
+    box-shadow: $shadow-glow;
+    background: $color-bg-card-hover;
+  }
+}
+
+// Glow effect
+@mixin neon-glow($color: $color-accent) {
+  box-shadow: 0 0 20px rgba($color, 0.25), 0 0 40px rgba($color, 0.1);
+}
+
+// Flex Center
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Grid Layout
+@mixin grid-columns($cols: 3, $gap: $spacing-xl) {
+  display: grid;
+  grid-template-columns: repeat($cols, minmax(0, 1fr));
+  gap: $gap;
+
+  @include max-lg {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include max-md {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Container wrapper
+@mixin container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+}
+
+@mixin max-xl {
+  @media (max-width: ($bp-xl - 1px)) { @content; }
+}

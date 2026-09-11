@@ -1,0 +1,425 @@
+// -----------------------------------------------------------------------------
+// SERVICES SECTION (designs/featured-services.png)
+// High-craft engineering & dark cyberpunk minimalist aesthetics
+// -----------------------------------------------------------------------------
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.services {
+  position: relative;
+  overflow: hidden;
+  padding-top: $spacing-4xl;
+  padding-bottom: $spacing-4xl;
+
+  @include max-md {
+    padding-top: $spacing-3xl;
+    padding-bottom: $spacing-3xl;
+  }
+
+  // Section Header: Title Block + Philosophy Note + Trajectory Curve
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 32px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+
+    @include max-lg {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 36px;
+    }
+  }
+
+  &__title-group {
+    flex: 1 1 auto;
+    max-width: 620px;
+
+    @include lg {
+      flex: 1 1 480px;
+    }
+  }
+
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: rgba(163, 230, 53, 0.05);
+    border: 1px solid rgba(163, 230, 53, 0.35);
+    font-family: $font-mono;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: $color-accent;
+    margin-bottom: $spacing-md;
+    text-transform: uppercase;
+  }
+
+  &__headline {
+    font-family: $font-sans;
+    font-weight: 900;
+    font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+    color: $color-text-white;
+    margin-bottom: $spacing-sm;
+    text-transform: uppercase;
+  }
+
+  &__lead {
+    font-size: clamp(1rem, 1.25vw, 1.125rem);
+    color: $color-text-secondary;
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.55;
+    max-width: 520px;
+  }
+
+  // Section-specific layout tweaks for services meta
+  &__meta {
+    padding-bottom: 8px;
+
+    @include max-md {
+      margin-top: -8px;
+    }
+  }
+
+  &__trajectory {
+    flex: 0 0 380px;
+    max-width: 420px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    &-img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    @include max-lg {
+      flex: 1 1 100%;
+      max-width: 380px;
+    }
+
+    @include max-sm {
+      display: none;
+    }
+  }
+
+  // 6 Services Grid (2 rows of 3 columns)
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+
+    @include max-lg {
+      grid-template-columns: 1fr;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+      gap: 24px;
+    }
+
+    @include max-md {
+      max-width: 100%;
+      gap: 20px;
+    }
+  }
+
+  // Bottom Engagement Banner
+  &__banner {
+    background: rgba(13, 17, 14, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: $radius-lg;
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    transition: border-color $transition-normal, box-shadow $transition-normal;
+
+    &:hover {
+      border-color: rgba(163, 230, 53, 0.3);
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8), 0 0 20px -8px rgba(163, 230, 53, 0.12);
+    }
+
+    @include max-lg {
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include max-md {
+      max-width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 20px;
+    }
+
+    &-left {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+
+      .banner-status {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: $font-mono;
+        font-size: 11px;
+        font-weight: 700;
+        color: $color-accent;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+
+        .status-dot {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: $color-accent;
+          box-shadow: 0 0 8px $color-accent;
+        }
+      }
+
+      .banner-scope {
+        font-family: $font-mono;
+        font-size: 10.5px;
+        color: #718077;
+        letter-spacing: 0.05em;
+        margin: 0;
+        line-height: 1.4;
+
+        @include max-sm {
+          font-size: 9.5px;
+        }
+      }
+    }
+
+    &-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+    }
+
+    &-motto {
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      padding-left: 16px;
+      display: flex;
+      flex-direction: column;
+      font-family: $font-mono;
+      font-size: 9.5px;
+      font-weight: 600;
+      color: #718077;
+      letter-spacing: 0.08em;
+      line-height: 1.35;
+      text-transform: uppercase;
+      flex-shrink: 0;
+
+      @include max-md {
+        width: 100%;
+        border-left: none;
+        padding-left: 0;
+        padding-top: 12px;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+      }
+    }
+  }
+
+  // Action Buttons
+  &__btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: $color-accent;
+    color: #070908;
+    font-family: $font-mono;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 11px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0 0 16px rgba(163, 230, 53, 0.35);
+    transition: all $transition-fast;
+
+    .btn-arrow {
+      display: inline-block;
+    }
+
+    &:hover {
+      background: #b5f542;
+      box-shadow: 0 0 24px rgba(163, 230, 53, 0.5);
+      transform: translateY(-1px);
+    }
+  }
+
+  &__btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    font-family: $font-mono;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 11px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all $transition-fast;
+
+    &:hover {
+      border-color: rgba(163, 230, 53, 0.4);
+      color: $color-accent;
+      background: rgba(163, 230, 53, 0.04);
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// SERVICE CARD COMPONENT
+// -----------------------------------------------------------------------------
+.service-card {
+  background: #0b0e0c;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: rgba(163, 230, 53, 0.35);
+    box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.8),
+                0 0 30px -10px rgba(163, 230, 53, 0.15);
+
+    .service-card__img {
+      transform: scale(1.03);
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  &__num {
+    font-family: $font-mono;
+    font-size: 14px;
+    font-weight: 600;
+    color: $color-accent;
+  }
+
+  &__arrow {
+    color: $color-accent;
+    font-size: 18px;
+    font-weight: 400;
+    transition: transform $transition-fast;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    min-height: 175px;
+    margin-bottom: 16px;
+    flex-grow: 1;
+
+    @include max-sm {
+      min-height: auto;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: 16px;
+    }
+  }
+
+  &__info {
+    flex: 1 1 54%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title {
+    font-family: $font-sans;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: $color-text-white;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    font-size: 0.8125rem;
+    color: #9ca3af;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  &__visual {
+    flex: 0 0 44%;
+    max-width: 190px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @include max-sm {
+      width: 100%;
+      max-width: 180px;
+      height: 140px;
+      align-self: center;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: right center;
+    display: block;
+    transition: transform 0.35s ease;
+  }
+
+  &__footer {
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  &__tags {
+    font-family: $font-mono;
+    font-size: 10.5px;
+    font-weight: 600;
+    color: #718077;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

@@ -1,0 +1,1205 @@
+// -----------------------------------------------------------------------------
+// THE PROCESS SECTION (designs/the-process.png)
+// Pure SCSS, Pixel-Perfect & Responsive across Desktop, Tablet, and Mobile
+// -----------------------------------------------------------------------------
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.process {
+  position: relative;
+  padding-top: $spacing-4xl;
+  padding-bottom: $spacing-4xl;
+  overflow: hidden;
+
+  @include max-md {
+    padding-top: $spacing-3xl;
+    padding-bottom: $spacing-3xl;
+  }
+
+  // Header Block: Title group on the left, philosophy text on the right
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: $spacing-xl;
+    margin-bottom: clamp(40px, 5vw, 64px);
+
+    @include max-md {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $spacing-md;
+      margin-bottom: 36px;
+    }
+  }
+
+  &__badge {
+    display: inline-block;
+    font-family: $font-mono;
+    font-size: 11px;
+    font-weight: 700;
+    color: $color-accent;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border: 1px solid rgba($color-accent, 0.35);
+    border-radius: 4px;
+    padding: 4px 10px;
+    margin-bottom: 18px;
+    background: rgba($color-accent, 0.04);
+  }
+
+  &__headline {
+    font-family: $font-sans;
+    font-size: clamp(2.25rem, 4.2vw, 3.6rem);
+    font-weight: 800;
+    line-height: 1.05;
+    color: $color-text-white;
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+    margin: 0;
+
+    .text-accent {
+      color: $color-accent;
+    }
+  }
+
+  &__philosophy {
+    max-width: 320px;
+
+    @include max-md {
+      max-width: 100%;
+    }
+  }
+
+  &__lead {
+    font-size: 15px;
+    line-height: 1.6;
+    color: $color-text-secondary;
+    margin: 0;
+  }
+
+  // Process Flow Timeline Area
+  &__flow {
+    position: relative;
+    width: 100%;
+    margin-bottom: clamp(40px, 5vw, 60px);
+  }
+
+  // Desktop Continuous Spline Wave & Glowing Milestone Nodes
+  &__wave-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+
+    @include max-lg {
+      display: none;
+    }
+  }
+
+  &__wave-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  &__spline-draw {
+    stroke-dasharray: 1400;
+    stroke-dashoffset: 0;
+  }
+
+  // Seamless Fiber-Optic Energy Pulse (Concept 2)
+  &__spline-pulse-aura {
+    stroke: rgba(163, 230, 53, 0.65);
+    stroke-width: 6px;
+    stroke-linecap: round;
+    stroke-dasharray: 140 1055; // 140 + 1055 = 1195 (exact path length)
+    fill: none;
+    animation: seamlessSplineFlow 3.6s linear infinite;
+    filter: drop-shadow(0 0 10px rgba(163, 230, 53, 0.95)) drop-shadow(0 0 20px rgba(163, 230, 53, 0.6));
+    pointer-events: none;
+    will-change: stroke-dashoffset;
+  }
+
+  &__spline-pulse {
+    stroke: #ffffff;
+    stroke-width: 2.5px;
+    stroke-linecap: round;
+    stroke-dasharray: 100 1095; // 100 + 1095 = 1195 (exact path length)
+    fill: none;
+    animation: seamlessSplineFlowCore 3.6s linear infinite;
+    filter: drop-shadow(0 0 4px #a3e635);
+    pointer-events: none;
+    will-change: stroke-dashoffset;
+  }
+
+  &__node {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
+    transform-origin: center;
+  }
+
+  // 4 Process Cards Grid (Step 1 is wider to accommodate left meta & cubes)
+  &__grid {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr 1fr 1fr;
+    gap: 32px;
+    position: relative;
+    z-index: 2;
+
+    @include max-lg {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 48px 32px;
+    }
+
+    @include max-md {
+      grid-template-columns: 1fr;
+      gap: 44px;
+      padding-left: 28px;
+
+      // Vertical spine connecting all steps on mobile
+      &::before {
+        content: '';
+        position: absolute;
+        left: 5px;
+        top: 15px;
+        bottom: 15px;
+        width: 2px;
+        background: linear-gradient(
+          to bottom,
+          $color-accent,
+          rgba($color-accent, 0.35) 70%,
+          rgba($color-accent, 0.05)
+        );
+      }
+    }
+  }
+
+  // Bottom Status Track (Sequential Neon Progression Pipeline)
+  &__track {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 28px;
+    background: rgba(13, 17, 15, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    font-family: $font-mono;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: relative;
+    animation: trackContainerGlow 8s linear infinite;
+    transition: border-color $transition-normal, box-shadow $transition-normal;
+
+    &:hover {
+      &, * {
+        animation-play-state: paused !important;
+      }
+    }
+
+    @include max-md {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      padding: 16px;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #94a3b8;
+      white-space: nowrap;
+      position: relative;
+      z-index: 2;
+
+      &--1 {
+        .process__track-dot {
+          animation: trackDot1 8s linear infinite;
+        }
+        .process__track-label {
+          animation: trackLabel1 8s linear infinite;
+        }
+      }
+
+      &--2 {
+        .process__track-dot {
+          animation: trackDot2 8s linear infinite;
+        }
+        .process__track-label {
+          animation: trackLabel2 8s linear infinite;
+        }
+      }
+
+      &--3 {
+        .process__track-dot {
+          animation: trackDot3 8s linear infinite;
+        }
+        .process__track-label {
+          animation: trackLabel3 8s linear infinite;
+        }
+      }
+
+      &--4 {
+        .process__track-dot {
+          animation: trackDot4 8s linear infinite;
+        }
+        .process__track-label {
+          animation: trackLabel4 8s linear infinite;
+        }
+        .process__track-arrow {
+          animation: arrowOscillateX 1.8s ease-in-out infinite, trackArrowGlow 8s linear infinite;
+        }
+      }
+    }
+
+    &-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: $color-accent;
+      box-shadow: 0 0 10px $color-accent;
+      flex-shrink: 0;
+      display: inline-block;
+      will-change: transform, opacity, box-shadow;
+    }
+
+    &-label {
+      display: inline-block;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+      will-change: color, text-shadow;
+    }
+
+    &-line {
+      flex: 1;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.08);
+      position: relative;
+      overflow: visible;
+
+      @include max-md {
+        display: none;
+      }
+
+      &--1 {
+        .process__track-bar {
+          animation: trackLine1Bar 8s linear infinite;
+        }
+        .process__track-particle {
+          animation: trackLine1Particle 8s linear infinite;
+        }
+      }
+
+      &--2 {
+        .process__track-bar {
+          animation: trackLine2Bar 8s linear infinite;
+        }
+        .process__track-particle {
+          animation: trackLine2Particle 8s linear infinite;
+        }
+      }
+
+      &--3 {
+        .process__track-bar {
+          animation: trackLine3Bar 8s linear infinite;
+        }
+        .process__track-particle {
+          animation: trackLine3Particle 8s linear infinite;
+        }
+      }
+    }
+
+    &-bar {
+      position: absolute;
+      inset: 0;
+      height: 2px;
+      top: -0.5px;
+      background: linear-gradient(90deg, rgba(163, 230, 53, 0.4), #a3e635);
+      box-shadow: 0 0 8px rgba(163, 230, 53, 0.7), 0 0 16px rgba(163, 230, 53, 0.35);
+      transform-origin: left center;
+      transform: scaleX(0);
+      border-radius: 2px;
+      pointer-events: none;
+      z-index: 1;
+      will-change: transform, opacity;
+    }
+
+    &-particle {
+      position: absolute;
+      top: 50%;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #ffffff;
+      box-shadow: 0 0 8px #a3e635, 0 0 16px #a3e635, 0 0 24px rgba(163, 230, 53, 0.9);
+      transform: translateY(-50%);
+      pointer-events: none;
+      opacity: 0;
+      z-index: 2;
+      will-change: left, opacity, transform;
+    }
+
+    &-arrow {
+      color: $color-accent;
+      font-weight: 700;
+      margin-left: 4px;
+      display: inline-block;
+      will-change: color, text-shadow;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      animation: none !important;
+
+      .process__track-dot,
+      .process__track-label,
+      .process__track-bar,
+      .process__track-particle,
+      .process__track-arrow {
+        animation: none !important;
+      }
+
+      .process__track-particle {
+        display: none !important;
+      }
+
+      .process__track-bar {
+        transform: scaleX(1) !important;
+        opacity: 0.3 !important;
+      }
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// PROCESS TRACK KEYFRAME SEQUENCER (8s Repeating Pipeline Loop)
+// -----------------------------------------------------------------------------
+@keyframes trackDot1 {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 10px #a3e635, 0 0 20px rgba(163, 230, 53, 0.8);
+    background: #a3e635;
+  }
+  3% {
+    transform: scale(1.35);
+    box-shadow: 0 0 14px #a3e635, 0 0 28px rgba(163, 230, 53, 0.95);
+  }
+  8% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #a3e635, 0 0 20px rgba(163, 230, 53, 0.8);
+  }
+  14%, 88% {
+    opacity: 0.9;
+    transform: scale(1);
+    box-shadow: 0 0 8px #a3e635, 0 0 16px rgba(163, 230, 53, 0.6);
+    background: #a3e635;
+  }
+  89%, 95% {
+    box-shadow: 0 0 12px #a3e635, 0 0 24px rgba(163, 230, 53, 0.8);
+  }
+  97%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 10px #a3e635, 0 0 20px rgba(163, 230, 53, 0.8);
+    background: #a3e635;
+  }
+}
+
+@keyframes trackLabel1 {
+  0%, 14% {
+    color: #a3e635;
+    text-shadow: 0 0 12px rgba(163, 230, 53, 0.85), 0 0 24px rgba(163, 230, 53, 0.45);
+    font-weight: 700;
+  }
+  15%, 88% {
+    color: #e2e8f0;
+    text-shadow: 0 0 8px rgba(163, 230, 53, 0.35);
+    font-weight: 600;
+  }
+  89%, 95% {
+    color: #a3e635;
+    text-shadow: 0 0 12px rgba(163, 230, 53, 0.8);
+    font-weight: 700;
+  }
+  97%, 100% {
+    color: #a3e635;
+    text-shadow: 0 0 12px rgba(163, 230, 53, 0.85);
+  }
+}
+
+@keyframes trackLine1Bar {
+  0%, 9% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  10% {
+    transform: scaleX(0);
+    opacity: 1;
+  }
+  24% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  25%, 88% {
+    transform: scaleX(1);
+    opacity: 0.85;
+  }
+  89%, 95% {
+    transform: scaleX(1);
+    opacity: 1;
+    box-shadow: 0 0 12px rgba(163, 230, 53, 0.9), 0 0 24px rgba(163, 230, 53, 0.5);
+  }
+  97%, 100% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+}
+
+@keyframes trackLine1Particle {
+  0%, 9% {
+    left: 0%;
+    opacity: 0;
+    transform: translateY(-50%) scale(0.3);
+  }
+  10% {
+    left: 0%;
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+  23% {
+    left: 100%;
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+  25% {
+    left: 100%;
+    opacity: 0;
+    transform: translateY(-50%) scale(1.6);
+  }
+  26%, 100% {
+    left: 100%;
+    opacity: 0;
+    transform: translateY(-50%) scale(0.3);
+  }
+}
+
+@keyframes trackDot2 {
+  0%, 22% {
+    opacity: 0.18;
+    transform: scale(0.6);
+    box-shadow: none;
+    background: #64748b;
+  }
+  23% {
+    opacity: 0.7;
+    transform: scale(0.9);
+    background: #a3e635;
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.35);
+    box-shadow: 0 0 14px #a3e635, 0 0 28px rgba(163, 230, 53, 0.95);
+    background: #a3e635;
+  }
+  28% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #a3e635, 0 0 20px rgba(163, 230, 53, 0.8);
+  }
+  29%, 88% {
+    opacity: 0.9;
+    transform: scale(1);
+    box-shadow: 0 0 8px #a3e635, 0 0 16px rgba(163, 230, 53, 0.6);
+    background: #a3e635;
+  }
+  89%, 95% {
+    box-shadow: 0 0 12px #a3e635, 0 0 24px rgba(163, 230, 53, 0.8);
+  }
+  97%, 100% {
+    opacity: 0.18;
+    transform: scale(0.6);
+    box-shadow: none;
+    background: #64748b;
+  }
+}
+
+@keyframes trackLabel2 {
+  0%, 23% {
+    color: #94a3b8;
+    text-shadow: none;
+    font-weight: 500;
+  }
+  24%, 38% {
+    color: #a3e635;
+    text-shadow: 0 0 12px rgba(163, 230, 53, 0.85), 0 0 24px rgba(163, 230, 53, 0.45);
+    font-weight: 700;
+  }
+  39%, 88% {
+    color: #e2e8f0;
+    text-shadow: 0 0 8px rgba(163, 230, 53, 0.35);
+    font-weight: 600;
+  }
+  89%, 95% {
+    color: #a3e635;
+    text-shadow: 0 0 12px rgba(163, 230, 53, 0.8);
+    font-weight: 700;
+  }
+  97%, 100% {
+    color: #94a3b8;
+    text-shadow: none;
+    font-weight: 500;
+  }
+}
+
+@keyframes trackLine2Bar {
+  0%, 34% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  35% {
+    transform: scaleX(0);
+    opacity: 1;
+  }
+  49% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  50%, 88% {
+    transform: scaleX(1);
+    opacity: 0.85;
+  }
+  89%, 95% {
+    transform: scaleX(1);
+    opacity: 1;
+    box-shadow: 0 0 12px rgba(163, 230, 53, 0.9), 0 0 24px rgba(163, 230, 53, 0.5);
+  }
+  97%, 100% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+}
+
+@keyframes trackLine2Particle {
+  0%, 34% {
+    left: 0%;
+    opacity: 0;
+    transform: translateY(-50%) scale(0.3);
+  }
+  35% {
+    left: 0%;
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+  48% {
+    left: 100%;
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    left: 100%;
+    opacity: 0;
+    transform: translateY(-50%) scale(1.6);
+  }
+  51%, 100% {
+    left: 100%;
+    opacity: 0;
+    transform: translateY(-50%) scale(0.3);
+  }
+}
+
+@keyframes trackDot3 {
+  0%, 47% {
+    opacity: 0.18;
+    transform: scale(0.6);
+    box-shadow: none;
+    background: #64748b;
+  }
+  48% {
+    opacity: 0.7;
+    transform: scale(0.9);
+    background: #a3e635;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.35);
+    box-shadow: 0 0 14px #a3e635, 0 0 28px rgba(163, 230, 53, 0.95);
+    background: #a3e635;
+  }
+  53% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #a3e635, 0 0 20px rgba(163, 230, 53, 0.8);
+  }
+  54%, 88% {
+    opacity: 0.9;
+    transform: scale(1);
+    box-shadow: 0 0 8px #a3e635, 0 0 16px rgba(163, 230, 53, 0.6);
+    background: #a3e635;
+  }
+  89%, 95% {
+    box-shadow: 0 0 12px #a3e635, 0 0 24px rgba(163, 230, 53, 0.8);
+  }
+  97%, 100% {
+    opacity: 0.18;
+    transform: scale(0.6);
+    box-shadow: none;
+    background: #64748b;
+  }
+}
+
+@keyframes trackLabel3 {
+  0%, 48% {
+    color: #94a3b8;
+    text-shadow: none;
+    font-weight: 500;
+  }
+  49%, 63% {
+    color: #a3e635;
+    text-shadow: 0 0 12px rgba(163, 230, 53, 0.85), 0 0 24px rgba(163, 230, 53, 0.45);
+    font-weight: 700;
+  }
+  64%, 88% {
+    color: #e2e8f0;
+    text-shadow: 0 0 8px rgba(163, 230, 53, 0.35);
+    font-weight: 600;
+  }
+  89%, 95% {
+    color: #a3e635;
+    text-shadow: 0 0 12px rgba(163, 230, 53, 0.8);
+    font-weight: 700;
+  }
+  97%, 100% {
+    color: #94a3b8;
+    text-shadow: none;
+    font-weight: 500;
+  }
+}
+
+@keyframes trackLine3Bar {
+  0%, 59% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scaleX(0);
+    opacity: 1;
+  }
+  74% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  75%, 88% {
+    transform: scaleX(1);
+    opacity: 0.85;
+  }
+  89%, 95% {
+    transform: scaleX(1);
+    opacity: 1;
+    box-shadow: 0 0 12px rgba(163, 230, 53, 0.9), 0 0 24px rgba(163, 230, 53, 0.5);
+  }
+  97%, 100% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+}
+
+@keyframes trackLine3Particle {
+  0%, 59% {
+    left: 0%;
+    opacity: 0;
+    transform: translateY(-50%) scale(0.3);
+  }
+  60% {
+    left: 0%;
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+  73% {
+    left: 100%;
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+  75% {
+    left: 100%;
+    opacity: 0;
+    transform: translateY(-50%) scale(1.6);
+  }
+  76%, 100% {
+    left: 100%;
+    opacity: 0;
+    transform: translateY(-50%) scale(0.3);
+  }
+}
+
+@keyframes trackDot4 {
+  0%, 72% {
+    opacity: 0.18;
+    transform: scale(0.6);
+    box-shadow: none;
+    background: #64748b;
+  }
+  73% {
+    opacity: 0.7;
+    transform: scale(0.9);
+    background: #a3e635;
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1.4);
+    box-shadow: 0 0 16px #a3e635, 0 0 32px rgba(163, 230, 53, 1);
+    background: #a3e635;
+  }
+  78%, 95% {
+    opacity: 1;
+    transform: scale(1.1);
+    box-shadow: 0 0 14px #a3e635, 0 0 28px rgba(163, 230, 53, 0.9);
+    background: #a3e635;
+  }
+  97%, 100% {
+    opacity: 0.18;
+    transform: scale(0.6);
+    box-shadow: none;
+    background: #64748b;
+  }
+}
+
+@keyframes trackLabel4 {
+  0%, 73% {
+    color: #94a3b8;
+    text-shadow: none;
+    font-weight: 500;
+  }
+  75%, 95% {
+    color: #bef264;
+    text-shadow: 0 0 16px rgba(163, 230, 53, 0.95), 0 0 32px rgba(163, 230, 53, 0.5);
+    font-weight: 700;
+  }
+  97%, 100% {
+    color: #94a3b8;
+    text-shadow: none;
+    font-weight: 500;
+  }
+}
+
+@keyframes trackArrowGlow {
+  0%, 73% {
+    color: #94a3b8;
+    text-shadow: none;
+    opacity: 0.5;
+  }
+  75%, 95% {
+    color: #bef264;
+    text-shadow: 0 0 16px #a3e635, 0 0 28px rgba(163, 230, 53, 0.8);
+    opacity: 1;
+  }
+  97%, 100% {
+    color: #94a3b8;
+    text-shadow: none;
+    opacity: 0.5;
+  }
+}
+
+@keyframes trackContainerGlow {
+  0%, 74% {
+    border-color: rgba(255, 255, 255, 0.06);
+    box-shadow: none;
+  }
+  78%, 95% {
+    border-color: rgba(163, 230, 53, 0.4);
+    box-shadow: 0 0 24px rgba(163, 230, 53, 0.15), inset 0 0 16px rgba(163, 230, 53, 0.06);
+  }
+  97%, 100% {
+    border-color: rgba(255, 255, 255, 0.06);
+    box-shadow: none;
+  }
+}
+
+// Seamless Continuous Wave Spline Energy Flow (Concept 2 - Mathematical Zero-Glitch Loop)
+@keyframes seamlessSplineFlow {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -1195;
+  }
+}
+
+@keyframes seamlessSplineFlowCore {
+  0% {
+    stroke-dashoffset: -20;
+  }
+  100% {
+    stroke-dashoffset: -1215;
+  }
+}
+
+// Pulse-Crossing Synchronized Float Keyframes for Each Step Graphic
+@keyframes processVisualPulseFloat1 {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.15));
+  }
+  2% {
+    transform: translateY(-4px) rotate(-0.2deg) scale(1.01);
+  }
+  5% {
+    transform: translateY(-11px) rotate(-0.5deg) scale(1.022);
+  }
+  8% {
+    transform: translateY(-16px) rotate(-0.8deg) scale(1.035);
+    filter: drop-shadow(0 0 32px rgba($color-accent, 0.65)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.4));
+  }
+  13% {
+    transform: translateY(-14px) rotate(-0.6deg) scale(1.028);
+    filter: drop-shadow(0 0 26px rgba($color-accent, 0.5));
+  }
+  18% {
+    transform: translateY(-5px) rotate(-0.2deg) scale(1.01);
+  }
+  23% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.15));
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.15));
+  }
+}
+
+@keyframes processVisualPulseFloat2 {
+  0%, 32% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.15));
+  }
+  34% {
+    transform: translateY(-4px) rotate(0.2deg) scale(1.01);
+  }
+  38% {
+    transform: translateY(-11px) rotate(0.5deg) scale(1.022);
+  }
+  42% {
+    transform: translateY(-16px) rotate(0.8deg) scale(1.035);
+    filter: drop-shadow(0 0 32px rgba($color-accent, 0.65)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.4));
+  }
+  47% {
+    transform: translateY(-14px) rotate(0.6deg) scale(1.028);
+    filter: drop-shadow(0 0 26px rgba($color-accent, 0.5));
+  }
+  52% {
+    transform: translateY(-5px) rotate(0.2deg) scale(1.01);
+  }
+  57% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.15));
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.15));
+  }
+}
+
+@keyframes processVisualPulseFloat3 {
+  0%, 58% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.15));
+  }
+  60% {
+    transform: translateY(-4px) rotate(-0.2deg) scale(1.01);
+  }
+  64% {
+    transform: translateY(-11px) rotate(-0.5deg) scale(1.022);
+  }
+  68% {
+    transform: translateY(-16px) rotate(-0.8deg) scale(1.035);
+    filter: drop-shadow(0 0 32px rgba($color-accent, 0.65)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.4));
+  }
+  73% {
+    transform: translateY(-14px) rotate(-0.6deg) scale(1.028);
+    filter: drop-shadow(0 0 26px rgba($color-accent, 0.5));
+  }
+  78% {
+    transform: translateY(-5px) rotate(-0.2deg) scale(1.01);
+  }
+  83% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.15));
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.15));
+  }
+}
+
+@keyframes processVisualPulseFloat4 {
+  0%, 81% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.15));
+  }
+  83% {
+    transform: translateY(-4px) rotate(0.2deg) scale(1.01);
+  }
+  87% {
+    transform: translateY(-11px) rotate(0.5deg) scale(1.022);
+  }
+  91% {
+    transform: translateY(-16px) rotate(0.8deg) scale(1.035);
+    filter: drop-shadow(0 0 32px rgba($color-accent, 0.65)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.4));
+  }
+  95% {
+    transform: translateY(-13px) rotate(0.5deg) scale(1.025);
+    filter: drop-shadow(0 0 24px rgba($color-accent, 0.45));
+  }
+  98% {
+    transform: translateY(-4px) rotate(0.15deg) scale(1.008);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.15));
+  }
+}
+
+// Individual Process Card
+.process-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  // Visual Graphic Top Container for Steps 1, 2, 3, 4
+  &__visual-wrap {
+    height: 225px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 45px;
+
+    @include max-lg {
+      height: auto;
+      margin-bottom: 16px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding-bottom: 0;
+    }
+  }
+
+  &--1 &__visual-wrap {
+    justify-content: flex-start;
+    padding-bottom: 20px;
+
+    .process-card__img {
+      max-width: 165px;
+    }
+  }
+
+  &--2 &__visual-wrap {
+    justify-content: center;
+    padding-bottom: 35px;
+  }
+
+  &--3 &__visual-wrap {
+    justify-content: center;
+    padding-bottom: 48px;
+  }
+
+  &--4 &__visual-wrap {
+    justify-content: flex-end;
+    padding-bottom: 25px;
+    padding-right: 15px;
+  }
+
+  &__visual {
+    position: relative;
+    z-index: 2;
+    transform-origin: center bottom;
+    will-change: transform, filter;
+  }
+
+  &--1 &__visual {
+    @media (min-width: 992px) {
+      animation: processVisualPulseFloat1 3.6s linear infinite;
+    }
+  }
+
+  &--2 &__visual {
+    @media (min-width: 992px) {
+      animation: processVisualPulseFloat2 3.6s linear infinite;
+    }
+  }
+
+  &--3 &__visual {
+    @media (min-width: 992px) {
+      animation: processVisualPulseFloat3 3.6s linear infinite;
+    }
+  }
+
+  &--4 &__visual {
+    @media (min-width: 992px) {
+      animation: processVisualPulseFloat4 3.6s linear infinite;
+    }
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 95%);
+    mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 95%);
+    filter: drop-shadow(0 0 16px rgba($color-accent, 0.15));
+    transition: transform $transition-normal, filter $transition-normal;
+
+    @include max-lg {
+      max-height: 120px;
+    }
+  }
+
+  &:hover &__img {
+    transform: translateY(-4px);
+    filter: drop-shadow(0 0 24px rgba($color-accent, 0.35));
+  }
+
+  // Contextual Meta Tags
+  &__meta {
+    font-family: $font-mono;
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+    z-index: 3;
+
+    &--right {
+      position: absolute;
+      top: 15px;
+      right: -8px;
+      text-align: left;
+
+      @include max-lg {
+        position: static;
+        margin-top: 12px;
+        right: auto;
+      }
+    }
+
+    .meta-title {
+      color: #e2e8f0;
+      font-weight: 700;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .meta-dash {
+      color: $color-accent;
+    }
+
+    .meta-tags {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      color: #64748b;
+
+      li {
+        margin-bottom: 2px;
+      }
+    }
+  }
+
+  // Mobile / Tablet Timeline Node Marker
+  &__marker {
+    display: none;
+
+    @include max-md {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: -28px;
+      top: 4px;
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $color-accent;
+    box-shadow: 0 0 10px $color-accent;
+    border: 2px solid #070908;
+  }
+
+  // Content Block: Number, Title, Description
+  &__content {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__number {
+    font-family: $font-mono;
+    font-size: 34px;
+    font-weight: 700;
+    color: #cbd5e1;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  &__cursor {
+    color: $color-accent;
+  }
+
+  &__title {
+    font-family: $font-sans;
+    font-size: 20px;
+    font-weight: 800;
+    color: $color-text-white;
+    letter-spacing: 0.04em;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    font-size: 13px;
+    line-height: 1.55;
+    color: $color-text-secondary;
+    max-width: 260px;
+    margin: 0;
+  }
+}
+
+html.reveal-ready {
+  .process__spline-draw {
+    stroke-dashoffset: 1400;
+    transition: stroke-dashoffset 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .process__wave-wrap.is-drawn .process__spline-draw,
+  .process.is-revealed .process__spline-draw,
+  .is-revealed .process__spline-draw {
+    stroke-dashoffset: 0;
+  }
+
+  .process__node {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  .process__wave-wrap.is-drawn,
+  .process.is-revealed,
+  .is-revealed .process__wave-wrap {
+    .process__node--1 { opacity: 1; transform: scale(1); transition-delay: 250ms; }
+    .process__node--2 { opacity: 1; transform: scale(1); transition-delay: 550ms; }
+    .process__node--3 { opacity: 1; transform: scale(1); transition-delay: 850ms; }
+    .process__node--4 { opacity: 1; transform: scale(1); transition-delay: 1150ms; }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .process__spline-pulse-aura,
+  .process__spline-pulse {
+    display: none !important;
+  }
+
+  .process-card__visual {
+    animation: none !important;
+    transform: none !important;
+  }
+}

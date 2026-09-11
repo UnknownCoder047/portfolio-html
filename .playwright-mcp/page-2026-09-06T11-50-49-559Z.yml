@@ -1,0 +1,185 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Ankit Kumar - Home" [ref=e4] [cursor=pointer]:
+        - /url: ../index.html
+        - generic [ref=e5]: A
+        - generic [ref=e6]: /
+      - navigation "Primary Navigation" [ref=e7]:
+        - list [ref=e8]:
+          - listitem [ref=e9]:
+            - link "Home" [ref=e10] [cursor=pointer]:
+              - /url: ../index.html
+          - listitem [ref=e11]:
+            - link "Projects" [ref=e12] [cursor=pointer]:
+              - /url: projects.html
+          - listitem [ref=e13]:
+            - link "Services" [ref=e14] [cursor=pointer]:
+              - /url: services.html
+          - listitem [ref=e17]:
+            - link "About" [ref=e18] [cursor=pointer]:
+              - /url: about.html
+          - listitem [ref=e19]:
+            - link "Contact" [ref=e20] [cursor=pointer]:
+              - /url: contact.html
+      - link "LET'S TALK" [ref=e22] [cursor=pointer]:
+        - /url: contact.html
+        - generic [aria-hidden] [ref=e24]: →
+    - generic [aria-hidden]:
+      - generic:
+        - navigation:
+          - list:
+            - listitem:
+              - link:
+                - /url: ../index.html
+                - generic: Home
+            - listitem:
+              - link:
+                - /url: projects.html
+                - generic: Projects
+            - listitem:
+              - link:
+                - /url: services.html
+                - generic: Services
+            - listitem:
+              - link:
+                - /url: about.html
+                - generic: About
+            - listitem:
+              - link:
+                - /url: contact.html
+                - generic: Contact
+        - generic:
+          - link:
+            - /url: contact.html
+            - generic: LET'S TALK
+            - generic: →
+  - main [ref=e25]:
+    - generic [ref=e26]:
+      - link "Back to Services" [ref=e27] [cursor=pointer]:
+        - /url: services.html
+        - generic [aria-hidden] [ref=e28]: ←
+      - generic [ref=e31]:
+        - generic [ref=e32]: ANDROID DEVELOPMENT
+        - heading "Android App Development" [level=1] [ref=e33]:
+          - text: Android App
+          - generic [ref=e34]: Development
+        - paragraph [ref=e35]: Build powerful, user-friendly Android applications with clean architecture, modern tools, and a focus on real-world usability.
+      - generic [ref=e38]:
+        - generic [ref=e44]:
+          - heading "High Performance" [level=3] [ref=e45]
+          - paragraph [ref=e46]: Optimized and efficient apps
+        - generic [ref=e52]:
+          - heading "Best Practices" [level=3] [ref=e53]
+          - paragraph [ref=e54]: Clean and maintainable code
+        - generic [ref=e59]:
+          - heading "Wide Compatibility" [level=3] [ref=e60]
+          - paragraph [ref=e61]: Supports latest Android versions
+      - region [ref=e62]:
+        - generic [ref=e63]:
+          - generic [aria-hidden] [ref=e64]: —
+          - heading "What I Offer" [level=2] [ref=e65]
+        - generic [ref=e66]:
+          - generic [ref=e72]:
+            - heading "Custom Android Apps" [level=3] [ref=e73]
+            - paragraph [ref=e74]: Tailored solutions for your business needs.
+          - generic [ref=e79]:
+            - heading "UI/UX Implementation" [level=3] [ref=e80]
+            - paragraph [ref=e81]: Modern and intuitive user interfaces using Material Design.
+          - generic [ref=e88]:
+            - heading "API Integration" [level=3] [ref=e89]
+            - paragraph [ref=e90]: Seamless integration with REST APIs and third-party services.
+          - generic [ref=e95]:
+            - heading "App Maintenance" [level=3] [ref=e96]
+            - paragraph [ref=e97]: Ongoing support, bug fixes, and feature enhancements.
+      - region [ref=e98]:
+        - generic [ref=e99]:
+          - generic [aria-hidden] [ref=e100]: —
+          - heading "Technologies I Use" [level=2] [ref=e101]
+        - generic [ref=e102]:
+          - generic [ref=e103]: Kotlin
+          - generic [ref=e107]: Android Studio
+          - generic [ref=e112]: Jetpack Compose
+          - generic [ref=e117]: Retrofit
+          - generic [ref=e122]: Room
+          - generic [ref=e128]: Firebase
+      - region [ref=e134]:
+        - generic [ref=e135]:
+          - generic [aria-hidden] [ref=e136]: —
+          - heading "Process" [level=2] [ref=e137]
+        - generic [ref=e138]:
+          - generic [ref=e139]:
+            - generic [ref=e140]: "01"
+            - heading "Discuss" [level=3] [ref=e141]
+            - paragraph [ref=e142]: Understand your requirements
+          - generic [ref=e143]:
+            - generic [ref=e144]: "02"
+            - heading "Plan" [level=3] [ref=e145]
+            - paragraph [ref=e146]: Define features and architecture
+          - generic [ref=e147]:
+            - generic [ref=e148]: "03"
+            - heading "Build" [level=3] [ref=e149]
+            - paragraph [ref=e150]: Develop and test the app
+          - generic [ref=e151]:
+            - generic [ref=e152]: "04"
+            - heading "Deploy" [level=3] [ref=e153]
+            - paragraph [ref=e154]: Launch on Play Store or internal distribution
+      - generic [ref=e155]:
+        - generic [ref=e163]:
+          - heading "Ready to Build Your Android App?" [level=3] [ref=e164]
+          - paragraph [ref=e165]: Turn your idea into a high-quality Android application.
+        - link "Get in Touch" [ref=e166] [cursor=pointer]:
+          - /url: contact.html?service=android
+          - generic [aria-hidden] [ref=e168]: →
+  - contentinfo [ref=e169]:
+    - generic [ref=e170]:
+      - generic [ref=e171]:
+        - generic [ref=e172]:
+          - generic [ref=e173]: "[ BUILD • LEARN • SHIP ]"
+          - heading "Good Software Matters." [level=2] [ref=e174]
+          - paragraph [ref=e175]: Ideas to real products. One build at a time.
+          - generic [ref=e176]:
+            - link "Ankit Kumar GitHub Profile" [ref=e177] [cursor=pointer]:
+              - /url: https://github.com/ankitkumar
+            - link "Ankit Kumar LinkedIn Profile" [ref=e180] [cursor=pointer]:
+              - /url: https://linkedin.com/in/ankitkumar
+        - generic [ref=e185]:
+          - generic [ref=e186]: NAVIGATE
+          - list [ref=e187]:
+            - listitem [ref=e188]:
+              - link "Work" [ref=e189] [cursor=pointer]:
+                - /url: projects.html
+                - text: Work →
+            - listitem [ref=e190]:
+              - link "Services" [ref=e191] [cursor=pointer]:
+                - /url: services.html
+                - text: Services →
+            - listitem [ref=e192]:
+              - link "About" [ref=e193] [cursor=pointer]:
+                - /url: about.html
+                - text: About →
+            - listitem [ref=e194]:
+              - link "Contact" [ref=e195] [cursor=pointer]:
+                - /url: contact.html
+                - text: Contact →
+        - generic [ref=e196]:
+          - generic [ref=e197]:
+            - generic [ref=e198]: LET'S BUILD
+            - heading "Software engineer building reliable systems and useful products." [level=3] [ref=e199]
+            - paragraph [ref=e200]: Available for freelance projects — from a single backend to a complete product.
+            - link "START A PROJECT" [ref=e201] [cursor=pointer]:
+              - /url: contact.html
+              - text: START A PROJECT →
+          - generic [aria-hidden]:
+            - generic:
+              - generic: IDEAS
+              - generic: CODE
+              - generic: PEOPLE
+              - generic: IMPACT
+      - generic [ref=e202]:
+        - generic [ref=e203]: © 2026 Ankit Kumar. All rights reserved.
+        - generic [ref=e204]: // SAME IDEAS. BIGGER POSSIBILITIES.
+        - generic [ref=e205]:
+          - generic [ref=e206]: MADE WITH
+          - generic [ref=e207]: </>
+          - generic [ref=e208]: AND

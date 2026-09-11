@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products & Tools | Ankit Kumar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Header Section (Matched to designs/hero.png) -->
+  <header class="header" id="main-header">
+    <div class="header__container">
+      <a href="index.html" class="header__logo" aria-label="A/ - Home">
+        <span class="logo-letter">A</span><span class="logo-slash">/</span>
+      </a>
+
+      <nav class="header__nav" aria-label="Primary Navigation">
+        <ul class="header__menu">
+          <li><a href="index.html" class="header__link">Home</a></li>
+          <li><a href="projects.html" class="header__link">Projects</a></li>
+          <li><a href="services.html" class="header__link">Services</a></li>
+          <li><a href="about.html" class="header__link">About</a></li>
+          <li><a href="contact.html" class="header__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="contact.html" class="btn-talk">
+          <span class="btn-talk__text">LET'S TALK</span>
+          <span class="btn-talk__arrow" aria-hidden="true">→</span>
+        </a>
+
+        <button class="header__toggle" id="header-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <span class="bar bar--1"></span>
+          <span class="bar bar--2"></span>
+          <span class="bar bar--3"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="header__mobile-drawer" id="mobile-drawer" aria-hidden="true">
+      <div class="drawer-inner">
+        <nav class="drawer-nav">
+          <ul class="drawer-menu">
+            <li><a href="index.html" class="drawer-link"><span>Home</span></a></li>
+            <li><a href="projects.html" class="drawer-link"><span>Projects</span></a></li>
+            <li><a href="services.html" class="drawer-link"><span>Services</span></a></li>
+            <li><a href="about.html" class="drawer-link"><span>About</span></a></li>
+            <li><a href="contact.html" class="drawer-link"><span>Contact</span></a></li>
+          </ul>
+        </nav>
+        <div class="drawer-action">
+          <a href="contact.html" class="btn-talk btn-talk--full">
+            <span>LET'S TALK</span>
+            <span class="btn-talk__arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 120px;">
+    <section class="section">
+      <div class="container">
+        <!-- Header from 01_31_11 AM.png -->
+        <div class="section-title-wrap" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
+          <div>
+            <span class="status-badge"><span class="dot"></span> Products</span>
+            <h1 class="section-headline">
+              Tools I've Built for a <span class="highlight">Better Tomorrow</span>
+            </h1>
+            <p class="lead">Explore my personal and open-source products — built to solve real-world problems, one idea at a time.</p>
+          </div>
+          <div class="technical-tag" style="text-align: right;">
+            IDEAS • CODE • PRODUCTS • IMPACT
+          </div>
+        </div>
+
+        <!-- Filters & Search -->
+        <div class="projects-toolbar">
+          <div class="filter-tabs">
+            <button class="filter-tab active" data-filter="all">All</button>
+            <button class="filter-tab" data-filter="mobile">Mobile Apps</button>
+            <button class="filter-tab" data-filter="web">Web Apps</button>
+            <button class="filter-tab" data-filter="opensource">Open Source</button>
+            <button class="filter-tab" data-filter="tools">Tools</button>
+          </div>
+
+          <div class="search-input-wrap">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input type="text" class="form-control search-input" placeholder="Search products...">
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="grid-3">
+          <!-- 1. TaskFlow (Popular) -->
+          <div class="card" data-category="mobile tools" data-searchable>
+            <div class="card__header">
+              <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(163,230,53,0.15); border: 1px solid rgba(163,230,53,0.3); display: flex; align-items: center; justify-content: center; color: #a3e635;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <span class="feature-pill">Popular</span>
+            </div>
+            <h3 class="card__title">TaskFlow</h3>
+            <p class="card__desc">Organize your tasks, boost your productivity with offline support and smart reminders.</p>
+            <div class="card__tags" style="margin-bottom: 20px;">
+              <span class="tag-pill">Android</span>
+              <span class="tag-pill">Productivity</span>
+            </div>
+            <a href="product-detail.html" class="btn btn--outline btn--sm" style="width: 100%;"><span>View App &amp; Downloads</span> <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+
+          <!-- 2. CloudNotes -->
+          <div class="card" data-category="web opensource" data-searchable>
+            <div class="card__header">
+              <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: #a3e635;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+              </div>
+            </div>
+            <h3 class="card__title">CloudNotes</h3>
+            <p class="card__desc">A simple, encrypted and secure note taking app with markdown support and cloud sync.</p>
+            <div class="card__tags" style="margin-bottom: 20px;">
+              <span class="tag-pill">Web</span>
+              <span class="tag-pill">Open Source</span>
+            </div>
+            <a href="https://github.com/ankitkumar" target="_blank" class="btn btn--outline btn--sm" style="width: 100%;"><span>GitHub Repository</span> <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+
+          <!-- 3. FinTrack -->
+          <div class="card" data-category="mobile" data-searchable>
+            <div class="card__header">
+              <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: #a3e635;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              </div>
+            </div>
+            <h3 class="card__title">FinTrack</h3>
+            <p class="card__desc">Track your expenses, manage budgets and visualize your financial health with interactive charts.</p>
+            <div class="card__tags" style="margin-bottom: 20px;">
+              <span class="tag-pill">Android</span>
+              <span class="tag-pill">Finance</span>
+            </div>
+            <a href="product-detail.html" class="btn btn--outline btn--sm" style="width: 100%;"><span>View Details</span> <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+
+          <!-- 4. DevDocs -->
+          <div class="card" data-category="mobile tools" data-searchable>
+            <div class="card__header">
+              <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: #a3e635;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              </div>
+            </div>
+            <h3 class="card__title">DevDocs</h3>
+            <p class="card__desc">Offline documentation viewer for developers with instant search and syntax highlighting.</p>
+            <div class="card__tags" style="margin-bottom: 20px;">
+              <span class="tag-pill">Android</span>
+              <span class="tag-pill">Tools</span>
+            </div>
+            <a href="product-detail.html" class="btn btn--outline btn--sm" style="width: 100%;"><span>Download App</span> <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+
+          <!-- 5. SnapEdit -->
+          <div class="card" data-category="web tools" data-searchable>
+            <div class="card__header">
+              <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: #a3e635;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              </div>
+            </div>
+            <h3 class="card__title">SnapEdit</h3>
+            <p class="card__desc">Quickly edit, crop, optimize and enhance your images entirely in-browser with zero server uploads.</p>
+            <div class="card__tags" style="margin-bottom: 20px;">
+              <span class="tag-pill">Web</span>
+              <span class="tag-pill">Image Tools</span>
+            </div>
+            <a href="#" class="btn btn--outline btn--sm" style="width: 100%;"><span>Open Tool</span> <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+
+          <!-- 6. JSON Formatter -->
+          <div class="card" data-category="web tools" data-searchable>
+            <div class="card__header">
+              <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: #a3e635;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+            </div>
+            <h3 class="card__title">JSON Formatter</h3>
+            <p class="card__desc">Format, validate and beautify JSON instantly with schema checking and tree view representation.</p>
+            <div class="card__tags" style="margin-bottom: 20px;">
+              <span class="tag-pill">Web</span>
+              <span class="tag-pill">Developer Tools</span>
+            </div>
+            <a href="#" class="btn btn--outline btn--sm" style="width: 100%;"><span>Open Tool</span> <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__bottom" style="border-top: none;">
+      <div>© 2026 Ankit Kumar. All rights reserved.</div>
+      <div class="philosophy"><span class="slash">//</span> SAME IDEAS. BIGGER POSSIBILITIES.</div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

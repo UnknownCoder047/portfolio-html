@@ -1,0 +1,169 @@
+- generic [active] [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - generic [ref=f2e3]:
+      - link "A/ - Home" [ref=f2e4] [cursor=pointer]:
+        - /url: ../index.html
+        - generic [ref=f2e5]: A
+        - generic [ref=f2e6]: /
+      - navigation "Primary Navigation" [ref=f2e7]:
+        - list [ref=f2e8]:
+          - listitem [ref=f2e9]:
+            - link "Home" [ref=f2e10] [cursor=pointer]:
+              - /url: ../index.html
+          - listitem [ref=f2e12]:
+            - link "Projects" [ref=f2e13] [cursor=pointer]:
+              - /url: projects.html
+          - listitem [ref=f2e15]:
+            - link "Services" [ref=f2e16] [cursor=pointer]:
+              - /url: services.html
+          - listitem [ref=f2e19]:
+            - link "About" [ref=f2e20] [cursor=pointer]:
+              - /url: about.html
+          - listitem [ref=f2e22]:
+            - link "Contact" [ref=f2e23] [cursor=pointer]:
+              - /url: contact.html
+      - link "LET'S TALK" [ref=f2e26] [cursor=pointer]:
+        - /url: contact.html
+        - generic [aria-hidden] [ref=f2e28]: →
+    - generic [aria-hidden]:
+      - generic:
+        - navigation:
+          - list:
+            - listitem:
+              - link:
+                - /url: ../index.html
+                - generic: Home
+            - listitem:
+              - link:
+                - /url: projects.html
+                - generic: Projects
+            - listitem:
+              - link:
+                - /url: services.html
+                - generic: Services
+            - listitem:
+              - link:
+                - /url: about.html
+                - generic: About
+            - listitem:
+              - link:
+                - /url: contact.html
+                - generic: Contact
+        - generic:
+          - link:
+            - /url: contact.html
+            - generic: LET'S TALK
+            - generic: →
+  - main [ref=f2e29]:
+    - generic [ref=f2e31]:
+      - generic [ref=f2e32]:
+        - generic [ref=f2e33]:
+          - generic [ref=f2e34]: OUR SERVICES
+          - heading "Solutions for Real-World Problems" [level=1] [ref=f2e35]
+          - paragraph [ref=f2e36]: From idea to deployment, I offer end-to-end development services to help you build, scale, and maintain reliable software products.
+        - img "Ideas into Impact - Software Engineering Services" [ref=f2e39]
+      - generic [ref=f2e40]:
+        - textbox "Search services" [ref=f2e42]:
+          - /placeholder: Search services...
+        - button "All Services" [ref=f2e44] [cursor=pointer]
+      - generic [ref=f2e52]:
+        - article [ref=f2e53]:
+          - heading "Backend Development" [level=2] [ref=f2e58]
+          - paragraph [ref=f2e59]: Scalable and secure backend systems using Java, Spring Boot and modern architectures.
+          - link "Learn More" [ref=f2e60] [cursor=pointer]:
+            - /url: contact.html?service=backend
+            - generic [aria-hidden] [ref=f2e62]: →
+        - article [ref=f2e63]:
+          - heading "Android App Development" [level=2] [ref=f2e67]
+          - paragraph [ref=f2e68]: Modern, user-friendly Android apps with clean architecture and best practices.
+          - link "Learn More" [ref=f2e69] [cursor=pointer]:
+            - /url: contact.html?service=android
+            - generic [aria-hidden] [ref=f2e71]: →
+        - article [ref=f2e72]:
+          - heading "API Development" [level=2] [ref=f2e76]
+          - paragraph [ref=f2e77]: Design and development of robust RESTful APIs for web and mobile applications.
+          - link "Learn More" [ref=f2e78] [cursor=pointer]:
+            - /url: contact.html?service=api
+            - generic [aria-hidden] [ref=f2e80]: →
+        - article [ref=f2e81]:
+          - heading "Database Design" [level=2] [ref=f2e87]
+          - paragraph [ref=f2e88]: Efficient and scalable database solutions tailored to your business needs.
+          - link "Learn More" [ref=f2e89] [cursor=pointer]:
+            - /url: contact.html?service=database
+            - generic [aria-hidden] [ref=f2e91]: →
+        - article [ref=f2e92]:
+          - heading "System Architecture" [level=2] [ref=f2e97]
+          - paragraph [ref=f2e98]: Guidance on scalable architecture, tech stack, and best practices.
+          - link "Learn More" [ref=f2e99] [cursor=pointer]:
+            - /url: contact.html?service=architecture
+            - generic [aria-hidden] [ref=f2e101]: →
+        - article [ref=f2e102]:
+          - heading "Technical Consultation" [level=2] [ref=f2e109]
+          - paragraph [ref=f2e110]: Get expert advice for your project, code reviews, or technology decisions.
+          - link "Learn More" [ref=f2e111] [cursor=pointer]:
+            - /url: contact.html?service=consultation
+            - generic [aria-hidden] [ref=f2e113]: →
+      - generic [ref=f2e114]:
+        - generic [ref=f2e115]:
+          - generic [ref=f2e116]: HAVE A CUSTOM REQUIREMENT?
+          - heading "Let's Build Something Great Together." [level=2] [ref=f2e117]
+          - paragraph [ref=f2e118]: Not sure which service fits your needs? Get in touch and let's discuss your idea.
+          - link "Contact Me" [ref=f2e119] [cursor=pointer]:
+            - /url: contact.html
+            - generic [aria-hidden] [ref=f2e121]: →
+        - img "Discuss Plan Build - Custom Requirements" [ref=f2e124]
+  - contentinfo [ref=f2e125]:
+    - generic [ref=f2e126]:
+      - generic [ref=f2e127]:
+        - generic [ref=f2e128]:
+          - generic [ref=f2e129]: "[ BUILD • LEARN • SHIP ]"
+          - heading "Good Software Matters." [level=3] [ref=f2e130]: GoodSoftwareMatters.
+          - paragraph [ref=f2e131]: Ideas to real products. One build at a time.
+          - generic [ref=f2e132]:
+            - link "GitHub" [ref=f2e133] [cursor=pointer]:
+              - /url: https://github.com/ankitkumar
+            - link "LinkedIn" [ref=f2e136] [cursor=pointer]:
+              - /url: https://linkedin.com/in/ankitkumar
+        - generic [ref=f2e139]:
+          - heading "NAVIGATE" [level=4] [ref=f2e140]
+          - list [ref=f2e141]:
+            - listitem [ref=f2e142]:
+              - link "Work →" [ref=f2e143] [cursor=pointer]:
+                - /url: projects.html
+                - generic [ref=f2e144]: Work
+                - generic [ref=f2e145]: →
+            - listitem [ref=f2e146]:
+              - link "Services →" [ref=f2e147] [cursor=pointer]:
+                - /url: services.html
+                - generic [ref=f2e148]: Services
+                - generic [ref=f2e149]: →
+            - listitem [ref=f2e150]:
+              - link "About →" [ref=f2e151] [cursor=pointer]:
+                - /url: about.html
+                - generic [ref=f2e152]: About
+                - generic [ref=f2e153]: →
+            - listitem [ref=f2e154]:
+              - link "Contact →" [ref=f2e155] [cursor=pointer]:
+                - /url: contact.html
+                - generic [ref=f2e156]: Contact
+                - generic [ref=f2e157]: →
+        - generic [ref=f2e158]:
+          - generic [ref=f2e159]:
+            - generic [ref=f2e160]: LET'S BUILD
+            - heading "Software engineer building reliable systems and useful products." [level=4] [ref=f2e163]: Software engineer building reliablesystems and useful products.
+            - paragraph [ref=f2e164]: Available for freelance projects — from asingle backend to a complete product.
+            - link "START A PROJECT" [ref=f2e165] [cursor=pointer]:
+              - /url: contact.html
+          - generic [aria-hidden]:
+            - generic:
+              - generic: IDEAS
+              - generic: CODE
+              - generic: PEOPLE
+              - generic: IMPACT
+      - generic [ref=f2e169]:
+        - generic [ref=f2e170]: © 2026 Ankit Kumar. All rights reserved.
+        - generic [ref=f2e171]: // SAME IDEAS. BIGGER POSSIBILITIES.
+        - generic [ref=f2e172]:
+          - generic [ref=f2e173]: MADE WITH
+          - generic [ref=f2e174]: </>
+          - generic [ref=f2e175]: AND

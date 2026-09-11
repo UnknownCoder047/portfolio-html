@@ -1,0 +1,153 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "A/ - Home" [ref=e4] [cursor=pointer]:
+        - /url: index.html
+        - generic [ref=e5]: A
+        - generic [ref=e6]: /
+      - navigation "Primary Navigation" [ref=e7]:
+        - list [ref=e8]:
+          - listitem [ref=e9]:
+            - link "Home" [ref=e10] [cursor=pointer]:
+              - /url: index.html
+          - listitem [ref=e11]:
+            - link "Projects" [ref=e12] [cursor=pointer]:
+              - /url: projects.html
+          - listitem [ref=e13]:
+            - link "Services" [ref=e14] [cursor=pointer]:
+              - /url: services.html
+          - listitem [ref=e17]:
+            - link "About" [ref=e18] [cursor=pointer]:
+              - /url: about.html
+          - listitem [ref=e19]:
+            - link "Contact" [ref=e20] [cursor=pointer]:
+              - /url: contact.html
+      - link "LET'S TALK" [ref=e22] [cursor=pointer]:
+        - /url: contact.html
+        - generic [aria-hidden] [ref=e24]: →
+    - generic [aria-hidden]:
+      - generic:
+        - navigation:
+          - list:
+            - listitem:
+              - link:
+                - /url: index.html
+                - generic: Home
+            - listitem:
+              - link:
+                - /url: projects.html
+                - generic: Projects
+            - listitem:
+              - link:
+                - /url: services.html
+                - generic: Services
+            - listitem:
+              - link:
+                - /url: about.html
+                - generic: About
+            - listitem:
+              - link:
+                - /url: contact.html
+                - generic: Contact
+        - generic:
+          - link:
+            - /url: contact.html
+            - generic: LET'S TALK
+            - generic: →
+  - main [ref=e25]:
+    - generic [ref=e27]:
+      - generic [ref=e28]:
+        - generic [ref=e29]: Our Services
+        - heading "Solutions For Real-World Problems" [level=1] [ref=e31]
+        - paragraph [ref=e32]: From idea to deployment, I offer end-to-end development services to help you build, scale, and maintain reliable software products.
+      - textbox "Search services..." [ref=e38]
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - generic [ref=e41]:
+            - generic [ref=e42]: "01"
+            - link "↗" [ref=e43] [cursor=pointer]:
+              - /url: service-detail.html
+          - heading "Backend Development" [level=3] [ref=e44]
+          - paragraph [ref=e45]: Scalable and secure backend systems using Java, Spring Boot and modern architectures.
+          - generic [ref=e46]:
+            - generic [ref=e47]: Java
+            - generic [ref=e48]: Spring Boot
+            - generic [ref=e49]: Microservices
+          - link "Learn More →" [ref=e51] [cursor=pointer]:
+            - /url: service-detail.html
+        - generic [ref=e52]:
+          - generic [ref=e53]:
+            - generic [ref=e54]: "02"
+            - link "↗" [ref=e55] [cursor=pointer]:
+              - /url: service-detail.html
+          - heading "Android App Development" [level=3] [ref=e56]
+          - paragraph [ref=e57]: Modern, user-friendly Android apps with clean architecture and best practices.
+          - generic [ref=e58]:
+            - generic [ref=e59]: Kotlin
+            - generic [ref=e60]: Compose
+            - generic [ref=e61]: MVVM
+          - link "Learn More →" [ref=e63] [cursor=pointer]:
+            - /url: service-detail.html
+        - generic [ref=e64]:
+          - generic [ref=e65]:
+            - generic [ref=e66]: "03"
+            - link "↗" [ref=e67] [cursor=pointer]:
+              - /url: service-detail.html
+          - heading "API Development" [level=3] [ref=e68]
+          - paragraph [ref=e69]: Design and development of robust RESTful APIs for web and mobile applications.
+          - generic [ref=e70]:
+            - generic [ref=e71]: REST
+            - generic [ref=e72]: Security
+            - generic [ref=e73]: Swagger
+          - link "Learn More →" [ref=e75] [cursor=pointer]:
+            - /url: service-detail.html
+        - generic [ref=e76]:
+          - generic [ref=e77]:
+            - generic [ref=e78]: "04"
+            - link "↗" [ref=e79] [cursor=pointer]:
+              - /url: service-detail.html
+          - heading "Database Design" [level=3] [ref=e80]
+          - paragraph [ref=e81]: Efficient and scalable database solutions tailored to your business needs.
+          - generic [ref=e82]:
+            - generic [ref=e83]: PostgreSQL
+            - generic [ref=e84]: Redis
+            - generic [ref=e85]: Indexing
+          - link "Learn More →" [ref=e87] [cursor=pointer]:
+            - /url: service-detail.html
+        - generic [ref=e88]:
+          - generic [ref=e89]:
+            - generic [ref=e90]: "05"
+            - link "↗" [ref=e91] [cursor=pointer]:
+              - /url: service-detail.html
+          - heading "System Architecture" [level=3] [ref=e92]
+          - paragraph [ref=e93]: Guidance on scalable architecture, tech stack, and long-term maintainability.
+          - generic [ref=e94]:
+            - generic [ref=e95]: Cloud
+            - generic [ref=e96]: Distributed
+            - generic [ref=e97]: Scalability
+          - link "Learn More →" [ref=e99] [cursor=pointer]:
+            - /url: service-detail.html
+        - generic [ref=e100]:
+          - generic [ref=e101]:
+            - generic [ref=e102]: "06"
+            - link "↗" [ref=e103] [cursor=pointer]:
+              - /url: service-detail.html
+          - heading "Technical Consultation" [level=3] [ref=e104]
+          - paragraph [ref=e105]: Get expert advice for your project, code reviews, or architecture decisions.
+          - generic [ref=e106]:
+            - generic [ref=e107]: Audits
+            - generic [ref=e108]: Mentorship
+            - generic [ref=e109]: Strategy
+          - link "Learn More →" [ref=e111] [cursor=pointer]:
+            - /url: service-detail.html
+      - generic [ref=e112]:
+        - generic [ref=e113]:
+          - generic [ref=e114]: Have a custom requirement?
+          - heading "Let's Build Something Great Together." [level=3] [ref=e116]
+          - paragraph [ref=e117]: Not sure which service fits your needs? Get in touch and let's discuss your idea.
+        - link "Contact Me" [ref=e118] [cursor=pointer]:
+          - /url: contact.html
+  - contentinfo [ref=e122]:
+    - generic [ref=e123]:
+      - generic [ref=e124]: © 2026 Ankit Kumar. All rights reserved.
+      - generic [ref=e125]: // SAME IDEAS. BIGGER POSSIBILITIES.

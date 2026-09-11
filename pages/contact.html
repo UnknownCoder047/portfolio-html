@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Ankit Kumar</title>
+  <meta name="description" content="Get in touch with Ankit Kumar - Software Engineer available for freelance projects, backend systems, and high-performance applications.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="../css/style.css?v=15">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER / NAVBAR SECTION (Synchronized with index.html & about.html)
+       ========================================================================== -->
+  <header class="header" id="main-header">
+    <div class="header__container">
+      <!-- Brand Logo: Slanted White "A" with Neon Lime "/" -->
+      <a href="../index.html" class="header__logo" aria-label="A/ - Home">
+        <span class="logo-letter">A</span><span class="logo-slash">/</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="header__nav" aria-label="Primary Navigation">
+        <ul class="header__menu">
+          <li>
+            <a href="../index.html" class="header__link">
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="projects.html" class="header__link">
+              <span>Projects</span>
+            </a>
+          </li>
+          <li>
+            <a href="services.html" class="header__link">
+              <span>Services</span>
+            </a>
+          </li>
+          <li>
+            <a href="about.html" class="header__link">
+              <span>About</span>
+            </a>
+          </li>
+          <li>
+            <a href="contact.html" class="header__link active" aria-current="page">
+              <span class="nav-dot" aria-hidden="true"></span>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions: "LET'S TALK ->" Button & Mobile Toggle -->
+      <div class="header__actions">
+        <a href="contact.html" class="btn-talk">
+          <span class="btn-talk__text">LET'S TALK</span>
+          <span class="btn-talk__arrow" aria-hidden="true">→</span>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="header__toggle" id="header-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <span class="bar bar--1"></span>
+          <span class="bar bar--2"></span>
+          <span class="bar bar--3"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="header__mobile-drawer" id="mobile-drawer" aria-hidden="true">
+      <div class="drawer-inner">
+        <nav class="drawer-nav" aria-label="Mobile Navigation">
+          <ul class="drawer-menu">
+            <li>
+              <a href="../index.html" class="drawer-link">
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="projects.html" class="drawer-link">
+                <span>Projects</span>
+              </a>
+            </li>
+            <li>
+              <a href="services.html" class="drawer-link">
+                <span>Services</span>
+              </a>
+            </li>
+            <li>
+              <a href="about.html" class="drawer-link">
+                <span>About</span>
+              </a>
+            </li>
+            <li>
+              <a href="contact.html" class="drawer-link active">
+                <span class="drawer-dot"></span>
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="drawer-action">
+          <a href="contact.html" class="btn-talk btn-talk--full">
+            <span>LET'S TALK</span>
+            <span class="btn-talk__arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MAIN CONTENT: CONTACT PAGE (Matched to designs/contacts.png)
+       ========================================================================== -->
+  <main>
+    <section class="contact-page">
+      <div class="container">
+
+        <!-- Header Row: Title on Left, World Map on Right -->
+        <div class="contact-page__header">
+          <div class="contact-page__title-group reveal-on-scroll">
+            <span class="contact-page__tag">LET'S CONNECT</span>
+            <h1 class="contact-page__headline">
+              Have a Project<br>
+              in <span class="highlight">Mind?</span>
+            </h1>
+            <p class="contact-page__lead">
+              I'm always open to discussing new opportunities, interesting ideas, or just a friendly chat about technology. Feel free to reach out and I'll get back to you as soon as possible.
+            </p>
+          </div>
+
+          <!-- World Map Graphic Crop with glowing nodes, arcs and glass card -->
+          <div class="contact-page__map-drift parallax-drift" data-drift-factor="0.05">
+            <div class="ambient-float reveal-on-scroll" data-reveal-delay="200">
+              <div class="contact-page__map-wrap">
+                <img src="../images/contact-world-map.png" alt="Different Places Same Passion - Let's create impact together" width="710" height="265" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main 2-Column Grid: Contact Information Cards & Message Form -->
+        <div class="contact-page__grid">
+
+          <!-- Left Column: 5 Contact Cards & Handwritten Note -->
+          <div class="contact-page__cards reveal-cascade">
+
+            <!-- Card 1: Email -->
+            <a href="mailto:ankit@example.com" class="contact-card reveal-on-scroll">
+              <div class="contact-card__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div class="contact-card__info">
+                <h2 class="contact-card__title">Email</h2>
+                <span class="contact-card__desc">Drop me an email anytime</span>
+                <span class="contact-card__val">ankit@example.com</span>
+              </div>
+            </a>
+
+            <!-- Card 2: Phone -->
+            <a href="tel:+919876543210" class="contact-card reveal-on-scroll">
+              <div class="contact-card__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div class="contact-card__info">
+                <h2 class="contact-card__title">Phone</h2>
+                <span class="contact-card__desc">Available for calls (Mon - Fri)</span>
+                <span class="contact-card__val">+91 98765 43210</span>
+              </div>
+            </a>
+
+            <!-- Card 3: Location -->
+            <div class="contact-card reveal-on-scroll">
+              <div class="contact-card__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div class="contact-card__info">
+                <h2 class="contact-card__title">Location</h2>
+                <span class="contact-card__desc">Based in</span>
+                <span class="contact-card__val">Bengaluru, India</span>
+              </div>
+            </div>
+
+            <!-- Card 4: LinkedIn -->
+            <a href="https://linkedin.com/in/ankitkumar" target="_blank" rel="noopener noreferrer" class="contact-card reveal-on-scroll">
+              <div class="contact-card__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+              </div>
+              <div class="contact-card__info">
+                <h2 class="contact-card__title">LinkedIn</h2>
+                <span class="contact-card__desc">Let's connect professionally</span>
+                <span class="contact-card__val">linkedin.com/in/ankitkumar</span>
+              </div>
+            </a>
+
+            <!-- Card 5: GitHub -->
+            <a href="https://github.com/ankitkumar" target="_blank" rel="noopener noreferrer" class="contact-card reveal-on-scroll">
+              <div class="contact-card__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+              </div>
+              <div class="contact-card__info">
+                <h2 class="contact-card__title">GitHub</h2>
+                <span class="contact-card__desc">Check out my open source work</span>
+                <span class="contact-card__val">github.com/ankitkumar</span>
+              </div>
+            </a>
+
+            <!-- Handwritten Note Crop with curved green pointer -->
+            <div class="contact-page__note reveal-on-scroll" data-reveal-delay="250">
+              <img src="../images/contact-handwritten-note.png" alt="Let's Build Something Amazing Together!" width="190" height="95" loading="lazy">
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive Contact Form Card -->
+          <div class="contact-form-card reveal-on-scroll" data-reveal-delay="150">
+            <div class="contact-form-card__tag">— SEND A MESSAGE</div>
+            <h2 class="contact-form-card__title">Tell Me About <span class="highlight">Your Idea.</span></h2>
+            <p class="contact-form-card__sub">Fill out the form and I'll get back to you soon.</p>
+
+            <form class="contact-form" id="contact-form" novalidate>
+              <!-- 2-Column Row for Name and Email -->
+              <div class="contact-form__row">
+                <div class="contact-form__field">
+                  <div class="contact-form__icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                      <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                  </div>
+                  <input type="text" id="contact-name" name="name" class="contact-form__input" placeholder="Your Name" required aria-label="Your Name">
+                </div>
+
+                <div class="contact-form__field">
+                  <div class="contact-form__icon" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                      <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                  </div>
+                  <input type="email" id="contact-email" name="email" class="contact-form__input" placeholder="Your Email" required aria-label="Your Email">
+                </div>
+              </div>
+
+              <!-- Subject Input -->
+              <div class="contact-form__field">
+                <div class="contact-form__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                  </svg>
+                </div>
+                <input type="text" id="contact-subject" name="subject" class="contact-form__input" placeholder="Subject" required aria-label="Subject">
+              </div>
+
+              <!-- Message Textarea with Dynamic Character Counter -->
+              <div class="contact-form__field">
+                <div class="contact-form__icon contact-form__icon--textarea" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                  </svg>
+                </div>
+                <textarea id="user-message" name="message" class="contact-form__textarea" placeholder="Your Message" maxlength="500" required aria-label="Your Message"></textarea>
+                <span class="contact-form__count" id="char-count" aria-live="polite">0/500</span>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="contact-form__submit">
+                <span>Send Message</span>
+                <span class="arrow arrow--right" aria-hidden="true">→</span>
+              </button>
+
+              <!-- Security / Privacy Notice -->
+              <div class="contact-form__security">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                <span>Your information is safe with me. I never share your details.</span>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER SECTION (Synchronized with index.html & about.html)
+       ========================================================================== -->
+  <footer class="footer" id="main-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Column 1: Brand & Socials -->
+        <div class="footer__brand">
+          <span class="footer__brand-tag">[ BUILD • LEARN • SHIP ]</span>
+          <h3 class="footer__brand-title">Good<br>Software<br><span class="highlight">Matters.</span></h3>
+          <p class="footer__brand-sub">Ideas to real products. One build at a time.</p>
+          <div class="footer__social-links">
+            <a href="https://github.com/ankitkumar" target="_blank" rel="noopener noreferrer" class="footer__social-btn" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/ankitkumar" target="_blank" rel="noopener noreferrer" class="footer__social-btn" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Navigate -->
+        <div class="footer__nav">
+          <h4 class="footer__nav-header">NAVIGATE</h4>
+          <ul class="footer__nav-list">
+            <li><a href="projects.html"><span>Work</span> <span class="arrow">→</span></a></li>
+            <li><a href="services.html"><span>Services</span> <span class="arrow">→</span></a></li>
+            <li><a href="about.html"><span>About</span> <span class="arrow">→</span></a></li>
+            <li><a href="contact.html"><span>Contact</span> <span class="arrow">→</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Let's Build CTA & Technical Coordinate Grid Graphic -->
+        <div class="footer__cta-wrap">
+          <div class="footer__cta-content">
+            <div class="footer__status">
+              <span class="footer__status-dot"></span>
+              <span class="footer__status-text">LET'S BUILD</span>
+            </div>
+            <h4 class="footer__cta-heading">Software engineer building reliable<br>systems and useful products.</h4>
+            <p class="footer__cta-sub">Available for freelance projects — from a<br>single backend to a complete product.</p>
+            <a href="contact.html" class="footer__cta-btn">
+              <span>START A PROJECT</span>
+              <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10m0 0L8.5 3.5M13 8l-4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Technical Coordinate Grid with Glowing Crosshairs and Keyword Stack -->
+          <div class="footer__tech-grid" aria-hidden="true">
+            <div class="footer__grid-wireframe">
+              <svg class="footer__grid-svg" width="130" height="150" viewBox="0 0 130 150" fill="none">
+                <defs>
+                  <linearGradient id="footer-glow-vert" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#a3e635" stop-opacity="0"/>
+                    <stop offset="50%" stop-color="#a3e635" stop-opacity="0.85"/>
+                    <stop offset="100%" stop-color="#a3e635" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="footer-glow-horiz" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#a3e635" stop-opacity="0"/>
+                    <stop offset="50%" stop-color="#a3e635" stop-opacity="0.85"/>
+                    <stop offset="100%" stop-color="#a3e635" stop-opacity="0"/>
+                  </linearGradient>
+                  <filter id="glow-filter" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+                    <feMerge>
+                      <feMergeNode in="coloredBlur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <!-- Subtle Technical Grid Lines -->
+                <line x1="35" y1="0" x2="35" y2="150" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+                <line x1="95" y1="0" x2="95" y2="150" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+                <line x1="0" y1="45" x2="130" y2="45" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+                <line x1="0" y1="100" x2="130" y2="100" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+
+                <!-- Upper Crosshair Beam & Plus at (95, 45) -->
+                <line x1="95" y1="5" x2="95" y2="85" stroke="url(#footer-glow-vert)" stroke-width="1.5"/>
+                <circle cx="95" cy="45" r="12" fill="#a3e635" fill-opacity="0.12"/>
+                <g filter="url(#glow-filter)">
+                  <line x1="95" y1="38" x2="95" y2="52" stroke="#a3e635" stroke-width="1.75" stroke-linecap="square"/>
+                  <line x1="88" y1="45" x2="102" y2="45" stroke="#a3e635" stroke-width="1.75" stroke-linecap="square"/>
+                </g>
+
+                <!-- Lower Crosshair Beam & Plus at (35, 100) -->
+                <line x1="0" y1="100" x2="80" y2="100" stroke="url(#footer-glow-horiz)" stroke-width="1.5"/>
+                <circle cx="35" cy="100" r="12" fill="#a3e635" fill-opacity="0.12"/>
+                <g filter="url(#glow-filter)">
+                  <line x1="35" y1="93" x2="35" y2="107" stroke="#a3e635" stroke-width="1.75" stroke-linecap="square"/>
+                  <line x1="28" y1="100" x2="42" y2="100" stroke="#a3e635" stroke-width="1.75" stroke-linecap="square"/>
+                </g>
+              </svg>
+            </div>
+
+            <!-- Vertical Word Stack -->
+            <div class="footer__tech-words">
+              <span>IDEAS</span>
+              <span>CODE</span>
+              <span>PEOPLE</span>
+              <span>IMPACT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar: Copyright, Philosophy & Made-With -->
+      <div class="footer__bottom">
+        <div class="footer__copyright">© 2026 Ankit Kumar. All rights reserved.</div>
+        <div class="footer__philosophy">
+          <span class="slash">//</span> SAME IDEAS. BIGGER POSSIBILITIES.
+        </div>
+        <div class="footer__made-with">
+          <span>MADE WITH</span>
+          <span class="code-icon">&lt;/&gt;</span>
+          <span>AND</span>
+          <svg class="coffee-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="7" cy="4" r="0.75" fill="#a3e635"/>
+            <circle cx="11" cy="2" r="0.75" fill="#a3e635"/>
+            <circle cx="15" cy="4" r="0.75" fill="#a3e635"/>
+            <path d="M17 9h1a4 4 0 0 1 0 8h-1"/>
+            <path d="M3 9h14v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=2"></script>
+</body>
+</html>

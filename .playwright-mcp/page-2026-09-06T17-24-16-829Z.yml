@@ -1,0 +1,409 @@
+- generic [active] [ref=f5e1]:
+  - navigation "Animation Concepts Navigation" [ref=f5e2]:
+    - link "Back to Main Portfolio" [ref=f5e3] [cursor=pointer]:
+      - /url: index.html#process
+      - generic [aria-hidden] [ref=f5e4]: ←
+      - text: Back to Main Portfolio
+    - generic [ref=f5e5]:
+      - 'link "01: 3D Hologram Float" [ref=f5e6] [cursor=pointer]':
+        - /url: "#concept-1"
+      - 'link "02: Fiber-Optic Spline Pulse" [ref=f5e7] [cursor=pointer]':
+        - /url: "#concept-2"
+      - 'link "03: Sonar Radar Nodes" [ref=f5e8] [cursor=pointer]':
+        - /url: "#concept-3"
+      - 'link "04: Terminal & Card Focus" [ref=f5e9] [cursor=pointer]':
+        - /url: "#concept-4"
+      - link "✨ All-in-One Master Combo" [ref=f5e10] [cursor=pointer]:
+        - /url: "#concept-combo"
+  - banner [ref=f5e11]:
+    - generic [ref=f5e12]:
+      - generic [ref=f5e13]: "[ INTERACTIVE LAB // 4 ANIMATION CONCEPTS ]"
+      - heading "Process Section Animation Review" [level=1] [ref=f5e14]
+      - paragraph [ref=f5e15]: "Review each animated variation rendered live below. Notice how each concept highlights a different aesthetic dimension: 3D levitation, circuit wave energy, radar milestone telemetry, and tactile CLI card interaction."
+  - main [ref=f5e16]:
+    - generic [ref=f5e17]:
+      - generic [ref=f5e19]:
+        - generic [ref=f5e20]:
+          - generic [ref=f5e21]: "[ CONCEPT 01 ]"
+          - heading "Holographic Floating & Ambient Breathing for 3D Visuals" [level=2] [ref=f5e22]
+          - paragraph [ref=f5e23]: Each 3D graphic gently levitates in place with staggered sinusoidal floating cycles and an ambient neon breathing glow, turning static illustrations into live floating holographic blueprint artifacts. Pauses on hover with amplified lift.
+        - generic [ref=f5e24]: ⚡ GPU-Accelerated • 0 CLS • Auto-Levitate
+      - generic [ref=f5e27]:
+        - generic [ref=f5e28]:
+          - generic [ref=f5e29]:
+            - generic [ref=f5e30]: "[ THE PROCESS ]"
+            - heading "MORE THAN JUST CODE." [level=2] [ref=f5e31]
+          - paragraph [ref=f5e33]:
+            - generic [ref=f5e34]: //
+            - generic [ref=f5e35]: Good software starts long before implementation. Here’s how I turn ideas into real products.
+        - generic [ref=f5e37]:
+          - article [ref=f5e38]:
+            - generic [ref=f5e39]:
+              - img "Wireframe analysis and user research cube network" [ref=f5e41]
+              - generic [ref=f5e42]:
+                - generic [ref=f5e43]: A PROBLEM —
+                - list [ref=f5e44]:
+                  - listitem [ref=f5e45]: IDEAS
+                  - listitem [ref=f5e46]: REQUIREMENTS
+                  - listitem [ref=f5e47]: CONSTRAINTS
+            - generic [ref=f5e48]:
+              - generic [ref=f5e49]: 01 _
+              - heading "UNDERSTAND" [level=3] [ref=f5e50]
+              - paragraph [ref=f5e51]: Understand the problem, users, requirements and constraints.
+          - article [ref=f5e52]:
+            - generic [ref=f5e53]:
+              - img "System architecture layers and technical blueprint" [ref=f5e55]
+              - generic [ref=f5e56]:
+                - generic [ref=f5e57]: — A SOLUTION
+                - list [ref=f5e58]:
+                  - listitem [ref=f5e59]: RESEARCH
+                  - listitem [ref=f5e60]: ARCHITECTURE
+                  - listitem [ref=f5e61]: PLANNING
+            - generic [ref=f5e62]:
+              - generic [ref=f5e63]: 02 _
+              - heading "DESIGN" [level=3] [ref=f5e64]
+              - paragraph [ref=f5e65]: Turn the problem into a practical technical solution.
+          - article [ref=f5e66]:
+            - generic [ref=f5e67]:
+              - img "Code editors and fullstack development panes" [ref=f5e69]
+              - generic [ref=f5e70]:
+                - generic [ref=f5e71]: — A SYSTEM
+                - list [ref=f5e72]:
+                  - listitem [ref=f5e73]: DEVELOPMENT
+                  - listitem [ref=f5e74]: INTEGRATION
+                  - listitem [ref=f5e75]: TESTING
+            - generic [ref=f5e76]:
+              - generic [ref=f5e77]: 03 _
+              - heading "BUILD" [level=3] [ref=f5e78]
+              - paragraph [ref=f5e79]: Build reliable software across backend, APIs and mobile.
+          - article [ref=f5e80]:
+            - generic [ref=f5e81]:
+              - img "Live production device with analytics chart" [ref=f5e83]
+              - generic [ref=f5e84]:
+                - generic [ref=f5e85]: — A PRODUCT
+                - list [ref=f5e86]:
+                  - listitem [ref=f5e87]: REAL USERS
+                  - listitem [ref=f5e88]: REAL IMPACT
+            - generic [ref=f5e89]:
+              - generic [ref=f5e90]: 04 _
+              - heading "SHIP" [level=3] [ref=f5e91]
+              - paragraph [ref=f5e92]: Refine, deploy and take ownership of the final product.
+        - region "Process progression milestones" [ref=f5e93]:
+          - generic [ref=f5e94]: "[ PROBLEM ]"
+          - generic [ref=f5e98]: "[ SOLUTION ]"
+          - generic [ref=f5e102]: "[ SYSTEM ]"
+          - generic [ref=f5e106]:
+            - generic [ref=f5e108]: "[ PRODUCT ]"
+            - generic [aria-hidden] [ref=f5e109]: →
+    - generic [ref=f5e110]:
+      - generic [ref=f5e112]:
+        - generic [ref=f5e113]:
+          - generic [ref=f5e114]: "[ CONCEPT 02 ]"
+          - heading "Fiber-Optic Energy Pulse Along the Curved Wave Spline" [level=2] [ref=f5e115]
+          - paragraph [ref=f5e116]: A luminous neon green electricity pulse and glowing tracer photon flow continuously along the SVG curved trajectory trace from Step 1 through to Step 4, visualizing live product and data flow through the architecture.
+        - generic [ref=f5e117]: ⚡ SVG Dashflow • CSS Offset-Path • Photon Trail
+      - generic [ref=f5e120]:
+        - generic [ref=f5e121]:
+          - generic [ref=f5e122]:
+            - generic [ref=f5e123]: "[ THE PROCESS ]"
+            - heading "MORE THAN JUST CODE." [level=2] [ref=f5e124]
+          - paragraph [ref=f5e126]:
+            - generic [ref=f5e127]: //
+            - generic [ref=f5e128]: Good software starts long before implementation. Here’s how I turn ideas into real products.
+        - generic [ref=f5e130]:
+          - article [ref=f5e131]:
+            - generic [ref=f5e132]:
+              - img "Wireframe analysis and user research cube network" [ref=f5e134]
+              - generic [ref=f5e135]:
+                - generic [ref=f5e136]: A PROBLEM —
+                - list [ref=f5e137]:
+                  - listitem [ref=f5e138]: IDEAS
+                  - listitem [ref=f5e139]: REQUIREMENTS
+                  - listitem [ref=f5e140]: CONSTRAINTS
+            - generic [ref=f5e141]:
+              - generic [ref=f5e142]: 01 _
+              - heading "UNDERSTAND" [level=3] [ref=f5e143]
+              - paragraph [ref=f5e144]: Understand the problem, users, requirements and constraints.
+          - article [ref=f5e145]:
+            - generic [ref=f5e146]:
+              - img "System architecture layers and technical blueprint" [ref=f5e148]
+              - generic [ref=f5e149]:
+                - generic [ref=f5e150]: — A SOLUTION
+                - list [ref=f5e151]:
+                  - listitem [ref=f5e152]: RESEARCH
+                  - listitem [ref=f5e153]: ARCHITECTURE
+                  - listitem [ref=f5e154]: PLANNING
+            - generic [ref=f5e155]:
+              - generic [ref=f5e156]: 02 _
+              - heading "DESIGN" [level=3] [ref=f5e157]
+              - paragraph [ref=f5e158]: Turn the problem into a practical technical solution.
+          - article [ref=f5e159]:
+            - generic [ref=f5e160]:
+              - img "Code editors and fullstack development panes" [ref=f5e162]
+              - generic [ref=f5e163]:
+                - generic [ref=f5e164]: — A SYSTEM
+                - list [ref=f5e165]:
+                  - listitem [ref=f5e166]: DEVELOPMENT
+                  - listitem [ref=f5e167]: INTEGRATION
+                  - listitem [ref=f5e168]: TESTING
+            - generic [ref=f5e169]:
+              - generic [ref=f5e170]: 03 _
+              - heading "BUILD" [level=3] [ref=f5e171]
+              - paragraph [ref=f5e172]: Build reliable software across backend, APIs and mobile.
+          - article [ref=f5e173]:
+            - generic [ref=f5e174]:
+              - img "Live production device with analytics chart" [ref=f5e176]
+              - generic [ref=f5e177]:
+                - generic [ref=f5e178]: — A PRODUCT
+                - list [ref=f5e179]:
+                  - listitem [ref=f5e180]: REAL USERS
+                  - listitem [ref=f5e181]: REAL IMPACT
+            - generic [ref=f5e182]:
+              - generic [ref=f5e183]: 04 _
+              - heading "SHIP" [level=3] [ref=f5e184]
+              - paragraph [ref=f5e185]: Refine, deploy and take ownership of the final product.
+        - region "Process progression milestones" [ref=f5e186]:
+          - generic [ref=f5e187]: "[ PROBLEM ]"
+          - generic [ref=f5e191]: "[ SOLUTION ]"
+          - generic [ref=f5e195]: "[ SYSTEM ]"
+          - generic [ref=f5e199]:
+            - generic [ref=f5e201]: "[ PRODUCT ]"
+            - generic [aria-hidden] [ref=f5e202]: →
+    - generic [ref=f5e203]:
+      - generic [ref=f5e205]:
+        - generic [ref=f5e206]:
+          - generic [ref=f5e207]: "[ CONCEPT 03 ]"
+          - heading "Concentric Radar / Sonar Milestone Node Rings" [level=2] [ref=f5e208]
+          - paragraph [ref=f5e209]: The 4 circular milestone anchor nodes on the spline wave periodically emit expanding concentric radar ripple rings in a staggered sequence, giving the feeling of active telemetry stations pinging throughout the system workflow.
+        - generic [ref=f5e210]: ⚡ Concentric Rings • Staggered Beacons • Cyberpunk Sonar
+      - generic [ref=f5e213]:
+        - generic [ref=f5e214]:
+          - generic [ref=f5e215]:
+            - generic [ref=f5e216]: "[ THE PROCESS ]"
+            - heading "MORE THAN JUST CODE." [level=2] [ref=f5e217]
+          - paragraph [ref=f5e219]:
+            - generic [ref=f5e220]: //
+            - generic [ref=f5e221]: Good software starts long before implementation. Here’s how I turn ideas into real products.
+        - generic [ref=f5e223]:
+          - article [ref=f5e224]:
+            - generic [ref=f5e225]:
+              - img "Wireframe analysis and user research cube network" [ref=f5e227]
+              - generic [ref=f5e228]:
+                - generic [ref=f5e229]: A PROBLEM —
+                - list [ref=f5e230]:
+                  - listitem [ref=f5e231]: IDEAS
+                  - listitem [ref=f5e232]: REQUIREMENTS
+                  - listitem [ref=f5e233]: CONSTRAINTS
+            - generic [ref=f5e234]:
+              - generic [ref=f5e235]: 01 _
+              - heading "UNDERSTAND" [level=3] [ref=f5e236]
+              - paragraph [ref=f5e237]: Understand the problem, users, requirements and constraints.
+          - article [ref=f5e238]:
+            - generic [ref=f5e239]:
+              - img "System architecture layers and technical blueprint" [ref=f5e241]
+              - generic [ref=f5e242]:
+                - generic [ref=f5e243]: — A SOLUTION
+                - list [ref=f5e244]:
+                  - listitem [ref=f5e245]: RESEARCH
+                  - listitem [ref=f5e246]: ARCHITECTURE
+                  - listitem [ref=f5e247]: PLANNING
+            - generic [ref=f5e248]:
+              - generic [ref=f5e249]: 02 _
+              - heading "DESIGN" [level=3] [ref=f5e250]
+              - paragraph [ref=f5e251]: Turn the problem into a practical technical solution.
+          - article [ref=f5e252]:
+            - generic [ref=f5e253]:
+              - img "Code editors and fullstack development panes" [ref=f5e255]
+              - generic [ref=f5e256]:
+                - generic [ref=f5e257]: — A SYSTEM
+                - list [ref=f5e258]:
+                  - listitem [ref=f5e259]: DEVELOPMENT
+                  - listitem [ref=f5e260]: INTEGRATION
+                  - listitem [ref=f5e261]: TESTING
+            - generic [ref=f5e262]:
+              - generic [ref=f5e263]: 03 _
+              - heading "BUILD" [level=3] [ref=f5e264]
+              - paragraph [ref=f5e265]: Build reliable software across backend, APIs and mobile.
+          - article [ref=f5e266]:
+            - generic [ref=f5e267]:
+              - img "Live production device with analytics chart" [ref=f5e269]
+              - generic [ref=f5e270]:
+                - generic [ref=f5e271]: — A PRODUCT
+                - list [ref=f5e272]:
+                  - listitem [ref=f5e273]: REAL USERS
+                  - listitem [ref=f5e274]: REAL IMPACT
+            - generic [ref=f5e275]:
+              - generic [ref=f5e276]: 04 _
+              - heading "SHIP" [level=3] [ref=f5e277]
+              - paragraph [ref=f5e278]: Refine, deploy and take ownership of the final product.
+        - region "Process progression milestones" [ref=f5e279]:
+          - generic [ref=f5e280]: "[ PROBLEM ]"
+          - generic [ref=f5e284]: "[ SOLUTION ]"
+          - generic [ref=f5e288]: "[ SYSTEM ]"
+          - generic [ref=f5e292]:
+            - generic [ref=f5e294]: "[ PRODUCT ]"
+            - generic [aria-hidden] [ref=f5e295]: →
+    - generic [ref=f5e296]:
+      - generic [ref=f5e298]:
+        - generic [ref=f5e299]:
+          - generic [ref=f5e300]: "[ CONCEPT 04 ]"
+          - heading "Terminal Cursor Blink & Interactive Card Focus" [level=2] [ref=f5e301]
+          - paragraph [ref=f5e302]: "Authentic monospace CLI blinking cursors (01 _, 02 _, 03 _, 04 _), paired with high-tactile hover states: neon lime top-line bloom, subtle glassy green card tint, lifted graphic with deep neon green shadow, and highlighted meta badges."
+        - generic [ref=f5e303]: ⚡ Monospace CLI • Tactile Hover Depth • Interactive
+      - generic [ref=f5e306]:
+        - generic [ref=f5e307]:
+          - generic [ref=f5e308]:
+            - generic [ref=f5e309]: "[ THE PROCESS ]"
+            - heading "MORE THAN JUST CODE." [level=2] [ref=f5e310]
+          - paragraph [ref=f5e312]:
+            - generic [ref=f5e313]: //
+            - generic [ref=f5e314]: Good software starts long before implementation. Here’s how I turn ideas into real products.
+        - generic [ref=f5e316]:
+          - article [ref=f5e317]:
+            - generic [ref=f5e318]:
+              - img "Wireframe analysis and user research cube network" [ref=f5e320]
+              - generic [ref=f5e321]:
+                - generic [ref=f5e322]: A PROBLEM —
+                - list [ref=f5e323]:
+                  - listitem [ref=f5e324]: IDEAS
+                  - listitem [ref=f5e325]: REQUIREMENTS
+                  - listitem [ref=f5e326]: CONSTRAINTS
+            - generic [ref=f5e327]:
+              - generic [ref=f5e328]:
+                - text: "01"
+                - generic [ref=f5e329]: _
+              - heading "UNDERSTAND" [level=3] [ref=f5e330]
+              - paragraph [ref=f5e331]: Understand the problem, users, requirements and constraints.
+          - article [ref=f5e332]:
+            - generic [ref=f5e333]:
+              - img "System architecture layers and technical blueprint" [ref=f5e335]
+              - generic [ref=f5e336]:
+                - generic [ref=f5e337]: — A SOLUTION
+                - list [ref=f5e338]:
+                  - listitem [ref=f5e339]: RESEARCH
+                  - listitem [ref=f5e340]: ARCHITECTURE
+                  - listitem [ref=f5e341]: PLANNING
+            - generic [ref=f5e342]:
+              - generic [ref=f5e343]:
+                - text: "02"
+                - generic [ref=f5e344]: _
+              - heading "DESIGN" [level=3] [ref=f5e345]
+              - paragraph [ref=f5e346]: Turn the problem into a practical technical solution.
+          - article [ref=f5e347]:
+            - generic [ref=f5e348]:
+              - img "Code editors and fullstack development panes" [ref=f5e350]
+              - generic [ref=f5e351]:
+                - generic [ref=f5e352]: — A SYSTEM
+                - list [ref=f5e353]:
+                  - listitem [ref=f5e354]: DEVELOPMENT
+                  - listitem [ref=f5e355]: INTEGRATION
+                  - listitem [ref=f5e356]: TESTING
+            - generic [ref=f5e357]:
+              - generic [ref=f5e358]:
+                - text: "03"
+                - generic [ref=f5e359]: _
+              - heading "BUILD" [level=3] [ref=f5e360]
+              - paragraph [ref=f5e361]: Build reliable software across backend, APIs and mobile.
+          - article [ref=f5e362]:
+            - generic [ref=f5e363]:
+              - img "Live production device with analytics chart" [ref=f5e365]
+              - generic [ref=f5e366]:
+                - generic [ref=f5e367]: — A PRODUCT
+                - list [ref=f5e368]:
+                  - listitem [ref=f5e369]: REAL USERS
+                  - listitem [ref=f5e370]: REAL IMPACT
+            - generic [ref=f5e371]:
+              - generic [ref=f5e372]:
+                - text: "04"
+                - generic [ref=f5e373]: _
+              - heading "SHIP" [level=3] [ref=f5e374]
+              - paragraph [ref=f5e375]: Refine, deploy and take ownership of the final product.
+        - region "Process progression milestones" [ref=f5e376]:
+          - generic [ref=f5e377]: "[ PROBLEM ]"
+          - generic [ref=f5e381]: "[ SOLUTION ]"
+          - generic [ref=f5e385]: "[ SYSTEM ]"
+          - generic [ref=f5e389]:
+            - generic [ref=f5e391]: "[ PRODUCT ]"
+            - generic [aria-hidden] [ref=f5e392]: →
+    - generic [ref=f5e393]:
+      - generic [ref=f5e395]:
+        - generic [ref=f5e396]:
+          - generic [ref=f5e397]: "[ BONUS // MASTER COMBO ]"
+          - heading "Synchronized Architectural Masterpiece (All Concepts Combined)" [level=2] [ref=f5e398]
+          - paragraph [ref=f5e399]: "All 4 concepts finely tuned to run together in subtle, cohesive harmony: gently floating 3D visuals, travelling fiber-optic spline pulse, periodic radar node pings, and interactive terminal card focus with blinking cursor."
+        - generic [ref=f5e400]: ✨ Full Experience • Multi-Layer Depth • Production Ready
+      - generic [ref=f5e403]:
+        - generic [ref=f5e404]:
+          - generic [ref=f5e405]:
+            - generic [ref=f5e406]: "[ THE PROCESS ]"
+            - heading "MORE THAN JUST CODE." [level=2] [ref=f5e407]
+          - paragraph [ref=f5e409]:
+            - generic [ref=f5e410]: //
+            - generic [ref=f5e411]: Good software starts long before implementation. Here’s how I turn ideas into real products.
+        - generic [ref=f5e413]:
+          - article [ref=f5e414]:
+            - generic [ref=f5e415]:
+              - img "Wireframe analysis and user research cube network" [ref=f5e417]
+              - generic [ref=f5e418]:
+                - generic [ref=f5e419]: A PROBLEM —
+                - list [ref=f5e420]:
+                  - listitem [ref=f5e421]: IDEAS
+                  - listitem [ref=f5e422]: REQUIREMENTS
+                  - listitem [ref=f5e423]: CONSTRAINTS
+            - generic [ref=f5e424]:
+              - generic [ref=f5e425]:
+                - text: "01"
+                - generic [ref=f5e426]: _
+              - heading "UNDERSTAND" [level=3] [ref=f5e427]
+              - paragraph [ref=f5e428]: Understand the problem, users, requirements and constraints.
+          - article [ref=f5e429]:
+            - generic [ref=f5e430]:
+              - img "System architecture layers and technical blueprint" [ref=f5e432]
+              - generic [ref=f5e433]:
+                - generic [ref=f5e434]: — A SOLUTION
+                - list [ref=f5e435]:
+                  - listitem [ref=f5e436]: RESEARCH
+                  - listitem [ref=f5e437]: ARCHITECTURE
+                  - listitem [ref=f5e438]: PLANNING
+            - generic [ref=f5e439]:
+              - generic [ref=f5e440]:
+                - text: "02"
+                - generic [ref=f5e441]: _
+              - heading "DESIGN" [level=3] [ref=f5e442]
+              - paragraph [ref=f5e443]: Turn the problem into a practical technical solution.
+          - article [ref=f5e444]:
+            - generic [ref=f5e445]:
+              - img "Code editors and fullstack development panes" [ref=f5e447]
+              - generic [ref=f5e448]:
+                - generic [ref=f5e449]: — A SYSTEM
+                - list [ref=f5e450]:
+                  - listitem [ref=f5e451]: DEVELOPMENT
+                  - listitem [ref=f5e452]: INTEGRATION
+                  - listitem [ref=f5e453]: TESTING
+            - generic [ref=f5e454]:
+              - generic [ref=f5e455]:
+                - text: "03"
+                - generic [ref=f5e456]: _
+              - heading "BUILD" [level=3] [ref=f5e457]
+              - paragraph [ref=f5e458]: Build reliable software across backend, APIs and mobile.
+          - article [ref=f5e459]:
+            - generic [ref=f5e460]:
+              - img "Live production device with analytics chart" [ref=f5e462]
+              - generic [ref=f5e463]:
+                - generic [ref=f5e464]: — A PRODUCT
+                - list [ref=f5e465]:
+                  - listitem [ref=f5e466]: REAL USERS
+                  - listitem [ref=f5e467]: REAL IMPACT
+            - generic [ref=f5e468]:
+              - generic [ref=f5e469]:
+                - text: "04"
+                - generic [ref=f5e470]: _
+              - heading "SHIP" [level=3] [ref=f5e471]
+              - paragraph [ref=f5e472]: Refine, deploy and take ownership of the final product.
+        - region "Process progression milestones" [ref=f5e473]:
+          - generic [ref=f5e474]: "[ PROBLEM ]"
+          - generic [ref=f5e478]: "[ SOLUTION ]"
+          - generic [ref=f5e482]: "[ SYSTEM ]"
+          - generic [ref=f5e486]:
+            - generic [ref=f5e488]: "[ PRODUCT ]"
+            - generic [aria-hidden] [ref=f5e489]: →

@@ -1,0 +1,47 @@
+// -----------------------------------------------------------------------------
+// MAIN SCSS BUNDLE - ANKIT KUMAR PORTFOLIO
+// -----------------------------------------------------------------------------
+
+// 1. Abstracts
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+
+// 2. Base styles
+@use 'base/reset';
+@use 'base/typography';
+
+// 3. Components
+@use 'components/buttons';
+@use 'components/badges';
+@use 'components/cards';
+@use 'components/forms';
+@use 'components/visuals';
+@use 'components/meta';
+@use 'components/animations';
+@use 'components/scroll_top';
+
+// 4. Layout
+@use 'layout/grid';
+@use 'layout/navbar';
+@use 'layout/header';
+@use 'layout/footer';
+
+// 5. Sections
+@use 'sections/hero';
+@use 'sections/selected_work';
+@use 'sections/services';
+@use 'sections/process';
+@use 'sections/experience';
+@use 'sections/exploring';
+@use 'sections/mindset';
+@use 'sections/cta';
+@use 'sections/approach';
+@use 'sections/projects_page';
+@use 'sections/case_study';
+@use 'sections/products_page';
+@use 'sections/about_page';
+@use 'sections/contact_page';
+@use 'sections/services_page';
+@use 'sections/service_detail';
+@use 'sections/process_concepts';
+

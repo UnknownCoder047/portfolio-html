@@ -1,0 +1,382 @@
+// -----------------------------------------------------------------------------
+// MY MINDSET SECTION (designs/my-mindset.png)
+// Pure SCSS, Pixel-Perfect & Responsive across Desktop, Tablet, and Mobile
+// -----------------------------------------------------------------------------
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.mindset {
+  position: relative;
+  padding-top: $spacing-4xl;
+  padding-bottom: clamp(32px, 4vw, 48px);
+  overflow: hidden;
+
+  @include max-md {
+    padding-top: $spacing-3xl;
+    padding-bottom: 32px;
+  }
+
+  // Header: Title Group on Left, Technical Meta Manifesto on Right
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: $spacing-2xl;
+    margin-bottom: clamp(48px, 5vw, 68px);
+
+    @include max-lg {
+      gap: $spacing-xl;
+    }
+
+    @include max-md {
+      flex-direction: column;
+      gap: $spacing-lg;
+      margin-bottom: 36px;
+    }
+  }
+
+  &__title-group {
+    flex: 1;
+    max-width: 680px;
+  }
+
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: $font-mono;
+    font-size: 0.75rem; // 12px
+    font-weight: 700;
+    color: $color-text-white;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: $radius-full;
+    padding: 5px 14px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.03);
+
+    &-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $color-accent;
+      box-shadow: 0 0 8px $color-accent;
+    }
+  }
+
+  &__headline {
+    font-family: $font-sans;
+    font-size: clamp(2.5rem, 4.8vw, 4.25rem);
+    font-weight: 900;
+    line-height: 1.05;
+    color: $color-text-white;
+    letter-spacing: -0.035em;
+    text-transform: uppercase;
+    margin: 0;
+
+    .highlight {
+      color: $color-accent;
+      text-shadow: 0 0 35px rgba($color-accent, 0.35);
+    }
+  }
+
+  // Header Technical Meta
+  &__header-meta {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+    padding-top: 12px;
+
+    @include max-md {
+      padding-top: 0;
+      gap: 24px;
+    }
+  }
+
+  &__meta-block {
+    display: flex;
+    flex-direction: column;
+
+    &--manifesto {
+      border-left: 1px solid rgba(255, 255, 255, 0.15);
+      padding-left: 16px;
+    }
+
+    &--pillars {
+      padding-top: 22px; // Aligns with lines below the // marker
+
+      @include max-md {
+        padding-top: 0;
+      }
+    }
+  }
+
+  &__meta-slash {
+    font-family: $font-mono;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #718077;
+    margin-bottom: 6px;
+  }
+
+  &__meta-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-family: $font-mono;
+    font-size: 0.6875rem; // 11px
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    line-height: 1.45;
+    color: #718077;
+    text-transform: uppercase;
+  }
+
+  &__meta-underline {
+    width: 32px;
+    height: 1.5px;
+    background: rgba(255, 255, 255, 0.25);
+    margin-top: 8px;
+  }
+
+  // 5 Mindset Cards List
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// Individual Mindset Card Row
+.mindset-card {
+  display: grid;
+  grid-template-columns: 36px minmax(320px, 400px) 1fr;
+  gap: clamp(24px, 4vw, 56px);
+  align-items: center;
+  padding: clamp(32px, 3.5vw, 44px) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  transition: background-color $transition-normal;
+
+  &:hover {
+    .mindset-card__img {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(163, 230, 53, 0.12);
+      border-color: rgba($color-accent, 0.3);
+    }
+
+    .mindset-card__dot {
+      box-shadow: 0 0 14px $color-accent;
+      transform: scale(1.3);
+    }
+  }
+
+  @include max-lg {
+    grid-template-columns: 32px 340px 1fr;
+    gap: 24px;
+    padding: 32px 0;
+  }
+
+  @include max-md {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 28px 0;
+  }
+
+  // Column 1: Index Indicator
+  &__indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-start;
+    padding-top: 6px;
+
+    @include max-md {
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+      padding-top: 0;
+    }
+  }
+
+  &__num {
+    font-family: $font-sans;
+    font-size: 1.125rem; // 18px
+    font-weight: 800;
+    color: $color-text-white;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 8px;
+
+    @include max-md {
+      margin-bottom: 0;
+      font-size: 1rem;
+    }
+  }
+
+  &__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $color-accent;
+    box-shadow: 0 0 8px $color-accent;
+    transition: all $transition-normal;
+
+    @include max-md {
+      margin: 0;
+    }
+  }
+
+  &__guide {
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(to bottom, rgba($color-accent, 0.4), rgba(255, 255, 255, 0.05));
+    margin-top: 8px;
+
+    @include max-md {
+      display: none;
+    }
+  }
+
+  // Column 2: Visual Card
+  &__visual {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+
+    @include max-md {
+      max-width: 100%;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #090c0a;
+    transition: transform $transition-normal, box-shadow $transition-normal, border-color $transition-normal;
+  }
+
+  // Column 3: Content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &__tag {
+    font-family: $font-mono;
+    font-size: 0.75rem; // 12px
+    font-weight: 700;
+    color: $color-accent;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    font-family: $font-sans;
+    font-size: clamp(1.45rem, 2.1vw, 2rem);
+    font-weight: 800;
+    line-height: 1.18;
+    color: $color-text-white;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin: 0 0 12px 0;
+
+    .highlight {
+      color: $color-accent;
+    }
+  }
+
+  &__desc {
+    font-family: $font-sans;
+    font-size: clamp(0.9375rem, 1.05vw, 1rem);
+    line-height: 1.55;
+    color: #9ca3af;
+    margin: 0 0 20px 0;
+    max-width: 520px;
+
+    @include max-md {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__meta-tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    font-family: $font-mono;
+    font-size: 0.6875rem; // 11px
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: #718077;
+    text-transform: uppercase;
+
+    .sep {
+      color: #4b5563;
+      font-weight: 400;
+    }
+  }
+}
+
+// Bottom Bar
+.mindset__bottom {
+  border-top: none; // The last card has a border-bottom, matching design line
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+
+  @include max-md {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  &-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: $font-mono;
+    font-size: 0.75rem; // 12px
+    letter-spacing: 0.1em;
+    color: #718077;
+  }
+
+  &-marker {
+    color: #718077;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+  }
+
+  &-motto {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.35;
+  }
+
+  &-right {
+    font-family: $font-mono;
+    font-size: 0.75rem; // 12px
+    letter-spacing: 0.15em;
+    color: #718077;
+  }
+
+  &-counter {
+    font-family: $font-mono;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: #718077;
+  }
+}

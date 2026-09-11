@@ -1,0 +1,88 @@
+// -----------------------------------------------------------------------------
+// MODERN CSS RESET & GLOBAL BASE STYLES
+// -----------------------------------------------------------------------------
+@use '../abstracts/variables' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  color-scheme: dark;
+  word-spacing: 6px;
+}
+
+body {
+  font-family: $font-sans;
+  background-color: $color-bg-primary;
+  color: $color-text-primary;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // Global consistent background: subtle ambient radial glows + technical dot grid for all pages
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle at 80% 20%, rgba(163, 230, 53, 0.04) 0%, transparent 45%),
+      radial-gradient(circle at 10% 80%, rgba(163, 230, 53, 0.03) 0%, transparent 40%),
+      radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 24px 24px;
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color $transition-fast;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+::selection {
+  background-color: $color-accent;
+  color: #000000;
+}

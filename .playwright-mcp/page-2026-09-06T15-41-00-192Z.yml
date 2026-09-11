@@ -1,0 +1,164 @@
+- generic [active] [ref=f7e1]:
+  - banner [ref=f7e2]:
+    - generic [ref=f7e3]:
+      - link "A/ - Home" [ref=f7e4] [cursor=pointer]:
+        - /url: index.html
+        - generic [ref=f7e5]: A
+        - generic [ref=f7e6]: /
+      - navigation "Primary Navigation" [ref=f7e7]:
+        - list [ref=f7e8]:
+          - listitem [ref=f7e9]:
+            - link "Home" [ref=f7e10] [cursor=pointer]:
+              - /url: index.html
+          - listitem [ref=f7e11]:
+            - link "Projects" [ref=f7e12] [cursor=pointer]:
+              - /url: projects.html
+          - listitem [ref=f7e15]:
+            - link "Services" [ref=f7e16] [cursor=pointer]:
+              - /url: services.html
+          - listitem [ref=f7e17]:
+            - link "About" [ref=f7e18] [cursor=pointer]:
+              - /url: about.html
+          - listitem [ref=f7e19]:
+            - link "Contact" [ref=f7e20] [cursor=pointer]:
+              - /url: contact.html
+      - link "LET'S TALK" [ref=f7e22] [cursor=pointer]:
+        - /url: contact.html
+        - generic [aria-hidden] [ref=f7e24]: →
+    - generic [aria-hidden]:
+      - generic:
+        - navigation:
+          - list:
+            - listitem:
+              - link:
+                - /url: index.html
+                - generic: Home
+            - listitem:
+              - link:
+                - /url: projects.html
+                - generic: Projects
+            - listitem:
+              - link:
+                - /url: services.html
+                - generic: Services
+            - listitem:
+              - link:
+                - /url: about.html
+                - generic: About
+            - listitem:
+              - link:
+                - /url: contact.html
+                - generic: Contact
+        - generic:
+          - link:
+            - /url: contact.html
+            - generic: LET'S TALK
+            - generic: →
+  - main [ref=f7e25]:
+    - generic [ref=f7e27]:
+      - generic [ref=f7e28]:
+        - generic [ref=f7e29]:
+          - generic [ref=f7e30]: My Work
+          - heading "Projects I've Built" [level=1] [ref=f7e32]
+          - paragraph [ref=f7e33]: A collection of real-world projects, side projects and experiments that showcase my skills, problem-solving approach and passion for building useful software.
+        - generic [ref=f7e34]: IDEAS → REAL PRODUCTS BUILD • LEARN • IMPROVE • REPEAT
+      - generic [ref=f7e36]:
+        - generic [ref=f7e37]:
+          - button "All Projects" [ref=f7e38] [cursor=pointer]
+          - button "Backend" [ref=f7e39] [cursor=pointer]
+          - button "Android" [ref=f7e40] [cursor=pointer]
+          - button "Full Stack" [ref=f7e41] [cursor=pointer]
+          - button "Tools" [ref=f7e42] [cursor=pointer]
+          - button "Personal" [ref=f7e43] [cursor=pointer]
+        - textbox "Search projects..." [ref=f7e48]
+      - generic [ref=f7e49]:
+        - article [ref=f7e50]:
+          - generic [ref=f7e51]: ★ Featured
+          - heading "TaskFlow" [level=3] [ref=f7e56]
+          - paragraph [ref=f7e57]: A collaborative task management tool with real-time updates, team workspaces and progress analytics.
+          - generic [ref=f7e58]:
+            - generic [ref=f7e59]: Spring Boot
+            - generic [ref=f7e60]: PostgreSQL
+            - generic [ref=f7e61]: React
+            - generic [ref=f7e62]: Docker
+          - generic [ref=f7e63]:
+            - link "View Code" [ref=f7e64] [cursor=pointer]:
+              - /url: https://github.com/ankitkumar
+            - link "Live Demo →" [ref=f7e68] [cursor=pointer]:
+              - /url: project-detail.html
+              - generic [ref=f7e69]: Live Demo
+              - generic [ref=f7e70]: →
+        - article [ref=f7e71]:
+          - heading "Notes App" [level=3] [ref=f7e76]
+          - paragraph [ref=f7e77]: A clean and fast Android notes app with offline support, search and cloud sync.
+          - generic [ref=f7e78]:
+            - generic [ref=f7e79]: Kotlin
+            - generic [ref=f7e80]: Jetpack Compose
+            - generic [ref=f7e81]: Room
+            - generic [ref=f7e82]: Firebase
+          - generic [ref=f7e83]:
+            - link "View Code" [ref=f7e84] [cursor=pointer]:
+              - /url: https://github.com/ankitkumar
+            - link "Live Demo →" [ref=f7e85] [cursor=pointer]:
+              - /url: product-detail.html
+        - article [ref=f7e86]:
+          - heading "E-Commerce API" [level=3] [ref=f7e93]
+          - paragraph [ref=f7e94]: A scalable e-commerce backend with product management, order processing and Stripe payment integration.
+          - generic [ref=f7e95]:
+            - generic [ref=f7e96]: Spring Boot
+            - generic [ref=f7e97]: MySQL
+            - generic [ref=f7e98]: Redis
+            - generic [ref=f7e99]: Stripe
+          - generic [ref=f7e100]:
+            - link "View Code" [ref=f7e101] [cursor=pointer]:
+              - /url: https://github.com/ankitkumar
+            - link "API Docs →" [ref=f7e102] [cursor=pointer]:
+              - /url: project-detail.html
+        - article [ref=f7e103]:
+          - heading "ChatX" [level=3] [ref=f7e111]
+          - paragraph [ref=f7e112]: A real-time chat application with end-to-end encryption, file sharing and online presence tracking.
+          - generic [ref=f7e113]:
+            - generic [ref=f7e114]: Socket.io
+            - generic [ref=f7e115]: React
+            - generic [ref=f7e116]: MongoDB
+            - generic [ref=f7e117]: Docker
+          - generic [ref=f7e118]:
+            - link "View Code" [ref=f7e119] [cursor=pointer]:
+              - /url: https://github.com/ankitkumar
+            - link "Live Demo →" [ref=f7e120] [cursor=pointer]:
+              - /url: project-detail.html
+        - article [ref=f7e121]:
+          - heading "DevTools Hub" [level=3] [ref=f7e127]
+          - paragraph [ref=f7e128]: A collection of developer tools to simplify daily workflows (JSON formatter, JWT decoder, Regex tester).
+          - generic [ref=f7e129]:
+            - generic [ref=f7e130]: Next.js
+            - generic [ref=f7e131]: TypeScript
+            - generic [ref=f7e132]: Tailwind CSS
+          - generic [ref=f7e133]:
+            - link "View Code" [ref=f7e134] [cursor=pointer]:
+              - /url: https://github.com/ankitkumar
+            - link "Live Demo →" [ref=f7e135] [cursor=pointer]:
+              - /url: products.html
+        - article [ref=f7e136]:
+          - heading "Expense Tracker" [level=3] [ref=f7e140]
+          - paragraph [ref=f7e141]: A minimal expense tracking app with categories, analytics and data export. Zero ads, local storage privacy.
+          - generic [ref=f7e142]:
+            - generic [ref=f7e143]: Android
+            - generic [ref=f7e144]: Kotlin
+            - generic [ref=f7e145]: Room
+            - generic [ref=f7e146]: MPAndroidChart
+          - generic [ref=f7e147]:
+            - link "View Code" [ref=f7e148] [cursor=pointer]:
+              - /url: https://github.com/ankitkumar
+            - link "Live Demo →" [ref=f7e149] [cursor=pointer]:
+              - /url: product-detail.html
+      - generic [ref=f7e150]:
+        - generic [ref=f7e151]:
+          - heading "Have an idea in mind?" [level=4] [ref=f7e152]
+          - paragraph [ref=f7e153]: I'm always open to discussing new projects, interesting ideas or collaboration opportunities.
+        - link "Let's Build Something" [ref=f7e154] [cursor=pointer]:
+          - /url: contact.html
+  - contentinfo [ref=f7e158]:
+    - generic [ref=f7e159]:
+      - generic [ref=f7e160]: © 2026 Ankit Kumar. All rights reserved.
+      - generic [ref=f7e161]: // SAME IDEAS. BIGGER POSSIBILITIES.

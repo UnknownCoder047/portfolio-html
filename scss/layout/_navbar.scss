@@ -1,0 +1,177 @@
+// -----------------------------------------------------------------------------
+// NAVIGATION BAR
+// -----------------------------------------------------------------------------
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 80px;
+  background: rgba(7, 9, 8, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all $transition-normal;
+
+  &--scrolled {
+    height: 70px;
+    background: rgba(7, 9, 8, 0.95);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &__inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    color: $color-text-white;
+
+    .logo-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, rgba(163, 230, 53, 0.2), rgba(163, 230, 53, 0.05));
+      border: 1px solid rgba(163, 230, 53, 0.4);
+      color: $color-accent;
+      font-family: $font-mono;
+      font-weight: 800;
+      font-size: 1.1rem;
+      box-shadow: 0 0 15px rgba(163, 230, 53, 0.2);
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    @include max-md {
+      display: none; // Hidden on mobile, toggled via mobile menu
+    }
+  }
+
+  &__link {
+    font-size: $font-size-sm;
+    font-weight: 600;
+    color: $color-text-secondary;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color $transition-fast;
+    position: relative;
+
+    &:hover {
+      color: $color-text-white;
+    }
+
+    &.active {
+      color: $color-accent;
+
+      &::before {
+        content: '•';
+        color: $color-accent;
+        font-size: 1.2rem;
+        line-height: 0;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: $radius-sm;
+    border: 1px solid $border-color-subtle;
+    background: $color-bg-card;
+    color: $color-text-white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: $color-text-white;
+      transition: all $transition-normal;
+    }
+
+    @include max-md {
+      display: flex;
+    }
+
+    &.open {
+      span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+    }
+  }
+}
+
+// Mobile Drawer Menu
+.mobile-nav {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(7, 9, 8, 0.98);
+  backdrop-filter: blur(24px);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  padding: $spacing-2xl $spacing-xl;
+  gap: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: all $transition-normal;
+
+  &.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .mobile-nav__link {
+    font-size: $font-size-2xl;
+    font-weight: 800;
+    color: $color-text-primary;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    &.active {
+      color: $color-accent;
+    }
+  }
+}

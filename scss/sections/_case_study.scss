@@ -1,0 +1,84 @@
+// -----------------------------------------------------------------------------
+// PROJECT DETAIL / CASE STUDY (ChatGPT Image Sep 5, 2026, 01_19_45 AM.png)
+// -----------------------------------------------------------------------------
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.case-hero {
+  padding-top: 130px;
+  padding-bottom: $spacing-3xl;
+
+  &__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: $font-mono;
+    font-size: $font-size-xs;
+    color: $color-accent;
+    margin-bottom: $spacing-lg;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 900;
+    margin-bottom: $spacing-md;
+
+    .highlight {
+      color: $color-accent;
+    }
+  }
+
+  &__stats {
+    display: flex;
+    align-items: center;
+    gap: $spacing-3xl;
+    margin-top: $spacing-2xl;
+    margin-bottom: $spacing-2xl;
+    flex-wrap: wrap;
+
+    .stat-box {
+      .value {
+        font-size: $font-size-3xl;
+        font-weight: 900;
+        color: $color-text-white;
+        font-family: $font-mono;
+      }
+      .label {
+        font-size: $font-size-xs;
+        color: $color-text-muted;
+      }
+    }
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) 140px;
+    gap: $spacing-md;
+    margin-top: $spacing-2xl;
+
+    @include max-lg {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .thumb {
+      height: 120px;
+      border-radius: $radius-md;
+      background: #0d100e;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all $transition-fast;
+
+      &:hover {
+        border-color: $color-accent;
+      }
+    }
+  }
+}
