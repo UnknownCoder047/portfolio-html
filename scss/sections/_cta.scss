@@ -60,25 +60,47 @@
     display: flex;
     flex-direction: column;
 
+    &-item {
+      display: inline-block;
+      padding-bottom: 2px;
+      border-bottom: 1.5px solid transparent;
+      color: #718077;
+      transition: color $transition-normal, border-color $transition-normal;
+      animation: ctaActiveCycle 8s cubic-bezier(0.4, 0, 0.2, 1) both infinite;
+
+      &:nth-child(1) { animation-delay: 0s; }
+      &:nth-child(2) { animation-delay: 2s; }
+      &:nth-child(3) { animation-delay: 4s; }
+      &:nth-child(4) { animation-delay: 6s; }
+
+      &:hover {
+        color: $color-text-white;
+        border-bottom-color: $color-accent;
+        cursor: default;
+      }
+
+      &--underlined {
+        // Fallback for non-animated environments
+        @media (prefers-reduced-motion: reduce) {
+          border-bottom-color: $color-accent;
+          color: $color-text-white;
+        }
+      }
+    }
+
     &--left {
       text-align: left;
 
-      .cta__meta-item--underlined {
-        border-bottom: 1.5px solid rgba(255, 255, 255, 0.35);
-        padding-bottom: 2px;
+      .cta__meta-item {
         align-self: flex-start;
-        color: $color-text-secondary;
       }
     }
 
     &--right {
       text-align: right;
 
-      .cta__meta-item--underlined {
-        border-bottom: 1.5px solid rgba(255, 255, 255, 0.35);
-        padding-bottom: 2px;
+      .cta__meta-item {
         align-self: flex-end;
-        color: $color-text-secondary;
       }
     }
 
@@ -299,21 +321,39 @@
       padding: 14px 20px;
     }
 
+    .arrow,
+    .btn-arrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      position: relative;
+      top: -1px;
+      vertical-align: middle;
+      transition: transform $transition-normal;
+      animation: none;
+      will-change: transform;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+
+      .arrow,
+      .btn-arrow {
+        transform: translateX(4px);
+      }
+    }
+
     &--primary {
       background: $color-accent;
       color: #070908;
       border: 1px solid $color-accent;
       box-shadow: 0 0 20px rgba(163, 230, 53, 0.25);
 
-      .arrow {
-        display: inline-block;
-      }
-
       &:hover {
         background: $color-accent-light;
         border-color: $color-accent-light;
         box-shadow: 0 0 30px rgba(163, 230, 53, 0.5);
-        transform: translateY(-2px);
       }
 
       &:active {
@@ -482,11 +522,64 @@
       align-items: flex-start;
     }
 
-    &-accent {
-      color: $color-text-white;
-      border-bottom: 2px solid $color-accent;
+    li {
+      display: inline-block;
       padding-bottom: 3px;
+      border-bottom: 2px solid transparent;
+      color: #718077;
+      transition: color $transition-normal, border-color $transition-normal;
+      animation: ctaActiveCycle 8s cubic-bezier(0.4, 0, 0.2, 1) both infinite;
+
+      &:nth-child(1) { animation-delay: 0s; }
+      &:nth-child(2) { animation-delay: 2s; }
+      &:nth-child(3) { animation-delay: 4s; }
+      &:nth-child(4) { animation-delay: 6s; }
+
+      &:hover {
+        color: $color-text-white;
+        border-bottom-color: $color-accent;
+        cursor: default;
+      }
     }
+
+    &-accent {
+      @media (prefers-reduced-motion: reduce) {
+        color: $color-text-white;
+        border-bottom-color: $color-accent;
+      }
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Sequential Active State Cycling for CTA Tech List and Meta Items
+// Smoothly illuminates one item active with accent underline while rest rest inactive
+// -----------------------------------------------------------------------------
+@keyframes ctaActiveCycle {
+  0% {
+    color: #718077;
+    border-bottom-color: transparent;
+    text-shadow: none;
+  }
+  4% {
+    color: $color-text-white;
+    border-bottom-color: $color-accent;
+    text-shadow: 0 0 10px rgba($color-accent, 0.4);
+  }
+  21% {
+    color: $color-text-white;
+    border-bottom-color: $color-accent;
+    text-shadow: 0 0 10px rgba($color-accent, 0.4);
+  }
+  25% {
+    color: #718077;
+    border-bottom-color: transparent;
+    text-shadow: none;
+  }
+  100% {
+    color: #718077;
+    border-bottom-color: transparent;
+    text-shadow: none;
   }
 }
 
@@ -520,5 +613,16 @@
   .cta__art-box {
     animation: none !important;
     transform: none !important;
+  }
+
+  .cta__tech-list li,
+  .cta__meta-item {
+    animation: none !important;
+  }
+
+  .cta__tech-list li:last-child,
+  .cta__meta-item:last-child {
+    color: $color-text-white !important;
+    border-bottom-color: $color-accent !important;
   }
 }
