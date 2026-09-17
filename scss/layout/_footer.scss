@@ -281,13 +281,26 @@
     white-space: nowrap;
 
     .arrow-icon {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      position: relative;
+      top: -1px;
+      vertical-align: middle;
+      transition: transform $transition-normal;
+      animation: none;
+      will-change: transform;
     }
 
     &:hover {
       background-color: $color-accent-light;
       box-shadow: 0 0 35px rgba(163, 230, 53, 0.55);
       transform: translateY(-2px);
+
+      .arrow-icon {
+        transform: translateX(4px);
+      }
     }
 
     &:active {

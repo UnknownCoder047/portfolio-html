@@ -96,6 +96,12 @@
     display: flex;
     align-items: center;
     gap: 16px;
+
+    .btn-talk {
+      @include max-md {
+        display: none !important;
+      }
+    }
   }
 
   &__toggle {

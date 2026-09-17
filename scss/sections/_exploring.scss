@@ -300,10 +300,18 @@
     transition: all $transition-normal;
 
     .arrow {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      position: relative;
+      top: -1px;
+      vertical-align: middle;
       margin-left: 4px;
       font-size: 14px;
-      transition: transform $transition-fast;
+      transition: transform $transition-normal;
+      animation: none;
+      will-change: transform;
     }
 
     &:hover {
@@ -311,6 +319,11 @@
       background: rgba(163, 230, 53, 0.12);
       box-shadow: 0 0 20px rgba(163, 230, 53, 0.25);
       color: $color-accent;
+      transform: translateY(-2px);
+
+      .arrow {
+        transform: translateX(4px);
+      }
     }
 
     @include max-sm {

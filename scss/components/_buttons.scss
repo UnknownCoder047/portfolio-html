@@ -20,16 +20,37 @@
   user-select: none;
 
   svg {
-    transition: transform $transition-fast;
+    transition: transform $transition-normal;
     width: 16px;
     height: 16px;
     flex-shrink: 0;
   }
 
-  .arrow {
-    display: inline-block;
+  .arrow,
+  .btn-arrow,
+  .arrow-icon,
+  .btn-talk__arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     line-height: 1;
     font-size: inherit;
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+    transition: transform $transition-normal;
+    animation: none;
+    will-change: transform;
+  }
+
+  &:hover {
+    .arrow,
+    .btn-arrow,
+    .arrow-icon,
+    .btn-talk__arrow,
+    svg {
+      transform: translateX(4px);
+    }
   }
 
   &:active {
@@ -96,3 +117,21 @@
     }
   }
 }
+
+// -----------------------------------------------------------------------------
+// MOBILE RESPONSIVE BUTTONS & HERO ROLES
+// -----------------------------------------------------------------------------
+@include max-md {
+  .hero__btn-primary,
+  .hero__btn-secondary,
+  .services__btn-primary,
+  .services__btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero__roles {
+    justify-content: space-between;
+  }
+}
+

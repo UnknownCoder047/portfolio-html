@@ -516,18 +516,14 @@ html.reveal-ready {
 }
 
 // 1. Horizontal Arrows (Default: Pointing Right)
-.btn-arrow,
-.btn-talk__arrow,
 .cta-arrow,
 .banner-arrow,
 .service-card__arrow,
 .service-item-card__arrow,
 .exploring-card__arrow,
 .process__track-arrow,
-.arrow,
 .arrow--x,
 .arrow--right,
-.footer__cta-btn .arrow-icon,
 [data-arrow="horizontal"],
 [data-arrow="right"] {
   animation: arrowOscillateX 1.8s ease-in-out infinite;
@@ -558,28 +554,19 @@ html.reveal-ready {
 }
 
 // Interactive Hover: Accelerated & amplified back & forth feedback
-a:hover,
-button:hover,
-.btn:hover,
-.btn-talk:hover,
 .card:hover,
 .service-card:hover,
 .service-item-card:hover,
 .exploring-card:hover,
-.work-card:hover,
-.footer__cta-btn:hover {
-  .btn-arrow,
-  .btn-talk__arrow,
+.work-card:hover {
   .cta-arrow,
   .banner-arrow,
   .service-card__arrow,
   .service-item-card__arrow,
   .exploring-card__arrow,
   .process__track-arrow,
-  .arrow,
   .arrow--x,
   .arrow--right,
-  .arrow-icon,
   [data-arrow="horizontal"],
   [data-arrow="right"] {
     animation-name: arrowOscillateXHover;

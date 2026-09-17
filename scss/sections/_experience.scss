@@ -298,11 +298,29 @@
     letter-spacing: 0.06em;
     padding: 12px 24px;
     border-radius: $radius-sm;
+    transition: all $transition-normal;
 
     .arrow {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      position: relative;
+      top: -1px;
+      vertical-align: middle;
       margin-left: 6px;
       font-size: 14px;
+      transition: transform $transition-normal;
+      animation: none;
+      will-change: transform;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+
+      .arrow {
+        transform: translateX(4px);
+      }
     }
 
     @include max-sm {
