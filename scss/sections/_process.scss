@@ -966,6 +966,11 @@
   flex-direction: column;
   position: relative;
 
+  &::before {
+    display: none !important;
+    content: none !important;
+  }
+
   // Visual Graphic Top Container for Steps 1, 2, 3, 4
   &__visual-wrap {
     height: 225px;

@@ -117,9 +117,10 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
     margin-bottom: 32px;
+    width: 100%;
 
     @include max-lg {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       max-width: 680px;
       margin-left: auto;
       margin-right: auto;
@@ -127,6 +128,8 @@
     }
 
     @include max-md {
+      grid-template-columns: minmax(0, 1fr);
+      width: 100%;
       max-width: 100%;
       gap: 20px;
     }
@@ -210,6 +213,10 @@
       gap: 12px;
       flex-shrink: 0;
       flex-wrap: wrap;
+
+      @include max-md {
+        width: 100%;
+      }
     }
 
     &-motto {
@@ -252,16 +259,34 @@
     border-radius: 6px;
     text-decoration: none;
     box-shadow: 0 0 16px rgba(163, 230, 53, 0.35);
-    transition: all $transition-fast;
+    transition: all $transition-normal;
+
+    @include max-md {
+      width: 100%;
+      justify-content: center;
+    }
 
     .btn-arrow {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      position: relative;
+      top: -1px;
+      vertical-align: middle;
+      transition: transform $transition-normal;
+      animation: none;
+      will-change: transform;
     }
 
     &:hover {
       background: #b5f542;
       box-shadow: 0 0 24px rgba(163, 230, 53, 0.5);
-      transform: translateY(-1px);
+      transform: translateY(-2px);
+
+      .btn-arrow {
+        transform: translateX(4px);
+      }
     }
   }
 
@@ -280,6 +305,11 @@
     border-radius: 6px;
     text-decoration: none;
     transition: all $transition-fast;
+
+    @include max-md {
+      width: 100%;
+      justify-content: center;
+    }
 
     &:hover {
       border-color: rgba(163, 230, 53, 0.4);
@@ -300,9 +330,16 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
               border-color 0.3s ease,
               box-shadow 0.3s ease;
+
+  @include max-md {
+    padding: 20px 18px;
+  }
 
   &:hover {
     transform: translateY(-4px);
@@ -320,6 +357,7 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 12px;
+    width: 100%;
   }
 
   &__num {
@@ -344,6 +382,8 @@
     min-height: 175px;
     margin-bottom: 16px;
     flex-grow: 1;
+    min-width: 0;
+    width: 100%;
 
     @include max-sm {
       min-height: auto;
@@ -358,6 +398,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-width: 0;
+    width: 100%;
   }
 
   &__title {
@@ -402,12 +444,18 @@
     object-position: right center;
     display: block;
     transition: transform 0.35s ease;
+
+    @include max-sm {
+      object-position: center center;
+    }
   }
 
   &__footer {
     margin-top: auto;
     padding-top: 14px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+    min-width: 0;
   }
 
   &__tags {
@@ -421,5 +469,14 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    min-width: 0;
+    max-width: 100%;
+
+    @include max-sm {
+      font-size: 10px;
+      letter-spacing: 0.04em;
+      white-space: normal;
+      line-height: 1.45;
+    }
   }
 }

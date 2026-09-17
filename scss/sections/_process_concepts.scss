@@ -358,20 +358,10 @@
     border: 1px solid transparent;
     transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 
-    &::before {
-      opacity: 0.4;
-      transition: transform 0.4s ease, opacity 0.4s ease, box-shadow 0.4s ease;
-    }
-
     &:hover {
       border-color: rgba(163, 230, 53, 0.3);
       background: rgba(163, 230, 53, 0.035);
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(163, 230, 53, 0.04);
-
-      &::before {
-        opacity: 1;
-        box-shadow: 0 0 16px #a3e635, 0 0 32px rgba(163, 230, 53, 0.75);
-      }
 
       .process-card__number {
         color: $color-accent;
